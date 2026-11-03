@@ -1,0 +1,10 @@
+{
+  "github_repository": "https://github.com/mehmetkoc1226/hycado-reproducibility",
+  "public_release": false,
+  "prepared_for": "mehmetkoc1226",
+  "suggested_repository_name": "hycado-reproducibility",
+  "scope": "archived experiment code, recorded identities and table regeneration; external assets required for prediction replay and historical training",
+  "fresh_end_to_end_retraining_validated_here": false,
+  "source_publication": true,
+  "public_release_scope": "No complete checkpoint/prediction-archive release; source snapshot only"
+}

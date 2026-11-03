@@ -1,0 +1,26 @@
+{
+  "yolo": {
+    "final_sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+    "initial_sha256": "876eb84f515d40c34a3b111f8fc1077d3aee59d3a243afd1cc5b77d520f237c7",
+    "protocol_sha256": "159ea5fec31f25542b18417823cbefb74ed4a88c442050fec64dece7365ab6be",
+    "selected_weights": "fixed final round80 EMA",
+    "parameters": 25536942,
+    "queries": null
+  },
+  "crop": {
+    "final_sha256": "fa6e3991b26650e2426a4bbac9253351d47087e2533d3b98d86a2f24b586cbf9",
+    "initial_sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+    "protocol_sha256": "6ae4d2ae2c503b18fe467d3c275605d527bd8934e8f6128276daeaa5327491ae",
+    "selected_weights": "fixed final round80 EMA",
+    "parameters": 32826626,
+    "queries": 300
+  },
+  "full": {
+    "final_sha256": "0d7f046673037e83accccf8c430f6978799f59557a93f3be4a7ac2ea182eb57c",
+    "initial_sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+    "protocol_sha256": "0137544e585fa48eee80b1bc1713c77f7ca10b75560876420642f9814cf4643f",
+    "selected_weights": "fixed final round80 EMA",
+    "parameters": 32826626,
+    "queries": 300
+  }
+}

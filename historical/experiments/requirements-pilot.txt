@@ -1,0 +1,8 @@
+# Direct dependency versions for the local capacity pilot.
+# Torch/torchvision are installed separately from the official CUDA wheel index.
+# Transitive dependency versions are recorded by setup_env.py in reports/.
+ultralytics==8.3.203
+numpy==1.26.4
+opencv-python==4.11.0.86
+Pillow==11.3.0
+PyYAML==6.0.2

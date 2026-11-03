@@ -1,0 +1,85 @@
+{
+  "id": "hycado_rtdetr_crop_experiment_v1_seed42",
+  "decision_date": "2026-10-25",
+  "source_calibration_protocol_sha256": "44cae0d4d575dd1d09f23157d7fc0837b5289b6933ecc74cf14dcf2d2cfe1f4e",
+  "source_calibration_report_sha256": "f530e20b790c4735e32b7101dcc69551476fa39bd14b05eac515ddac7e4e5cf0",
+  "source_calibration_history_sha256": "fcfb45de3aff738746b95ae450ae5ccf0fa5ca39abe5f9e468a1c03b2c5bdb26",
+  "source_calibration_code_hashes": {
+    "crop_loader.py": "16ed6b1112ad3814ab6eab8cf72c0f2d9496a9c2b3253de2930ebfb1265f55de",
+    "crop_criterion.py": "92d41e1511d0b6901dbee4c1eed9dee77e6f5c33a0a7441e54167f54b007092a",
+    "crop_training_v2.py": "bd6d1fd2bcf575272685c4fe0f392f89faa2555c4fb9133bc0709023bb1ef4cf"
+  },
+  "catalog": {
+    "source08_protocol_sha256": "647bd53a65d7214bada37216070533596bbd6c388a3f8e354c69e30c75a51d7f",
+    "source_index_sha256": "e5496edd06335ee9e32318d94e1ca6a842f60a25ab9744c4ae35be7b7d54a459",
+    "summary_sha256": "67b23d15a53657514d353a8beb2cad8b6fff72b9585e4d2724a3c46db37a5815",
+    "total_crops": {
+      "train": 95746,
+      "val": 10682
+    },
+    "fully_ignored_crops_excluded": {
+      "train": 213,
+      "val": 23
+    },
+    "source_images": {
+      "train": 5824,
+      "val": 647
+    },
+    "eligible_source_images": {
+      "train": 5824,
+      "val": 647
+    },
+    "sample_read_integrity": "PNG/annotation hash, source/protocol identity and geometry verified on every read"
+  },
+  "upstream_hashes": {
+    "models/utils/loss.py": "3400569debef73d78c60aaa8d66d9ffa52c80856af650213c8d94f6dc5f5c62e",
+    "models/utils/ops.py": "1e422b084d304e25cf98708333c20c032d229cecbb53a640056aaee7f298d2aa",
+    "nn/tasks.py": "d61cfbc3ad1235893b4f94d158138fba9fa66c0a82243819f75aeff5c85ea9d7",
+    "nn/modules/head.py": "156a606d2f1dd4ccbada9cb2407f3d9db1601e11c867eb204a9dd8c917adfe86",
+    "utils/loss.py": "c09d05d83a514c8f7e7bd69dc489b68a8d3371745ad114d615339ced6992d7e0"
+  },
+  "runtime_versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "ultralytics": "8.3.203",
+    "numpy": "1.26.4",
+    "Pillow": "11.3.0",
+    "opencv-python": "4.11.0.86"
+  },
+  "initial_weights_sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+  "seed": 42,
+  "rounds": 80,
+  "samples_per_round": 5824,
+  "total_training_samples": 465920,
+  "physical_batch": 1,
+  "effective_batch": 8,
+  "optimizer_attempts_per_round": 728,
+  "total_optimizer_attempts": 58240,
+  "imgsz": 960,
+  "lr": 0.0001,
+  "lrf": 0.1,
+  "lr_schedule": "cosine over round indices 0..79, endpoints lr and lr*lrf; no warmup",
+  "weight_decay": 0.0001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "gradient_clip_norm": 10.0,
+  "amp": true,
+  "amp_init_scale": 16.0,
+  "amp_growth_factor": 2.0,
+  "amp_backoff_factor": 0.5,
+  "amp_growth_interval": 2000,
+  "minimum_update_fraction_per_round": 0.9,
+  "ema_decay": 0.9999,
+  "ema_tau": 2000,
+  "development_diagnostic_samples": 32,
+  "selection": "fixed round 80 EMA; no best-by-loss/AP checkpoint selection",
+  "sampling": "one eligible crop per original training image per source round; deterministic per-source shuffled cycles",
+  "augmentation": "none; RGB/255 -> 960 square scale-fill INTER_LINEAR, same as validated calibration",
+  "official_val_used": false,
+  "pilot_checkpoint_used_as_initial_weights": false,
+  "scope": "first crop RT-DETR long run, seed 42; not complete paper experimental matrix",
+  "pending": "official-evaluator compatibility, full-image RT-DETR with matched budget/recipe, inference composition, ablations and extra seeds",
+  "measured_train_only_projection_hours": 44.6861441868021
+}

@@ -1,0 +1,7 @@
+# Recorded direct dependencies. Install the recorded PyTorch CUDA wheels separately.
+# This is not a complete transitive lock and does not supply historical input records.
+ultralytics==8.3.203
+numpy==1.26.4
+opencv-python==4.11.0.86
+Pillow==11.3.0
+PyYAML==6.0.2

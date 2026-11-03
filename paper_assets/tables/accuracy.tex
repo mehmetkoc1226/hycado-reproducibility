@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Method & $\APlit$ & AP50 & AP75 & AR500 & Macro AP\\
+\midrule
+YOLOv9-C & 27.839 & 47.164 & 27.660 & 37.941 & 27.444\\
+Full-image RT-DETR-L & 19.760 & 37.474 & 18.110 & 29.559 & 18.730\\
+Global fusion, $\alpha=1$ & 24.394 & 45.449 & 22.650 & 40.546 & 24.005\\
+Global fusion, $\alpha=0.25$ & 29.316 & 50.251 & 28.791 & 41.820 & 28.849\\
+Fixed grid + YOLO & 28.810 & 48.732 & 28.598 & 41.573 & 28.130\\
+Relocation mean (3 placements) & 28.448 & 48.046 & 28.288 & 40.284 & 27.861\\
+\textbf{HyCADO} & \textbf{29.987} & \textbf{50.673} & \textbf{29.795} & \textbf{44.588} & \textbf{29.305}\\
+\bottomrule
+\end{tabular}

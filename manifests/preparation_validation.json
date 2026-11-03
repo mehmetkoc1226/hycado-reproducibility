@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "date": "2026-11-03",
+  "split_images": 7019,
+  "split_counts": [
+    5824,
+    647,
+    548
+  ],
+  "tables_reproduced_byte_identically": 4,
+  "fusion_unit_tests_passed": 3,
+  "packaging_tests_passed": 3,
+  "five_frozen_replay_inputs_sha256_verified": true,
+  "historical_engine_source_unchanged": true,
+  "all_python_sources_compile": true,
+  "fresh_GPU_execution": false,
+  "full_prediction_replay_rerun_in_this_preparation": false,
+  "github_publication_completed": false,
+  "external_assets_public_hosting_completed": false
+}

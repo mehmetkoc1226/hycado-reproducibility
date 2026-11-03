@@ -1,0 +1,9 @@
+\subsection{Reproducibility and Implementation Details}
+The accompanying source bundle distinguishes regeneration from recorded results, prediction-level replay, and training replication. It contains the historical experiment implementation, fixed recipes, exact lists of the 5824 training, 647 development, and 548 official-VAL images, and recorded image, annotation, protocol, and checkpoint SHA256 identities. The numerical tables and two result plots can be regenerated on a CPU from the included metric master; this operation does not recalculate detection AP.
+
+The retained global-fusion engine supports prediction-level CPU replay when its five hash-identified input files are supplied. These files contain the frozen predictions, annotation export, audit records, reference-validation result, and scientific decision record required by that analysis. The replay does not rerun training, inference timing, or the original GNU Octave verification.
+
+The GPU implementation records Python 3.11.5, PyTorch 2.6.0+cu124, torchvision 0.21.0+cu124, Ultralytics 8.3.203, and the associated direct dependency versions. The historical training and inference entry points retain strict checks on upstream calibration, data catalogs, source hashes, and stage metadata. Repeating the full chain therefore requires the original prerequisite records as well as the official data and weights; a fresh-clone end-to-end training workflow has not been validated. CUDA nondeterminism remains as described above.
+
+The source repository is public at \url{https://github.com/mehmetkoc1226/hycado-reproducibility}. The manuscript identifies an immutable commit snapshot. Public hosting of the trained checkpoints and complete frozen prediction archives remains pending. Source publication and file hashes therefore do not establish that all external inputs for full experiment replication are publicly available.
+

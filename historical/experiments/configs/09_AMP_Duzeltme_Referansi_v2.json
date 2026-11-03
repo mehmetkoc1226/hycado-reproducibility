@@ -1,0 +1,50 @@
+{
+  "source09_report_sha256": "86d3ae4f8ee8a78e2a291c38a86cb9337edcd61eafe65563ca344df95161e16b",
+  "source09_protocol_sha256": "418077b9e5eb435538161192e2a2afdd191d4e8d81ffbdd360e362819fdc3430",
+  "source09_history_sha256": "02040a8d89129bad63ba86bdb80ed02a27b5170935c63a262053140c9625b67d",
+  "catalog": {
+    "source08_protocol_sha256": "647bd53a65d7214bada37216070533596bbd6c388a3f8e354c69e30c75a51d7f",
+    "source_index_sha256": "e5496edd06335ee9e32318d94e1ca6a842f60a25ab9744c4ae35be7b7d54a459",
+    "summary_sha256": "67b23d15a53657514d353a8beb2cad8b6fff72b9585e4d2724a3c46db37a5815",
+    "total_crops": {
+      "train": 95746,
+      "val": 10682
+    },
+    "fully_ignored_crops_excluded": {
+      "train": 213,
+      "val": 23
+    },
+    "source_images": {
+      "train": 5824,
+      "val": 647
+    },
+    "eligible_source_images": {
+      "train": 5824,
+      "val": 647
+    },
+    "sample_read_integrity": "PNG/annotation hash, source/protocol identity and geometry verified on every read"
+  },
+  "initial_weights_sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+  "upstream_hashes": {
+    "models/utils/loss.py": "3400569debef73d78c60aaa8d66d9ffa52c80856af650213c8d94f6dc5f5c62e",
+    "models/utils/ops.py": "1e422b084d304e25cf98708333c20c032d229cecbb53a640056aaee7f298d2aa",
+    "nn/tasks.py": "d61cfbc3ad1235893b4f94d158138fba9fa66c0a82243819f75aeff5c85ea9d7",
+    "nn/modules/head.py": "156a606d2f1dd4ccbada9cb2407f3d9db1601e11c867eb204a9dd8c917adfe86",
+    "utils/loss.py": "c09d05d83a514c8f7e7bd69dc489b68a8d3371745ad114d615339ced6992d7e0"
+  },
+  "training_plan_sha256": "fd01331ad4f30745ef70bb5206d3fa69a5d02f97df4bea6dbb8c7d6ee710f1f4",
+  "observed_updates": [
+    20,
+    32,
+    32
+  ],
+  "observed_attempts": [
+    32,
+    32,
+    32
+  ],
+  "inferred_final_scale": 16.0,
+  "inference_basis": "Default scale 65536, backoff 0.5, 12 skipped steps, fewer than 2000 total attempts; not directly logged in v1",
+  "new_initial_scale": 16.0,
+  "old_model_and_checkpoint_used_for_new_training": false
+}

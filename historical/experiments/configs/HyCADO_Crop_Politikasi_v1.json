@@ -1,0 +1,107 @@
+{
+  "decision_id": "hycado_crop_policy_v1",
+  "created_utc": "2026-10-23T10:44:58.680849+00:00",
+  "decision_date_europe_istanbul": "2026-10-23",
+  "status": "selected_development_reference_for_next_crop_data_preparation",
+  "selected_configuration_id": "c3_near_z3_b10",
+  "selection_basis": "Observed development crop count, IoA90 spatial coverage, and 960-square projected visible size; no RT-DETR AP or latency optimization claim",
+  "source07_protocol_sha256": "ebd673597595dd2f00668b6a0eee146eb0bb2cfc08dffb64f357c98c8d217226",
+  "source07_report_sha256": "5cdcbb133ef82892ff3875dc1d431fb269103739a8a79a98abc3bfdddcd22046",
+  "source06_protocol_sha256": "f4e33b895d33e9314607ae68cf051d94990b7f181fd0c9e13d76cd0ce3d3c354",
+  "source_prediction_index_sha256": "957042087b71af0b35ec6bdafd49ccb58a54db5348be69e04d5624235e1d7d60",
+  "dataset_manifest_sha256": "a047bf572d7a45235863fc7e8f626d7c96dee5698f16840cef90c49117ae3219",
+  "stage1_reference": {
+    "checkpoint": {
+      "epoch": 80,
+      "path": "weights/epoch_0080.pt",
+      "sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149"
+    },
+    "weights_used": "ema"
+  },
+  "proposal_generation": {
+    "cache_type": "06 post classwise NMS; preserve all cached Stage-1 outputs independently of crop Top-K",
+    "threshold": 0.05,
+    "top_k": 60,
+    "context_scale": 3.0,
+    "context_definition": "multiply anchor width and height; symmetric; floor/ceil; clip to original image; exact crop dedup"
+  },
+  "merge": {
+    "implementation_protocol_id": "hycado_crop_merge_development_v1",
+    "algorithm": "deterministic greedy heap; rank worst original-member axis growth, pair hull waste, gap, stable ids",
+    "source_code_hashes": {
+      "crop_merge.py": "3df67a7c697bcb851d44ae52c2fe8f0bdc992a13babffa7ef570487240c5dac4",
+      "merge_geometry.py": "39938c224256538f639182350711784770b6760044986370f4be0b946f619a81"
+    },
+    "policy": {
+      "name": "near_z3",
+      "max_gap_ratio": 0.5,
+      "max_axis_growth": 3.0,
+      "max_pair_hull_ratio": 2.0
+    },
+    "requested_crop_count": 10,
+    "requested_crop_count_is_hard_cap": false,
+    "inherited_crop_count_hard_upper_bound": 60,
+    "budget_failure_policy": "Retain every remaining crop; never discard a region to force requested count"
+  },
+  "evaluation_proxy": {
+    "resolution": 960,
+    "input_geometry": "square scale-fill; visible short side conditional on IoA90",
+    "coverage": "At least 90 percent GT area within one crop; class-agnostic geometry",
+    "small_definition": "Original GT area <1024 square pixels",
+    "pixel_size_thresholds_are_recognition_guarantees": false
+  },
+  "observed_development": {
+    "images": 647,
+    "targets": 33401,
+    "small_targets": 19796,
+    "mean_crops": 16.510046367851622,
+    "p95_crops": 25,
+    "crop_call_reduction_vs_base": 0.6511772197367991,
+    "budget_met_rate": 0.1839258114374034,
+    "budget_unmet_images": 528,
+    "coverage_ioa90": 0.8428789557198886,
+    "small_coverage_ioa90": 0.7653061224489796,
+    "small_coverage90_min8px": 0.7652556071933724,
+    "small_coverage90_min16px": 0.7630329359466559,
+    "small_paired_view_ratio_p10": 0.40191114420451723,
+    "small_paired_view_ratio_median": 0.5681818181818182,
+    "small_lost_min8px": 0,
+    "small_gained_min8px": 667
+  },
+  "paired_reference": {
+    "unmerged_control": {
+      "id": "c3_base",
+      "mean_crops": 47.33075734157651,
+      "coverage_ioa90": 0.818538367114757,
+      "small_coverage_ioa90": 0.7316124469589816
+    },
+    "moderate_merge_ablation_to_retain": {
+      "id": "c3_near_z2_b10",
+      "mean_crops": 24.168469860896444,
+      "coverage_ioa90": 0.8274003772342146,
+      "small_coverage_ioa90": 0.7435845625378864
+    }
+  },
+  "data_roles": {
+    "training_images": 5824,
+    "development_images": 647,
+    "both_from_official_train": true,
+    "official_val_images": 548,
+    "official_val_used_for_this_decision": false,
+    "train_proposals_are_in_sample_stage1_predictions": true,
+    "GT_used_to_place_or_merge_crops": false
+  },
+  "not_yet_frozen": {
+    "crop_partial_GT_and_ignore_policy": "Requires explicit implementation and verification before crop training",
+    "crop_training_sampling_and_step_budget": "Set from actual training crop counts and measured local training cost; do not automatically repeat 80 epochs over every crop",
+    "RTDETR_accuracy_and_runtime": "Not measured by study 07",
+    "official_VisDrone_evaluator": "Reference compatibility verification still required"
+  },
+  "old_experiment_artifacts_used": false,
+  "notes_tr": [
+    "Bu seçim ilk crop veri hazırlığının geliştirme referansıdır; nihai doğruluk optimumu değildir.",
+    "b10 hedefi yumuşaktır: yalnız 119/647 görüntü 10 crop veya altına inmiştir; P95=25 kesin maksimum değildir.",
+    "Birleşim sonrası başlangıçta kapsanan küçük nesnelerin en iyi görünür kısa kenar oranı medyanı 0.56818; gerçek model başarısı ayrıca ölçülecek.",
+    "Geometri çalışmaları tamamlandıktan sonra bu politikayla gerçek crop sayısı, etiket denetimi ve eğitim maliyeti ölçümüne geçilecek."
+  ]
+}
