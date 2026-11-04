@@ -1,7 +1,9 @@
 # External artifact staging (not a public weight release)
 
 The five stage-26 inputs were collected and independently SHA256/ZIP checked for
-the accompanying distribution bundle. Their public download URL remains pending.
+the accompanying distribution bundle. The staging script accepts the five files
+beside the script, in a nested extraction directory, or in the exact unopened
+bundle ZIP. Their public download URL remains pending.
 The three selected `.pt` weights are not included in this source checkout or the
 companion bundle. Source hashes are in `manifests/checkpoints.json` and
 `manifests/global_fusion_inputs.json`.

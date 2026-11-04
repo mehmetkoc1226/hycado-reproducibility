@@ -4,7 +4,7 @@ Python standard library only. No torch, model load, training, or inference.
 Does not upload or publish anything. All originals remain untouched.
 """
 from __future__ import annotations
-import argparse,hashlib,json,os,shutil,sys,zipfile
+import argparse,hashlib,json,os,shutil,tempfile,zipfile
 from pathlib import Path
 
 CHECKPOINTS={
@@ -13,6 +13,8 @@ CHECKPOINTS={
  'full':('rtdetr_full_image_v1_seed42','full_epoch_0080.pt'),
 }
 BLOCK=4*1024*1024
+BUNDLE='HyCADO_Adim2_Tahmin_Girdileri_v1.zip'
+BUNDLE_SHA256='7aa3d9bfdef044444f7fa4c46f2113b0bd39297e5145c5cdfea03bc26b7a6b6d'
 
 def digest(path):
  h=hashlib.sha256()
@@ -30,6 +32,38 @@ def check_zip(path):
  with zipfile.ZipFile(path) as z:
   bad=z.testzip()
   if bad:raise ValueError('Corrupt ZIP member: '+bad)
+
+def candidate_dirs(root):
+ if not root.is_dir():return []
+ result=[root]
+ for child in sorted(root.iterdir()):
+  if child.is_dir() and child.name!='release_stage':
+   result.append(child)
+   result.extend(sorted(p for p in child.iterdir() if p.is_dir()))
+ return result
+
+def locate_inputs(root,expected):
+ """Accept same-level files, a nested extraction, or the unopened exact bundle."""
+ dirs=candidate_dirs(root)
+ complete=[d for d in dirs if all((d/n).is_file() for n in expected)]
+ if len(complete)>1:raise ValueError('Multiple complete input directories: '+', '.join(map(str,complete)))
+ if complete:return complete[0],None
+ bundles=[d/BUNDLE for d in dirs if (d/BUNDLE).is_file()]
+ if len(bundles)>1:raise ValueError('Multiple prediction bundles: '+', '.join(map(str,bundles)))
+ if not bundles:return root,None
+ archive=bundles[0];verified(archive,BUNDLE_SHA256)
+ temp=tempfile.TemporaryDirectory(prefix='hycado_prediction_inputs_')
+ folder=Path(temp.name)
+ try:
+  with zipfile.ZipFile(archive) as z:
+   if set(expected)-set(z.namelist()):raise ValueError('Bundle members missing')
+   for name,sha in expected.items():
+    # Explicit names only: no extraction of arbitrary paths from the ZIP.
+    with z.open(name) as src,(folder/name).open('wb') as dst:shutil.copyfileobj(src,dst,BLOCK)
+    verified(folder/name,sha)
+  return folder,temp
+ except BaseException:
+  temp.cleanup();raise
 
 def sources(project,inputs,manifest):
  specs=[]
@@ -49,36 +83,40 @@ def run(project,inputs,out,manifest_dir,stage):
  m={'checkpoints':json.loads((manifest_dir/'checkpoints.json').read_text()),
     'inputs':json.loads((manifest_dir/'global_fusion_inputs.json').read_text())}
  if set(m['checkpoints'])!=set(CHECKPOINTS) or len(m['inputs']['files'])!=5:raise ValueError('Invalid fixed manifest')
- checked={};missing=[]
- for path,name,sha,is_zip in sources(project,inputs,m):
-  try:
-   row=verified(path,sha)
-   if is_zip:check_zip(path)
-   checked[name]=row
-  except FileNotFoundError:missing.append(name)
- if missing:
-  print(json.dumps({'status':'INCOMPLETE','verified':checked,'missing':missing},indent=2))
-  raise ValueError('Missing required files: '+', '.join(missing))
- if not stage:
-  print(json.dumps({'status':'VERIFIED','verified':checked,'staged':False},indent=2));return
- if project.resolve()==out.resolve() or inputs.resolve()==out.resolve():raise ValueError('Output cannot replace source root')
- out.mkdir(parents=True,exist_ok=True)
- for src,name,sha,_ in sources(project,inputs,m):
-  dest=out/name;dest.parent.mkdir(parents=True,exist_ok=True)
-  if dest.exists():verified(dest,sha)
-  else:
-   tmp=dest.with_name(dest.name+'.partial')
-   if tmp.exists():tmp.unlink() # Incomplete prior copy only; original is untouched.
-   shutil.copyfile(src,tmp)
-   verified(tmp,sha)
-   os.replace(tmp,dest)
-  print('STAGED:',name,flush=True)
- record={'status':'STAGED_VERIFIED','files':checked,
-  'source_repository':'https://github.com/mehmetkoc1226/hycado-reproducibility',
-  'scope':'exact bytes staged; no training, inference, or publication performed',
-  'public_download_urls':None}
- write_json(out/'manifest.json',record)
- print('STAGED VERIFIED:',len(checked),'files; manifest:',out/'manifest.json')
+ input_dir,temp=locate_inputs(inputs,m['inputs']['files'])
+ try:
+  checked={};missing=[]
+  for path,name,sha,is_zip in sources(project,input_dir,m):
+   try:
+    row=verified(path,sha)
+    if is_zip:check_zip(path)
+    checked[name]=row
+   except FileNotFoundError:missing.append(name)
+  if missing:
+   print(json.dumps({'status':'INCOMPLETE','verified':checked,'missing':missing},indent=2))
+   raise ValueError('Missing required files: '+', '.join(missing))
+  if not stage:
+   print(json.dumps({'status':'VERIFIED','verified':checked,'staged':False},indent=2));return
+  if project.resolve()==out.resolve() or inputs.resolve()==out.resolve():raise ValueError('Output cannot replace source root')
+  out.mkdir(parents=True,exist_ok=True)
+  for src,name,sha,_ in sources(project,input_dir,m):
+   dest=out/name;dest.parent.mkdir(parents=True,exist_ok=True)
+   if dest.exists():verified(dest,sha)
+   else:
+    tmp=dest.with_name(dest.name+'.partial')
+    if tmp.exists():tmp.unlink() # Incomplete prior copy only; original is untouched.
+    shutil.copyfile(src,tmp)
+    verified(tmp,sha)
+    os.replace(tmp,dest)
+   print('STAGED:',name,flush=True)
+  record={'status':'STAGED_VERIFIED','files':checked,
+   'source_repository':'https://github.com/mehmetkoc1226/hycado-reproducibility',
+   'scope':'exact bytes staged; no training, inference, or publication performed',
+   'public_download_urls':None}
+  write_json(out/'manifest.json',record)
+  print('STAGED VERIFIED:',len(checked),'files; manifest:',out/'manifest.json')
+ finally:
+  if temp is not None:temp.cleanup()
 
 def verify_staged(out):
  record=json.loads((out/'manifest.json').read_text())

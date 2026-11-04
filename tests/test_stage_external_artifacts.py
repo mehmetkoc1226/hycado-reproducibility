@@ -26,4 +26,30 @@ class StageTest(unittest.TestCase):
    with self.assertRaises(ValueError):s.verify_staged(out)
    with self.assertRaises(ValueError):s.run(project,inputs,out,man,True)
 
+ def test_nested_directory_and_unopened_bundle(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);names={'one.zip':'a','two.zip':'b','three.zip':'c','four.zip':'d','decision.md':'e'}
+   nested=root/'unpacked'/'files';nested.mkdir(parents=True)
+   expected={}
+   for name,value in names.items():
+    p=nested/name
+    if name.endswith('.zip'):
+     with zipfile.ZipFile(p,'w') as z:z.writestr('value.txt',value)
+    else:p.write_text(value)
+    expected[name]=s.digest(p)
+   self.assertEqual(s.locate_inputs(root,expected)[0],nested)
+   bundle=root/s.BUNDLE
+   with zipfile.ZipFile(bundle,'w') as z:
+    for name in names:z.write(nested/name,name)
+   for file in nested.iterdir():file.unlink()
+   actual_sha=s.BUNDLE_SHA256
+   try:
+    s.BUNDLE_SHA256=s.digest(bundle)
+    folder,temp=s.locate_inputs(root,expected)
+    try:
+     self.assertEqual({n:s.digest(folder/n) for n in names},expected)
+    finally:temp.cleanup()
+   finally:s.BUNDLE_SHA256=actual_sha
+   self.assertFalse(folder.exists())
+
 if __name__=='__main__':unittest.main()
