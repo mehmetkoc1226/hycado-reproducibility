@@ -1,0 +1,93 @@
+{
+  "id": "hycado_p2_official_val_v1",
+  "development_protocol_sha256": "7de91b5fa14633790834e6ce3040d416603ffbaab816edd4aa7fba301b29736b",
+  "development_metrics_sha256": "a532c30548c688951ed4a0039402d50ca2f5649c92d43b20cb621fdd106c2da9",
+  "development_prediction_index_sha256": "8c72b5c99566539869acac45b213bbf18fd35a50fc9a5c31a98a870f0b2c32c0",
+  "preflight_sha256": "d64ddc3a35fbd9313105e1632f31ac7c5e4c29ca1a53ea4b7dab54f4bb71b792",
+  "checkpoint_sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+  "official_manifest_sha256": "e2b610a276aea28c4d5d3ec47e45c381d4b4fc2b09f3ef20d57495a0677905fa",
+  "previous_baseline_protocol_sha256": "ae0ae6f46e530d4a2cdd3f699f490016a659a574e2fe3f7da0b3f6b947eafdd2",
+  "preflight_field_correction": {
+    "field": "split_identity.official_val.source_manifest_sha256",
+    "recorded_as_previous_baseline_protocol_file_sha256": "bf406f50d8441fc66346be30615ebdb94b009625e5946e5fa59dd1e5427e686f",
+    "actual_prepared_manifest_sha256": "e2b610a276aea28c4d5d3ec47e45c381d4b4fc2b09f3ef20d57495a0677905fa",
+    "independent_audit": "25_veri_model_denetim_rapor.zip/source_bindings.json"
+  },
+  "script_sha256": "27bd06ab7b3d834c60fb1734b9edde6e79db0eb29a2b764b17beab8c499365f8",
+  "development_script_sha256": "53ec58a853e3c93ca4363df9ec25df3fa08d808f5c5da31d1579a8cc979619b1",
+  "frozen_settings": {
+    "id": "hycado_p2_strong_baselines_v1",
+    "selection": "All settings specified before new baseline AP; no VAL-based tuning",
+    "development": "647 held-out images of official TRAIN, split=val in Stage-1 manifest",
+    "evaluation": "548 official VAL images only after development checks; already examined previously",
+    "methods": [
+      {
+        "id": "yolo800_repeat",
+        "imgsz": 800,
+        "purpose": "exact output parity and shared-session timing"
+      },
+      {
+        "id": "yolo1280",
+        "imgsz": 1280
+      },
+      {
+        "id": "yolo1536",
+        "imgsz": 1536
+      },
+      {
+        "id": "sahi640",
+        "slice_height": 640,
+        "slice_width": 640
+      },
+      {
+        "id": "sahi800",
+        "slice_height": 800,
+        "slice_width": 800
+      }
+    ],
+    "yolo": {
+      "weights": "stage1 seed42 final EMA",
+      "batch": 1,
+      "half": true,
+      "rect": true,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 1000,
+      "agnostic_nms": false,
+      "augment": false,
+      "device": "cuda:0"
+    },
+    "sahi": {
+      "package_version": "0.11.35",
+      "model_type": "ultralytics",
+      "model_input_size": 800,
+      "confidence_threshold": 0.001,
+      "overlap_height_ratio": 0.2,
+      "overlap_width_ratio": 0.2,
+      "perform_standard_pred": true,
+      "postprocess_type": "NMS",
+      "postprocess_match_metric": "IOU",
+      "postprocess_match_threshold": 0.5,
+      "postprocess_class_agnostic": false,
+      "max_output_for_evaluation": 500,
+      "note": "actual SAHI Ultralytics adapter; verify checkpoint loading and class indices before full run"
+    },
+    "metric": "pinned VisDrone DET toolkit AP; also AP50/AP75, class AP; no COCO mAP claim",
+    "runtime": "fresh same-session repeated end-to-end batch-one GPU timing, sync and warmup; report OOM",
+    "training": false
+  },
+  "methods": [
+    "yolo800_repeat",
+    "yolo1280",
+    "yolo1536",
+    "sahi640",
+    "sahi800"
+  ],
+  "images": 548,
+  "training": false,
+  "parameter_search": false,
+  "official_val_used": true,
+  "annotation_policy": "not opened until every inference result is committed",
+  "metric": "same pinned toolkit-aligned Python evaluator as completed development; provisional",
+  "timing": "diagnostic only; no end-to-end FPS or Pareto claim"
+}

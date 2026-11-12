@@ -1,0 +1,17 @@
+{
+  "code": {
+    "optimized_runtime.py": "d61308b9afeab5bbc1f046df699d2a3b66b9e8ebf78de95a1ce49218e37b6d78",
+    "runtime_benchmark.py": "2ef452b2d98cede91da6dd3fff2c160c0d16d2ac81abb43095b073de59dc9b4d",
+    "nms_equivalence.py": "0ce3781e35d1d2dfd1481b276aecc3c154aa2f40133ece6339be6481f0658d88",
+    "crop_data.py": "a0a1d3c25607277b72605277f9fb2e2cc03c78bedb6aaa2fbc2d0bbc46a8720f",
+    "crop_capture.py": "0f8495863eb22f11da8fe618c046cfa703dc9eb4754ba8293837becc3bd9edac",
+    "crop_training_v2.py": "bd6d1fd2bcf575272685c4fe0f392f89faa2555c4fb9133bc0709023bb1ef4cf",
+    "dev_evaluation.py": "3e7a2c7e79d75c6841bd57824723f84da269abf8a8cbf5d2e3415803697ddf11",
+    "proposal_geometry.py": "3a7015d30f4178a48abd3dd08031fead4a10b2338cfb23c0d28a12d276b4b182",
+    "proposals.py": "f2d4049cad20e674391b7f5d678fedb3bc29af24d4dabaf7cfe2bb83b43e0490"
+  },
+  "manifest": "a047bf572d7a45235863fc7e8f626d7c96dee5698f16840cef90c49117ae3219",
+  "checkpoint": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+  "p2_index": "8c72b5c99566539869acac45b213bbf18fd35a50fc9a5c31a98a870f0b2c32c0",
+  "p2_protocol": "df5bc6a3a40057d70af477b8916b8505f30d68c4f2ef48e1fd0dc71a8b8b7105"
+}

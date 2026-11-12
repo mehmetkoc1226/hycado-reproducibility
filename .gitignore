@@ -16,3 +16,6 @@ reports/
 *.mat
 *.log
 historical/experiments/experiments/
+
+# Small frozen diagnostic/source reports required by the v12 CPU checks.
+!paper_assets/v12/evidence/val_diagnostics/*.zip

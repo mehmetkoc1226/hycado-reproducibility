@@ -1,0 +1,12 @@
+{
+  "status": "PREFLIGHT_OK",
+  "protocol_sha256": "61c062fb5af135098b39c4c423f9bfff4f44ae2ce7794572a3bac832163dbe3c",
+  "development_exact_images": 3,
+  "testdev_pilot_images": 8,
+  "original_hycado800_replay_exact": true,
+  "testdev_annotation_rows_parsed": false,
+  "estimated_remaining_inference_hours": 0.9468915645581001,
+  "estimate_excludes": "CPU metrics/bootstrap and setup; approximate subset estimate",
+  "training": false,
+  "cached_global_predictions_reused": true
+}

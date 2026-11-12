@@ -1,0 +1,13 @@
+{
+  "scope": "Original diagnostic source archives kept outside this public update. Table regeneration uses the two included, hash-verified result reports.",
+  "files": {
+    "HyCADO_16_VAL_Boyut_Yogunluk_CPU.zip": {
+      "sha256": "57de402eca198d7fb2e10e2a8a010e4113e65b075e87aa36610be166e0ff9aad",
+      "download_url": null
+    },
+    "HyCADO_17_Esit_Yanlis_Alarm_CPU.zip": {
+      "sha256": "ad3af76cbe7b1c01f73f5d6de628bca4797556223cd0fd511949469dfd1c4532",
+      "download_url": null
+    }
+  }
+}

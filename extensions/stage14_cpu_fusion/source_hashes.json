@@ -1,0 +1,13 @@
+{
+  "code": {
+    "score_ablation.py": "c83892eb69d09b4cba1ff287192e07684d55ea8eebaf2206064661d453fcaf5d",
+    "dev_evaluation.py": "3e7a2c7e79d75c6841bd57824723f84da269abf8a8cbf5d2e3415803697ddf11",
+    "dev_metrics.py": "d87a27c597393e80704bc544312ede5a571a55f387ea3728e4f16a807dbf6a9b",
+    "proposal_geometry.py": "3a7015d30f4178a48abd3dd08031fead4a10b2338cfb23c0d28a12d276b4b182"
+  },
+  "manifest": "a047bf572d7a45235863fc7e8f626d7c96dee5698f16840cef90c49117ae3219",
+  "checkpoint": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+  "p2_metrics": "a532c30548c688951ed4a0039402d50ca2f5649c92d43b20cb621fdd106c2da9",
+  "pilot_a_metrics": "9ec3ff86a010d8bc07465714de5ac1cffa48bdfcefff4304acd131dedae13927",
+  "p2_script": "53ec58a853e3c93ca4363df9ec25df3fa08d808f5c5da31d1579a8cc979619b1"
+}

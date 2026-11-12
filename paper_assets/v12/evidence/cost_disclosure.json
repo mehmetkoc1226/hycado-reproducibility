@@ -1,0 +1,6 @@
+{
+  "original_hycado800_mean_ms": 1116.504438929807,
+  "hardware": "NVIDIA GeForce RTX 3060 Ti",
+  "measurement": "Original warmed sequential batch-one VAL session; not a timing measurement for test-dev 1280 variants.",
+  "source": "paper_assets/evidence/results.json:runtime_common.variants.hybrid_a025.mean_ms"
+}

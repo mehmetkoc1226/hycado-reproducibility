@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "images": 647,
+  "crops": 10682,
+  "nms_only_changed_images": 136,
+  "baseline_checks": "P2 YOLO-1280 and Pilot A all crops matched",
+  "AP_gain_vs_yolo1280_pp": 0.8192158341498974,
+  "AP_gain_vs_nms_only_pp": 0.8191051308963111,
+  "training": false,
+  "inference": false,
+  "latency_measured": false,
+  "official_val_used": false
+}

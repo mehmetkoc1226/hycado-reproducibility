@@ -1,19 +1,22 @@
 # Release status
 
-Source publication on 3 November 2026: https://github.com/mehmetkoc1226/hycado-reproducibility. Use an immutable commit URL to cite the source snapshot. A complete external-artifact release has not been published.
+The public source repository now contains the recorded-result materials for manuscript v12. Cite an immutable commit URL for the exact revision used.
 
-| Component | Current status |
+| Component | Status |
 |---|---|
-| Historical code and fixed recipes | Included; source hashes retained |
-| Exact source-role lists | Included: 5824 / 647 / 548 |
-| Recorded image/annotation/checkpoint identities | Included |
-| Metric master and table/plot generator | Included; numerical table replay checked |
-| CPU fusion source and unit tests | Included |
-| Full original images and annotations | Obtain from official maintainers |
-| Trained checkpoints | Hashes included; public weight hosting pending |
-| Frozen prediction replay inputs | Hashes included; public archive hosting pending |
-| Public GitHub source repository | Source snapshot published; cite its commit as recorded in the manuscript |
-| Fresh end-to-end training replication | Not performed or validated in package preparation |
-| Project-wide release license | No new license grant assigned by this preparation |
+| Historical code, fixed recipes and provenance | Included; original bytes retained |
+| Exact original source roles | Included: 5824 training / 647 internal development / 548 VAL |
+| Test-dev membership and recorded JPEG identities | Included: 1610 images |
+| Current v12 tables and CPU regeneration | Included: 11 byte-checked LaTeX files |
+| Higher-resolution and SAHI VAL results | Included with paired intervals and retained official-VAL implementation |
+| VAL false-positive/size/count results and table checks | Included with source-bound reports |
+| Original stage16/stage17 diagnostic source ZIPs | Retained externally; hashes recorded |
+| Completed stage 18–20 reports and implementations | Included; no new GPU execution during this update |
+| Historical stage-26 CPU fusion source and tests | Included |
+| Official images and annotations | Obtain from dataset maintainers |
+| Trained checkpoint downloads | Recorded hashes included; public hosting pending |
+| Full frozen prediction downloads | Recorded hashes included; public hosting pending |
+| Fresh-clone end-to-end training replication | Not validated |
+| Project-wide license | No new license grant assigned by this update |
 
-The accompanying manuscript subsection identifies this repository and its immutable source commit. It does not state that unavailable external files are publicly downloadable. Model/prediction downloads and a validated fresh-clone training workflow remain separate outstanding tasks.
+The initial preparation_validation.json retains the state on its original preparation date. The v12 validation record separately describes this update. Source publication does not by itself complete the external-artifact release.

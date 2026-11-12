@@ -25,3 +25,23 @@ Those retained input files exist in the authors' workflow, but public download l
 ## Future public release record
 
 When external files are published, add their actual URLs, byte sizes, existing SHA256 values and immutable release identifiers. Do not invent a DOI or use a changing branch URL as an immutable snapshot. Keep publication status explicit until the files are accessible.
+
+## Test-dev and resolution-extension artifacts
+
+The 18–20 protocols, metric summaries, intervals, source identities and prediction indexes are included under paper_assets/v12/evidence/extensions/. Exact inference sources are under extensions/stage18, stage19 and stage20. The report indexes identify retained outputs; they do not contain complete per-detection predictions or raw crop queries.
+
+The large predictions.sqlite3 files remain external:
+
+| Local experiment folder | Stage |
+|---|---|
+| experiments/testdev_frozen_v1_seed42 | 18 |
+| experiments/full1280_development_v1_seed42 | 19 |
+| experiments/testdev1280_extension_v1_seed42 | 20 |
+
+Their exact recorded SHA256 values and pending-download status are in manifests/extension_prediction_inputs.json. Stage20 depends on the exact stage18/stage19 reports and databases, as well as the official data, selected checkpoints and original project prerequisites. Its source retains these checks; publishing a report does not make a fresh-clone GPU replay self-contained.
+
+All official data remain with the dataset maintainers. Test-dev filenames and JPEG hashes are recorded in the stage18 dataset manifest. This records exact-file identities, not independently verified scene identities.
+
+## Diagnostic source packages
+
+The two small VAL diagnostic result reports are included and suffice for table regeneration and count consistency checks. The original stage16/stage17 diagnostic source ZIPs are retained externally for now; their identities are recorded in manifests/diagnostic_source_inputs.json. This update does not claim public distribution of those two source packages.

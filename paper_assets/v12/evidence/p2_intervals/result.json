@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "images": 548,
+  "methods": [
+    "hybrid_a025",
+    "yolo800_repeat",
+    "yolo1280",
+    "yolo1536",
+    "sahi640",
+    "sahi800"
+  ],
+  "draws_per_mode": 1000,
+  "no_training": true,
+  "no_GPU_inference": true
+}

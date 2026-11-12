@@ -1,0 +1,35 @@
+[
+  {
+    "image": "images/train/0000036_00500_d_0000046.jpg",
+    "stem": "0000036_00500_d_0000046",
+    "width": 960,
+    "height": 540,
+    "image_sha256": "a3ddc46a17ccc9dd6eec31bee224f52b1e24b331dbcc96d5b8d9761f6d3927bc",
+    "annotation_sha256": "690f847c8547abbe8bd0af781c7b19ee7082cd6c6b9bf87e696bcdc8dfe0c803",
+    "data_image": "images/val/0000036_00500_d_0000046.jpg",
+    "p2_path": "development_predictions/yolo1280/0000036_00500_d_0000046.json",
+    "p2_sha256": "64a64fecba12df16243b58b8ded42af073d2d29b73c64b4e8eb9dcf69b184f8b"
+  },
+  {
+    "image": "images/train/0000036_03591_d_0000048.jpg",
+    "stem": "0000036_03591_d_0000048",
+    "width": 960,
+    "height": 540,
+    "image_sha256": "6e06bf4b4a0c46f9f3eea55f3b4bf555f3fce217814c5940f51ac485b06ada29",
+    "annotation_sha256": "2f310e29be34040801904983e61f24094456fe55124ea2397d301442295c1d72",
+    "data_image": "images/val/0000036_03591_d_0000048.jpg",
+    "p2_path": "development_predictions/yolo1280/0000036_03591_d_0000048.json",
+    "p2_sha256": "e7240f2b89f3f1b247cc8b4dabff2e0b57affa1ff0742ca4af1223404a9d3f74"
+  },
+  {
+    "image": "images/train/0000042_01000_d_0000074.jpg",
+    "stem": "0000042_01000_d_0000074",
+    "width": 960,
+    "height": 540,
+    "image_sha256": "9bd6680f9898c33613b08cf4a55ee7fa21b5b6f2e7cced3c93e9bc02a7e90a43",
+    "annotation_sha256": "77f22b15187357e91ecbf3316c3d7c09d5695cc556c5e2f7a8b52c9eb0fd596e",
+    "data_image": "images/val/0000042_01000_d_0000074.jpg",
+    "p2_path": "development_predictions/yolo1280/0000042_01000_d_0000074.json",
+    "p2_sha256": "0adeaae8e971827041ab48caa76ad56d36135f6604a1093176cb2c62b9b6e53e"
+  }
+]

@@ -40,3 +40,17 @@ The final states use seed 42 and fixed 80-round budgets. Historical recipes pres
 Historical code validates exact upstream metadata and code hashes. In particular, `crop_experiment.validate_calibration` checks the retained calibration protocol/history and `configuration` checks catalog and dependency identities. Full-image training and evaluation depend on additional stage records. A fresh calibration run can generate different metadata even when scientific settings agree. Do not bypass these checks and describe the result as an already validated reproduction.
 
 The included split text files specify exact membership. They do not replace sampler schedules, pixel identities or historical source-order fingerprints.
+
+## Later completed comparisons for manuscript v12
+
+These labels belong to the later extension series and are separate from the original numbered training stages above. They document completed runs; no rerun is needed for this repository update.
+
+| Source directory | Entry point | Recorded role |
+|---|---|---|
+| extensions/p2_official_val | p2_official_val.py | 548-image VAL; YOLO-1280/1536 and SAHI-640/800 |
+| extensions/stage14_cpu_fusion | fusion1280.py | 647-image development replay with 800-based regions and 1280 global predictions |
+| extensions/stage18 | testdev.py | 1610-image test-dev; original cascade, two global resolutions, three relocations |
+| extensions/stage19 | run1280.py | 647-image internal development; full 1280 variant and NMS-only control |
+| extensions/stage20 | test1280.py | 1610-image test-dev; two fixed 1280 cascade variants |
+
+Keep each source package with its engine/ and evidence/ directories. Launchers preserve the original Windows project default and accept overrides documented in each ONCE_OKUYUN.md. They require retained project state, exact checkpoint bytes, earlier reports and prediction databases. Source and result publication here does not remove those dependencies. See V12_UPDATE.md for scope and the distinction between the original and exploratory test-dev evaluations.

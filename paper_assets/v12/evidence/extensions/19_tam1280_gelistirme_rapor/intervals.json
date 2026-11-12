@@ -1,0 +1,53 @@
+{
+  "replicates_requested": 1000,
+  "valid_replicates": 1000,
+  "proxy_cluster_count": 27,
+  "differences_pp": {
+    "hybrid1280_minus_yolo1280": {
+      "AP": {
+        "point": 0.7584186623551439,
+        "lower95": 0.47182402281219904,
+        "upper95": 1.217133087916779
+      },
+      "AP50": {
+        "point": 0.9735729879067989,
+        "lower95": 0.4494663199447535,
+        "upper95": 1.8245409669053492
+      },
+      "AP75": {
+        "point": 0.9047349610409654,
+        "lower95": 0.6218504447147057,
+        "upper95": 1.3440380306776305
+      },
+      "AR500": {
+        "point": 3.061031539714591,
+        "lower95": 2.100142849799244,
+        "upper95": 4.461662102440039
+      }
+    },
+    "hybrid1280_minus_yolo1280_nms_only": {
+      "AP": {
+        "point": 0.7583079591015647,
+        "lower95": 0.4717166311761156,
+        "upper95": 1.2172638521114727
+      },
+      "AP50": {
+        "point": 0.9722523271614278,
+        "lower95": 0.4478517422914745,
+        "upper95": 1.8230370068299582
+      },
+      "AP75": {
+        "point": 0.9051663779093531,
+        "lower95": 0.6217853020481428,
+        "upper95": 1.3451753431870992
+      },
+      "AR500": {
+        "point": 3.0643036583222028,
+        "lower95": 2.101246602462948,
+        "upper95": 4.4652544060572446
+      }
+    }
+  },
+  "scope": "exploratory, previously examined TRAIN development, fixed weights",
+  "interval": "paired proxy-cluster percentile 95%; no training seed uncertainty"
+}

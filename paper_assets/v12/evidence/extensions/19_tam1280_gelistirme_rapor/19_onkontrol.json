@@ -1,0 +1,10 @@
+{
+  "status": "PREFLIGHT_OK",
+  "protocol_sha256": "c17ee0d8f1eb08bc2ebb882ebb8c0b6cf91f6800b9ca36a08e69afc37cb07331",
+  "fresh_yolo1280_exact_images": 3,
+  "crop_pilot_exact_images": 8,
+  "estimated_remaining_inference_hours": 0.3405449768752078,
+  "estimate_excludes": "setup, CPU metrics/bootstrap; nonrepresentative pilot subset",
+  "new_crop_calls": 158,
+  "annotation_rows_parsed": false
+}

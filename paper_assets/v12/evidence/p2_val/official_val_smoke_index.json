@@ -1,0 +1,107 @@
+{
+  "protocol_sha256": "5c2203059c03a360f02fceacce034a92a238b5f8efadb7fe7fdd726fe059b59f",
+  "methods": {
+    "yolo800_repeat": [
+      {
+        "source_image": "images/val/0000001_02999_d_0000005.jpg",
+        "path": "official_val_predictions/yolo800_repeat/0000001_02999_d_0000005.json",
+        "sha256": "8ef02a7d7d0d13ea5bf9199363d42700d665f0bef96fce22c1ec5765c49e4326",
+        "detections": 421
+      },
+      {
+        "source_image": "images/val/0000001_03499_d_0000006.jpg",
+        "path": "official_val_predictions/yolo800_repeat/0000001_03499_d_0000006.json",
+        "sha256": "299b933b9119978df98e68668de7ccc0c537eda63234bee7a408be3b710836ec",
+        "detections": 526
+      },
+      {
+        "source_image": "images/val/0000001_03999_d_0000007.jpg",
+        "path": "official_val_predictions/yolo800_repeat/0000001_03999_d_0000007.json",
+        "sha256": "7a3cab45f37aae39c62ac16a7450278af0c5e486dd706555b10f84b76684f434",
+        "detections": 543
+      }
+    ],
+    "yolo1280": [
+      {
+        "source_image": "images/val/0000001_02999_d_0000005.jpg",
+        "path": "official_val_predictions/yolo1280/0000001_02999_d_0000005.json",
+        "sha256": "89527d04f9afe1ed08d4e5d193c84d30943668f8af887796a12cb59e0ae6aa6f",
+        "detections": 507
+      },
+      {
+        "source_image": "images/val/0000001_03499_d_0000006.jpg",
+        "path": "official_val_predictions/yolo1280/0000001_03499_d_0000006.json",
+        "sha256": "f0d2ce260d1552f9fb9b7551c18f7b8215d059c5270b7fe403f47f9895004b7f",
+        "detections": 524
+      },
+      {
+        "source_image": "images/val/0000001_03999_d_0000007.jpg",
+        "path": "official_val_predictions/yolo1280/0000001_03999_d_0000007.json",
+        "sha256": "98934b5315872fbfd8da99a92da82b8c618ac4d9ffeb3e4f9d32d52ce5d8f4cc",
+        "detections": 618
+      }
+    ],
+    "yolo1536": [
+      {
+        "source_image": "images/val/0000001_02999_d_0000005.jpg",
+        "path": "official_val_predictions/yolo1536/0000001_02999_d_0000005.json",
+        "sha256": "ce605d3648ce978c52cdf10a2cc334c0cb603356c73982abc2cf678bd6450443",
+        "detections": 599
+      },
+      {
+        "source_image": "images/val/0000001_03499_d_0000006.jpg",
+        "path": "official_val_predictions/yolo1536/0000001_03499_d_0000006.json",
+        "sha256": "e1dd32c572fccf909c94bbc12d5cf7557d66b2a0a57e0a9c9eb47e52d8fdc69f",
+        "detections": 718
+      },
+      {
+        "source_image": "images/val/0000001_03999_d_0000007.jpg",
+        "path": "official_val_predictions/yolo1536/0000001_03999_d_0000007.json",
+        "sha256": "579508c37dedad6dc0082fe9ec2449fbd87d4d06a8dbbc33d36e694cdbcc973d",
+        "detections": 628
+      }
+    ],
+    "sahi640": [
+      {
+        "source_image": "images/val/0000001_02999_d_0000005.jpg",
+        "path": "official_val_predictions/sahi640/0000001_02999_d_0000005.json",
+        "sha256": "136ad35ba6889a81d9569ae91edf2fcc202efd0472e97722a0917eb37b893568",
+        "detections": 700
+      },
+      {
+        "source_image": "images/val/0000001_03499_d_0000006.jpg",
+        "path": "official_val_predictions/sahi640/0000001_03499_d_0000006.json",
+        "sha256": "9bbf17c3b209cb1a0ee7f7500a452dec2d8c981722336d50e18b38df312f6281",
+        "detections": 774
+      },
+      {
+        "source_image": "images/val/0000001_03999_d_0000007.jpg",
+        "path": "official_val_predictions/sahi640/0000001_03999_d_0000007.json",
+        "sha256": "cf6d17fc922d37e4412d9d8fdfbd9767f45e58f73210472eb92041c76107ee55",
+        "detections": 637
+      }
+    ],
+    "sahi800": [
+      {
+        "source_image": "images/val/0000001_02999_d_0000005.jpg",
+        "path": "official_val_predictions/sahi800/0000001_02999_d_0000005.json",
+        "sha256": "6dda64f1b8ae66c427685abace2aed6b50f4103103585e0eab46df113806237c",
+        "detections": 660
+      },
+      {
+        "source_image": "images/val/0000001_03499_d_0000006.jpg",
+        "path": "official_val_predictions/sahi800/0000001_03499_d_0000006.json",
+        "sha256": "f1ebf17b2a44fa16ca453f7b223c4fb62c9a8403839872fdaf6db852e07dc34c",
+        "detections": 783
+      },
+      {
+        "source_image": "images/val/0000001_03999_d_0000007.jpg",
+        "path": "official_val_predictions/sahi800/0000001_03999_d_0000007.json",
+        "sha256": "85b62c546c1d10249b50e5bbf8862569c05c60997e469711bc6e315c212adad2",
+        "detections": 729
+      }
+    ]
+  },
+  "images_per_method": 3,
+  "yolo800_exact_frozen_parity": true
+}

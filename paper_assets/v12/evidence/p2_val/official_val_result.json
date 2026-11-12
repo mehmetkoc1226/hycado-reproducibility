@@ -1,0 +1,15 @@
+{
+  "status": "OFFICIAL_VAL_COMPLETE",
+  "images": 548,
+  "methods": [
+    "yolo800_repeat",
+    "yolo1280",
+    "yolo1536",
+    "sahi640",
+    "sahi800"
+  ],
+  "training": false,
+  "parameter_search": false,
+  "yolo800_exact_frozen_parity": true,
+  "old_baseline_metric_parity": true
+}

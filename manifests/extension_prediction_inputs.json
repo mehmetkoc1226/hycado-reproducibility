@@ -1,0 +1,32 @@
+{
+  "scope": "Full prediction databases are external; included report summaries do not replace them.",
+  "files": [
+    {
+      "stage": 18,
+      "author_project_path": "experiments/testdev_frozen_v1_seed42/predictions.sqlite3",
+      "sha256": "47c13d27e4effe7bd014d7d7cbaed65b342c8c14c4c0c8d1c520e9cb9a8f70e6",
+      "images": 1610,
+      "download_url": null,
+      "publication_status": "pending",
+      "identity_source": "paper_assets/v12/evidence/extensions/18_testdev_dogrulama_rapor/result.json"
+    },
+    {
+      "stage": 19,
+      "author_project_path": "experiments/full1280_development_v1_seed42/predictions.sqlite3",
+      "sha256": "63bc0681b64b682340679cb1e482735c3d9a1389484bd5d8c49ef8550ce4f6d1",
+      "images": 647,
+      "download_url": null,
+      "publication_status": "pending",
+      "identity_source": "paper_assets/v12/evidence/extensions/19_tam1280_gelistirme_rapor/result.json"
+    },
+    {
+      "stage": 20,
+      "author_project_path": "experiments/testdev1280_extension_v1_seed42/predictions.sqlite3",
+      "sha256": "3d3c68aac45e4931b7dfd4bbc5243d114552d19d51eec32e378c1898e27cf7b3",
+      "images": 1610,
+      "download_url": null,
+      "publication_status": "pending",
+      "identity_source": "paper_assets/v12/evidence/extensions/20_testdev1280_rapor/result.json"
+    }
+  ]
+}

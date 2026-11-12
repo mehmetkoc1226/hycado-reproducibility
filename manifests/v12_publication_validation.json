@@ -1,0 +1,17 @@
+{
+  "status": "PASSED",
+  "date": "2026-11-12",
+  "baseline_source_commit": "c80666a4a568d12e459a7fbc0acc81cea8518765",
+  "manuscript_revision": "v12",
+  "v12_latex_files_reproduced_byte_identically": 11,
+  "legacy_latex_files_reproduced_byte_identically": 4,
+  "packaging_staging_tests_passed": 5,
+  "stage26_fusion_unit_tests_passed": 3,
+  "extension_source_members_checked": 147,
+  "python_sources_compile": 246,
+  "original_training_and_fusion_sources_unchanged": true,
+  "new_training": false,
+  "new_inference": false,
+  "full_prediction_replay_rerun": false,
+  "external_artifact_hosting_completed": false
+}

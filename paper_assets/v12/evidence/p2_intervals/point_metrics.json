@@ -1,0 +1,690 @@
+{
+  "methods": {
+    "hybrid_a025": {
+      "AP": 29.98704960527791,
+      "AP50": 50.67306214833281,
+      "AP75": 29.795056121787,
+      "AR1": 1.2131869138447355,
+      "AR10": 8.49680846436082,
+      "AR100": 36.02094046542501,
+      "AR500": 44.5884106530552,
+      "class_macro_AP_separate_diagnostic": 29.304540156150797,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 28.814625223917204,
+          "AP50": 58.99924304998021,
+          "AP75": 23.66943782974044,
+          "AR500": 43.85663978189254
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 19.758665123642192,
+          "AP50": 46.04488530749177,
+          "AP75": 12.670475192689496,
+          "AR500": 36.99491989058226
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 13.778824129525807,
+          "AP50": 28.398528392771965,
+          "AP75": 11.945774653754379,
+          "AR500": 32.26917057902973
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 60.21134131626095,
+          "AP50": 83.90815927485195,
+          "AP75": 67.9051313281032,
+          "AR500": 67.86879381885821
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 34.34491854526269,
+          "AP50": 46.40885425557493,
+          "AP75": 39.977382823953434,
+          "AR500": 46.98935631018753
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 30.70198003544192,
+          "AP50": 44.53857801629769,
+          "AP75": 33.7066291427975,
+          "AR500": 46.149732620320854
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 21.41334206322669,
+          "AP50": 35.67804266085986,
+          "AP75": 21.95540655524904,
+          "AR500": 37.34674329501915
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 11.356801879535444,
+          "AP50": 17.482395741616017,
+          "AP75": 12.74864649579381,
+          "AR500": 27.859848484848488
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 45.01738709880532,
+          "AP50": 60.78719855608503,
+          "AP75": 51.68366862795655,
+          "AR500": 54.453441295546554
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 27.647516145889718,
+          "AP50": 57.52075705653371,
+          "AP75": 22.611754754434727,
+          "AR500": 44.44899631298649
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 31008,
+          "FP": 241940,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 20633,
+          "FP": 252315,
+          "ignored_detections": 0
+        }
+      }
+    },
+    "yolo800_repeat": {
+      "AP": 27.839111813361484,
+      "AP50": 47.16422913643969,
+      "AP75": 27.66024972743162,
+      "AR1": 1.2131869138447355,
+      "AR10": 8.48848561400404,
+      "AR100": 33.995556854918505,
+      "AR500": 37.94092723502017,
+      "class_macro_AP_separate_diagnostic": 27.44386575525568,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 25.11485091755643,
+          "AP50": 52.734387254533466,
+          "AP75": 20.34225067778789,
+          "AR500": 33.63626036578439
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 15.620330265900245,
+          "AP50": 37.17933146905818,
+          "AP75": 9.80454289528041,
+          "AR500": 23.798358733880423
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 12.345788835373332,
+          "AP50": 25.60738400945234,
+          "AP75": 10.790078659656837,
+          "AR500": 24.804381846635366
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 58.755796411513515,
+          "AP50": 82.59392928929053,
+          "AP75": 65.6825675161824,
+          "AR500": 64.78394620117328
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 31.253326080954576,
+          "AP50": 41.78241237521397,
+          "AP75": 36.449378814540744,
+          "AR500": 40.081094779523575
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 29.27584463605084,
+          "AP50": 42.52694883958857,
+          "AP75": 32.08764524529286,
+          "AR500": 41.029411764705884
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 20.776205175674757,
+          "AP50": 34.84359592819647,
+          "AP75": 21.33593238163205,
+          "AR500": 35.43103448275862
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 10.588970918058987,
+          "AP50": 16.465241672397614,
+          "AP75": 11.798290317525133,
+          "AR500": 23.901515151515152
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 44.53154329552389,
+          "AP50": 61.72506842270491,
+          "AP75": 50.011106299613715,
+          "AR500": 49.19028340080972
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 26.176001015950202,
+          "AP50": 55.39821094160378,
+          "AP75": 21.056184470501975,
+          "AR500": 39.489963129864805
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 27420,
+          "FP": 124469,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 17563,
+          "FP": 134326,
+          "ignored_detections": 0
+        }
+      }
+    },
+    "yolo1280": {
+      "AP": 31.914405702502943,
+      "AP50": 54.25901332606035,
+      "AP75": 31.802120352764504,
+      "AR1": 1.256909189760192,
+      "AR10": 8.615989685009005,
+      "AR100": 38.17482545329562,
+      "AR500": 44.03677519787113,
+      "class_macro_AP_separate_diagnostic": 30.980934930208623,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 32.52605410263364,
+          "AP50": 65.72514356656596,
+          "AP75": 27.93219814667749,
+          "AR500": 43.862319663750995
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 19.991377181470437,
+          "AP50": 47.508459771010465,
+          "AP75": 13.158313677377953,
+          "AR500": 31.645173896053144
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 16.506018324471302,
+          "AP50": 34.00952344791474,
+          "AP75": 13.738875042342077,
+          "AR500": 33.5602503912363
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 62.94739774544153,
+          "AP50": 87.33831797231927,
+          "AP75": 70.80641711393642,
+          "AR500": 68.9304621548147
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 35.595638755380236,
+          "AP50": 48.13381902476688,
+          "AP75": 40.9250584316567,
+          "AR500": 46.675114039533696
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 32.26214644959974,
+          "AP50": 47.425335078116674,
+          "AP75": 36.07435371884442,
+          "AR500": 48.0614973262032
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 23.11455405009002,
+          "AP50": 39.702641923332,
+          "AP75": 23.6957893999141,
+          "AR500": 40.047892720306514
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 10.295490600023246,
+          "AP50": 15.303861114270049,
+          "AP75": 11.95053748878051,
+          "AR500": 22.102272727272727
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 46.18526697022539,
+          "AP50": 63.63794536772009,
+          "AP75": 53.24672300794385,
+          "AR500": 52.10526315789474
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 30.385405122750665,
+          "AP50": 62.987667716840036,
+          "AP75": 25.214730426201097,
+          "AR500": 43.99221630479312
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 30860,
+          "FP": 140845,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 20361,
+          "FP": 151344,
+          "ignored_detections": 0
+        }
+      }
+    },
+    "yolo1536": {
+      "AP": 30.996366708037275,
+      "AP50": 53.154625326593326,
+      "AP75": 30.57002811009227,
+      "AR1": 1.2765613077013085,
+      "AR10": 8.420828928385257,
+      "AR100": 37.38066759888874,
+      "AR500": 43.90672241756806,
+      "class_macro_AP_separate_diagnostic": 29.87440030180682,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 32.722163148370086,
+          "AP50": 66.62335081208434,
+          "AP75": 27.78462157490199,
+          "AR500": 44.91877768942406
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 19.76756756247149,
+          "AP50": 47.4977703052138,
+          "AP75": 12.111186577681012,
+          "AR500": 32.35638921453693
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 15.445237448795705,
+          "AP50": 32.3356632043527,
+          "AP75": 11.756782945377346,
+          "AR500": 33.17683881064163
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 62.52727566262969,
+          "AP50": 86.91315128520894,
+          "AP75": 70.56702037780417,
+          "AR500": 68.61282014594363
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 34.47988149395239,
+          "AP50": 46.801621449471,
+          "AP75": 39.823896332738585,
+          "AR500": 46.8930562595033
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 29.77489388688293,
+          "AP50": 44.60490976533528,
+          "AP75": 32.93328672113336,
+          "AR500": 48.30213903743316
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 21.842480252222547,
+          "AP50": 37.49467866706102,
+          "AP75": 22.460048623852476,
+          "AR500": 39.530651340996165
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 9.288188847316045,
+          "AP50": 14.340989989485747,
+          "AP75": 10.335774400315087,
+          "AR500": 20.795454545454547
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 44.10931232044416,
+          "AP50": 62.291852295393866,
+          "AP75": 51.49450828119401,
+          "AR500": 51.25506072874494
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 28.787002394983148,
+          "AP50": 60.25847300660345,
+          "AP75": 23.38896298103366,
+          "AR500": 42.63211798443262
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 30968,
+          "FP": 158080,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 20282,
+          "FP": 168766,
+          "ignored_detections": 0
+        }
+      }
+    },
+    "sahi640": {
+      "AP": 32.253709149154176,
+      "AP50": 55.46418708936357,
+      "AP75": 31.701897677018888,
+      "AR1": 1.4038914157035753,
+      "AR10": 8.920121698766074,
+      "AR100": 39.545815746611865,
+      "AR500": 46.7094642958543,
+      "class_macro_AP_separate_diagnostic": 31.32679784258326,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 33.861733276563726,
+          "AP50": 68.19554192207825,
+          "AP75": 28.91557712814305,
+          "AR500": 45.470862206066116
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 21.030022779337013,
+          "AP50": 49.867452436929746,
+          "AP75": 13.566579082576801,
+          "AR500": 33.06760453302071
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 15.82221464971686,
+          "AP50": 34.36367643894719,
+          "AP75": 11.970252260026912,
+          "AR500": 33.96713615023474
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 61.96517727500949,
+          "AP50": 86.7548118755005,
+          "AP75": 69.55782482149857,
+          "AR500": 69.80827013878952
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 35.46074494286008,
+          "AP50": 48.435126104518496,
+          "AP75": 40.53703886613929,
+          "AR500": 51.83476938672072
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 30.30314598881078,
+          "AP50": 45.239378401029825,
+          "AP75": 32.75787419457021,
+          "AR500": 50.6951871657754
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 24.530640736569786,
+          "AP50": 42.44655128117428,
+          "AP75": 24.903625231473576,
+          "AR500": 44.34865900383142
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 13.297953054420844,
+          "AP50": 20.363639540098536,
+          "AP75": 15.055137871130366,
+          "AR500": 31.93181818181818
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 46.00893674252686,
+          "AP50": 62.919772093718585,
+          "AP75": 53.72756326098911,
+          "AR500": 57.449392712550605
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 30.987408980017086,
+          "AP50": 64.57095370475204,
+          "AP75": 25.414310395093132,
+          "AR500": 45.43834494059812
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 32370,
+          "FP": 175377,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 20632,
+          "FP": 187115,
+          "ignored_detections": 0
+        }
+      }
+    },
+    "sahi800": {
+      "AP": 31.408637518425788,
+      "AP50": 53.72651026794648,
+      "AP75": 31.104768444413345,
+      "AR1": 1.3651375579695029,
+      "AR10": 8.89248799746762,
+      "AR100": 38.484940694091094,
+      "AR500": 44.29038704093986,
+      "class_macro_AP_separate_diagnostic": 30.795056078003324,
+      "per_class": [
+        {
+          "class_id": 1,
+          "gt_count_in_reference_denominator": 8803,
+          "image_presence_count": 520,
+          "AP": 31.521420609426183,
+          "AP50": 64.92384057587341,
+          "AP75": 26.167962085664108,
+          "AR500": 41.44041803930479
+        },
+        {
+          "class_id": 2,
+          "gt_count_in_reference_denominator": 5118,
+          "image_presence_count": 482,
+          "AP": 19.520706794649673,
+          "AP50": 46.82914653534625,
+          "AP75": 12.579086082731072,
+          "AR500": 29.867135599843692
+        },
+        {
+          "class_id": 3,
+          "gt_count_in_reference_denominator": 1278,
+          "image_presence_count": 364,
+          "AP": 15.634650185172742,
+          "AP50": 32.115199486177524,
+          "AP75": 13.064174961241445,
+          "AR500": 33.57589984350548
+        },
+        {
+          "class_id": 4,
+          "gt_count_in_reference_denominator": 13978,
+          "image_presence_count": 515,
+          "AP": 62.002310120855725,
+          "AP50": 86.78748752701696,
+          "AP75": 69.67268994175578,
+          "AR500": 68.79453426813564
+        },
+        {
+          "class_id": 5,
+          "gt_count_in_reference_denominator": 1973,
+          "image_presence_count": 421,
+          "AP": 35.09586157028917,
+          "AP50": 47.36935913192846,
+          "AP75": 40.28992220810188,
+          "AR500": 49.35124176381145
+        },
+        {
+          "class_id": 6,
+          "gt_count_in_reference_denominator": 748,
+          "image_presence_count": 265,
+          "AP": 30.55441125083251,
+          "AP50": 44.873292631209765,
+          "AP75": 33.938010314157886,
+          "AR500": 47.64705882352941
+        },
+        {
+          "class_id": 7,
+          "gt_count_in_reference_denominator": 1044,
+          "image_presence_count": 337,
+          "AP": 23.56793192541155,
+          "AP50": 40.63342176030549,
+          "AP75": 24.10934297585075,
+          "AR500": 41.54214559386973
+        },
+        {
+          "class_id": 8,
+          "gt_count_in_reference_denominator": 528,
+          "image_presence_count": 219,
+          "AP": 12.269413576841796,
+          "AP50": 19.052275498040274,
+          "AP75": 13.83283424541294,
+          "AR500": 29.28030303030303
+        },
+        {
+          "class_id": 9,
+          "gt_count_in_reference_denominator": 247,
+          "image_presence_count": 130,
+          "AP": 48.57373412541902,
+          "AP50": 65.51783820303253,
+          "AP75": 56.06865424444838,
+          "AR500": 54.49392712550607
+        },
+        {
+          "class_id": 10,
+          "gt_count_in_reference_denominator": 4882,
+          "image_presence_count": 485,
+          "AP": 29.210120621134827,
+          "AP50": 61.639191313835205,
+          "AP75": 23.842423393095057,
+          "AR500": 43.42687423187219
+        }
+      ],
+      "counts_at_fixed_max500": {
+        "0.5": {
+          "TP": 31070,
+          "FP": 140662,
+          "ignored_detections": 0
+        },
+        "0.75": {
+          "TP": 19722,
+          "FP": 152010,
+          "ignored_detections": 0
+        }
+      }
+    }
+  },
+  "frozen_AP_reproduced": true,
+  "fast_literal_parity": true
+}

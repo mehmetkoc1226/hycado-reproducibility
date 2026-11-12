@@ -1,0 +1,13 @@
+{
+  "accuracy.tex": "7f76e2b570e4c38967b667e225bee3093ebcd757ff9178d802bfe0f65e6023a9",
+  "matched_fp_full.tex": "d14c3c1c37a60da368cc97c99a6447a33f1e8dca8c77fa66d994aa03578cd7de",
+  "matched_fp_main.tex": "1f1ff18a454eb19cf477b878fd1be838b4239a8da5fa6920eff38b6eda6c2280",
+  "paired_ci.tex": "0ddb95727139a5152c79cdc4072187df28b94651db7e15220e364fa0b822c5ec",
+  "scalars.tex": "b6400824a4192ce7107cbac9a75da329ec97111b605cddb022547c3e979e3bb7",
+  "strong_scalars.tex": "838a6d1bd06425b8b4e49d26c673d965092efb2bf2a27ddad7c184d9dc02106b",
+  "testdev1280.tex": "4bfd0d0ec973dd69b992895e11f90bbb5d207c350c85703a29a9ee03df7779ea",
+  "testdev_per_class.tex": "69dd106260ebcfa743d1fbb4fbf283dfb3db794221d87c729d0ebc9f7a7c084e",
+  "testdevci.tex": "a94be72b4abc6c8685a82e1ad5bab89f272df9044aad7ae216dd856d267f46a1",
+  "val_density_recall.tex": "6f95c57771f110c6ac9e48de2cfaea792f0806fa85bc81bb7ab059b354878bf2",
+  "val_size_recall.tex": "8191e01383441a16bcbde3a36853dea8279f75375edb0cdf6086c4539e4b8f39"
+}

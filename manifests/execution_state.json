@@ -6,5 +6,15 @@
   "scope": "archived experiment code, recorded identities and table regeneration; external assets required for prediction replay and historical training",
   "fresh_end_to_end_retraining_validated_here": false,
   "source_publication": true,
-  "public_release_scope": "No complete checkpoint/prediction-archive release; source snapshot only"
+  "public_release_scope": "No complete checkpoint/prediction-archive release; source snapshot only",
+  "manuscript_revision": "v12",
+  "source_update_date": "2026-11-12",
+  "included_completed_extension_stages": [
+    18,
+    19,
+    20
+  ],
+  "v12_latex_files": 11,
+  "new_training_for_this_update": false,
+  "new_inference_for_this_update": false
 }
