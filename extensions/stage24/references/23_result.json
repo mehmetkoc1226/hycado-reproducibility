@@ -1,0 +1,42 @@
+{
+  "status": "COCO_UNCERTAINTY_RECALL_COMPLETE",
+  "signature": "9dd5a70cee5f253fec0f8563213764decb30b4613f0356cb4326b7bca4f383a3",
+  "source_bindings": {
+    "protocol_sha256": "f92386e29b942893fafb9af53b8eb67269c6f215e8b8994b4c4e163a439085e8",
+    "environment": {
+      "pycocotools": "2.0.11",
+      "wheel_sha256": "8e159232adae3aef6b4e2d37b008bff107b26e9ed3b48e70ea6482302834bd34",
+      "numpy": "1.26.4",
+      "cocoeval_sha256": "84b0e75c6e972ca8b6fa3219fb03c1993dc9a3509df28447ca112c3f91828d61"
+    },
+    "source22_result_fingerprint": "80eca9a67c3716e08c38704242a5b69dcddcac954b688912a400a20a35c1872d",
+    "source22_cache_sha256": "67751fffc66781bff0da4a108ed5aa12e869776a9cc488d9887b6f9c52dd54e3",
+    "source20_database_sha256": "3d3c68aac45e4931b7dfd4bbc5243d114552d19d51eec32e378c1898e27cf7b3",
+    "package_sha256": "e4040e07fc7ba012e60269b0b48e8069808bd2f6b129a641b16a3007e0629cce"
+  },
+  "images": 1610,
+  "normal_GT": 74707,
+  "methods": [
+    "yolo1280",
+    "hybrid1280",
+    "yolo1280_rois800"
+  ],
+  "tests_passed": 14,
+  "replicates_completed": 1000,
+  "proxy_groups": 61,
+  "COCO_point_parity_22B": true,
+  "recall_TP_FP_parity_stage20": true,
+  "training": false,
+  "gpu": false,
+  "primary_COCO_AP_difference": {
+    "point": 0.43902149896623754,
+    "lower95": 0.16128724430974808,
+    "upper95": 0.8375766091324609,
+    "bootstrap_SE": 0.19053745218367346
+  },
+  "recall_matching": "existing toolkit-aligned global-max500 matches; complete pooled score ties",
+  "COCO_bootstrap": "maxDets100 area all; canonical image-order replication",
+  "interpretation": "conditional on fixed models and previously examined test-dev; no independent confirmation or training-seed CI",
+  "bootstrap_seconds_this_invocation": 560.8649770999327,
+  "source_files_unchanged": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "REFERENCE_TESTS_PASSED_WINDOWS_CONFIRMATION_PENDING",
+  "tests_passed": 13,
+  "reference_package": "pycocotools==2.0.11",
+  "tested_platform": "Linux Python 3.12 NumPy 2.3.5",
+  "required_target": "Windows x64 Python 3.11; existing NumPy",
+  "native_windows_execution_performed_here": false,
+  "new_training": false,
+  "gpu_inference": false,
+  "actual_full_dataset_coco_metrics_computed_here": false,
+  "step21_report_sha256": "bda7cccc77e99de2fe515282e4aeb6ffd13145fbfae27e4add2f844a8ae4fbb0",
+  "version": "22_v2"
+}

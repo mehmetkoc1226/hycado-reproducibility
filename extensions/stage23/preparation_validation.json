@@ -1,0 +1,18 @@
+{
+  "status": "REFERENCE_TESTS_PASSED_TARGET_CONFIRMATION_PENDING",
+  "tests_passed": 14,
+  "tested_platform": "Linux / Python3.12 / NumPy2.3.5 / pycocotools2.0.11",
+  "target_platform": "Windows x64 Python3.11 / NumPy1.26.4",
+  "real_full_dataset_intervals_computed_here": false,
+  "training": false,
+  "gpu_inference": false,
+  "literal_upstream_resampling_tolerance": 1e-10,
+  "implementation_only_synthetic_stress": {
+    "three_methods": true,
+    "images": 1610,
+    "draw_seconds_on_this_host": 0.229,
+    "peak_RSS_MiB": 97.0,
+    "not_a_target_PC_time_estimate": true,
+    "not_research_results": true
+  }
+}

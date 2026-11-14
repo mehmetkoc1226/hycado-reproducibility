@@ -2,7 +2,36 @@
 
 Companion materials for **HyCADO for Detector-Guided Region Refinement in UAV Object Detection**, Gul Erten and Mehmet Koc.
 
-This repository contains the historical implementation and the recorded-result materials for manuscript revision v12. The update adds completed higher-resolution/sliced baselines, VAL diagnostics, test-dev evaluation, and the fixed 1280 extension. It does not run new training or inference.
+The current recorded-result extension is **v14**. It adds completed COCO-style evaluation, paired uncertainty and recall diagnostics, frozen SAHI-640 test-dev inference, and prediction-independent qualitative selection code (stages 22–25). This publication does not run training or inference. The ten-class AP table is now in the main manuscript.
+
+## Current COCO results
+
+All values below use **COCO-style AP on VisDrone DET test-dev with the stated ignore-region preprocessing**, maxDets100 per image/category (1610 images). These are distinct from the historical toolkit scores below.
+
+| Method | AP | AP_small | AR100 |
+|---|---:|---:|---:|
+| YOLO-1280 | 23.996 | 15.365 | 36.166 |
+| HyCADO-1280 | 24.435 | 15.906 | 39.128 |
+| SAHI-640 + same YOLO checkpoint | 24.529 | 15.692 | 39.817 |
+
+HyCADO minus YOLO: **+0.439 AP [0.161, 0.838]**. HyCADO minus SAHI: **−0.095 [−0.776, 0.743]**. The latter interval establishes neither superiority nor equivalence. Size/class differences have no separate intervals. Low-FP recall point estimates are unchanged for the 1280 refinement variants at the prespecified budgets. All comparisons are exploratory on a previously examined split, conditional on one seed-42 trained model set and unverified filename/hash proxy groups.
+
+## Current result checks
+
+Use an isolated environment for optional analysis dependencies:
+
+```bash
+python -m venv .venv-report
+# Activate that environment for your platform, then:
+python -m pip install -r requirements/report_v14.txt
+python paper_assets/v14/scripts/build_current_results.py
+```
+
+The last command checks ten generated table/scalar files, source bindings and paired intervals against retained bootstrap draws. It is reporting verification, not AP recomputation. Optional `--write --figures` regenerates the same tables plus the AP/class and low-FP recall plots; add Matplotlib in the isolated environment first. Exact inference/evaluation packages are extracted under `extensions/stage22` through `stage25`; they require the original Windows project and externally supplied frozen inputs, not just a fresh clone.
+
+No dataset images, checkpoints, full prediction SQLite databases, manuscript PDFs or image atlas are added by this extension. Stage25 includes the fixed selection, hashes and export code; rendering needs the externally supplied images and frozen databases. Trained checkpoint and complete prediction download locations remain pending. See [v14 update](docs/V14_UPDATE.md).
+
+## Historical v12 workflow
 
 ## Start here
 
@@ -17,7 +46,7 @@ python -m unittest discover -s tests -v
 
 The table command regenerates **11 LaTeX files** (tables and scalar definitions) from retained metrics and checks their exact SHA256 values against the v12 manuscript. It requires a new or empty output directory. This operation checks reporting consistency; it does not recompute AP from predictions.
 
-The primary metric is the pinned VisDrone toolkit aggregation, written **AP_toolkit**. It is not COCO mAP. Class-macro AP is a separate diagnostic.
+The historical primary metric is the pinned VisDrone toolkit aggregation, written **AP_toolkit**. It is not COCO mAP. Class-macro AP is a separate diagnostic.
 
 ## What can be reproduced here?
 
@@ -59,7 +88,7 @@ On the 1610-image test-dev split:
 
 The test-dev placement margin is **+1.142 AP**, paired proxy-cluster 95% interval **[+0.792, +1.452]**. The primary 1280 extension adds **+0.505 AP** over YOLO-1280, interval **[+0.129, +0.885]**. Retaining the 800-based regions adds **+0.544 AP**, interval **[+0.168, +0.924]**.
 
-All conditions retain one seed-42 trained model set. Placement seeds are not training seeds. Bootstrap intervals describe sample-composition uncertainty for the fixed models using filename/hash proxy clusters. The 1280 test-dev extension was designed after the original test-dev results were inspected and is reported as **exploratory**. Secondary intervals are not multiplicity-adjusted. SAHI was evaluated on VAL; a SAHI test-dev result is not claimed.
+All conditions retain one seed-42 trained model set. Placement seeds are not training seeds. Bootstrap intervals describe sample-composition uncertainty for the fixed models using filename/hash proxy clusters. The 1280 test-dev extension was designed after the original test-dev results were inspected and is reported as **exploratory**. Secondary intervals are not multiplicity-adjusted. The historical v12 snapshot evaluated SAHI on VAL only; the completed stage24 test-dev result is reported above under the current extension.
 
 ## Repository map
 
@@ -74,7 +103,7 @@ All conditions retain one seed-42 trained model set. Placement seeds are not tra
 - splits/: exact role lists; test-dev JPEG identities are in the stage-18 dataset manifest.
 - manifests/: source, checkpoint, archive and table identities.
 
-The original files directly under paper_assets/ remain the historical snapshot. Use the versioned v12 directory for current tables. Detailed timing tables and plots are excluded from the v12 table workflow; historical records remain available separately. The manuscript retains a brief hardware-bound cost disclosure and crop-call counts.
+The original files directly under paper_assets/ remain the historical snapshot. Use v12 for the historical table set and paper_assets/v14 for the supplementary COCO result extension. Detailed timing tables and plots are excluded from the v12 table workflow; historical records remain available separately. The manuscript retains a brief hardware-bound cost disclosure and crop-call counts.
 
 ## Historical table and prediction replay
 

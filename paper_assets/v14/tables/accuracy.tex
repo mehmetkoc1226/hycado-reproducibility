@@ -1,0 +1,18 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Method & $\APlit$ & AP50 & AP75 & AR500 & Macro AP\\
+\midrule
+YOLOv9-C at 800 (YOLO-800) & 27.839 & 47.164 & 27.660 & 37.941 & 27.444\\
+YOLOv9-C at 1280 (YOLO-1280) & 31.914 & 54.259 & 31.802 & 44.037 & 30.981\\
+YOLOv9-C at 1536 (YOLO-1536) & 30.996 & 53.155 & 30.570 & 43.907 & 29.874\\
+YOLOv9-C + SAHI-640 & 32.254 & 55.464 & 31.702 & 46.709 & 31.327\\
+YOLOv9-C + SAHI-800 & 31.409 & 53.727 & 31.105 & 44.290 & 30.795\\
+HyCADO v1 (YOLO-800 + crop RT-DETR-L) & 29.987 & 50.673 & 29.795 & 44.588 & 29.305\\
+\midrule
+Full-image RT-DETR-L & 19.760 & 37.474 & 18.110 & 29.559 & 18.730\\
+Global fusion, $\alpha=1$ & 24.394 & 45.449 & 22.650 & 40.546 & 24.005\\
+Global fusion, $\alpha=0.25$ & 29.316 & 50.251 & 28.791 & 41.820 & 28.849\\
+Fixed grid + YOLO-800 & 28.810 & 48.732 & 28.598 & 41.573 & 28.130\\
+Relocation mean (three placements) & 28.448 & 48.046 & 28.288 & 40.284 & 27.861\\
+\bottomrule
+\end{tabular}

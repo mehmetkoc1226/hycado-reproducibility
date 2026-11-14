@@ -1,0 +1,238 @@
+{
+  "id": "hycado_step21_readonly_input_inventory_v1",
+  "project": "D:\\HyCADO_Temiz_Baslangic",
+  "training": false,
+  "inference": false,
+  "scoring": false,
+  "package_install": false,
+  "database_readonly": true,
+  "deep_hash_requested": false,
+  "sections": {
+    "stage18": {
+      "path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev_frozen_v1_seed42\\predictions.sqlite3",
+      "bytes": 318738432,
+      "full_database_hash_checked": false,
+      "sampled_images_per_method": 3,
+      "methods": {
+        "hybrid_a025": 1610,
+        "relocated_s0_a025": 1610,
+        "relocated_s1_a025": 1610,
+        "relocated_s2_a025": 1610,
+        "yolo1280": 1610,
+        "yolo800": 1610
+      },
+      "sample_detection_counts": {
+        "yolo800": [
+          310,
+          232,
+          236
+        ],
+        "yolo1280": [
+          456,
+          295,
+          364
+        ],
+        "hybrid_a025": [
+          1000,
+          1000,
+          1000
+        ],
+        "relocated_s0_a025": [
+          1000,
+          1000,
+          1000
+        ],
+        "relocated_s1_a025": [
+          1000,
+          1000,
+          1000
+        ],
+        "relocated_s2_a025": [
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "all_stems_verified": true,
+      "source_stat_unchanged": true
+    },
+    "stage20": {
+      "path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev1280_extension_v1_seed42\\predictions.sqlite3",
+      "bytes": 807481344,
+      "full_database_hash_checked": false,
+      "sampled_images_per_method": 3,
+      "methods": {
+        "hybrid1280": 1610,
+        "hybrid800_reference": 1610,
+        "yolo1280": 1610,
+        "yolo1280_rois800": 1610
+      },
+      "sample_detection_counts": {
+        "yolo1280": [
+          456,
+          295,
+          364
+        ],
+        "hybrid1280": [
+          1000,
+          1000,
+          1000
+        ],
+        "yolo1280_rois800": [
+          1000,
+          1000,
+          1000
+        ],
+        "hybrid800_reference": [
+          1000,
+          1000,
+          1000
+        ]
+      },
+      "all_stems_verified": true,
+      "raw_crop_samples": [
+        {
+          "image": "images/test-dev/0000006_00159_d_0000001.jpg",
+          "queries": {
+            "shape": [
+              37,
+              300,
+              14
+            ],
+            "dtype": "<f4"
+          },
+          "rects": {
+            "shape": [
+              37,
+              4
+            ],
+            "dtype": "<i4"
+          }
+        },
+        {
+          "image": "images/test-dev/9999944_00000_d_0000003.jpg",
+          "queries": {
+            "shape": [
+              27,
+              300,
+              14
+            ],
+            "dtype": "<f4"
+          },
+          "rects": {
+            "shape": [
+              27,
+              4
+            ],
+            "dtype": "<i4"
+          }
+        },
+        {
+          "image": "images/test-dev/9999996_00000_d_0000029.jpg",
+          "queries": {
+            "shape": [
+              37,
+              300,
+              14
+            ],
+            "dtype": "<f4"
+          },
+          "rects": {
+            "shape": [
+              37,
+              4
+            ],
+            "dtype": "<i4"
+          }
+        }
+      ],
+      "source_stat_unchanged": true
+    },
+    "testdev_dataset": {
+      "path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev_frozen_v1_seed42\\dataset_78b0c5078a14ee43",
+      "annotations": {
+        "files_sha256_verified": 1610,
+        "counts": {
+          "class_4_score_1": 28074,
+          "normal_targets": 75102,
+          "class_1_score_1": 21006,
+          "class_11_score_0": 265,
+          "class_6_score_1": 2659,
+          "class_10_score_1": 5845,
+          "class_5_score_1": 5771,
+          "class_0_score_0": 2180,
+          "class_8_score_1": 599,
+          "class_2_score_1": 6376,
+          "class_3_score_1": 1302,
+          "class_7_score_1": 530,
+          "class_9_score_1": 2940
+        },
+        "geometry_examples": []
+      },
+      "images_present": 1610,
+      "jpeg_hash_samples": 3
+    },
+    "val": {
+      "methods": {
+        "yolo800_repeat": 548,
+        "yolo1280": 548,
+        "yolo1536": 548,
+        "sahi640": 548,
+        "sahi800": 548,
+        "hybrid800_legacy": 548
+      },
+      "prediction_check": "all P2 payloads hashed and every row validated against the frozen per-image count",
+      "candidate_counts": {
+        "yolo800_repeat": {
+          "images_validated": 548,
+          "max": 1000,
+          "images_above_1000": 0
+        },
+        "yolo1280": {
+          "images_validated": 548,
+          "max": 1000,
+          "images_above_1000": 0
+        },
+        "yolo1536": {
+          "images_validated": 548,
+          "max": 1000,
+          "images_above_1000": 0
+        },
+        "sahi640": {
+          "images_validated": 548,
+          "max": 1018,
+          "images_above_1000": 2
+        },
+        "sahi800": {
+          "images_validated": 548,
+          "max": 898,
+          "images_above_1000": 0
+        }
+      },
+      "annotations": {
+        "files_sha256_verified": 548,
+        "counts": {
+          "class_4_score_1": 14064,
+          "normal_targets": 38759,
+          "class_10_score_1": 4886,
+          "class_2_score_1": 5125,
+          "class_1_score_1": 8844,
+          "class_8_score_1": 532,
+          "class_7_score_1": 1045,
+          "class_3_score_1": 1287,
+          "class_0_score_0": 1378,
+          "class_6_score_1": 750,
+          "class_5_score_1": 1975,
+          "class_11_score_0": 32,
+          "class_9_score_1": 251
+        },
+        "geometry_examples": []
+      },
+      "original_hycado800_samples_verified": 3,
+      "scope": "P2 and original HyCADO800 final predictions; global/grid/relocation VAL adapters remain optional."
+    }
+  },
+  "issues": [],
+  "status": "PREFLIGHT_READY",
+  "scope": "All P2 VAL payloads/rows and annotation hashes checked; test-dev payload checks and legacy VAL payload checks are sampled here, with complete test-dev database SHA checked separately by the COCO runner."
+}

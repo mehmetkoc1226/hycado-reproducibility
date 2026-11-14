@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "images": [
+    {
+      "image": "images/val/0000001_02999_d_0000005.jpg",
+      "exact_canonical_numeric_parity": true,
+      "detections": 700,
+      "dropped_zero_area": 0
+    },
+    {
+      "image": "images/val/0000001_04527_d_0000008.jpg",
+      "exact_canonical_numeric_parity": true,
+      "detections": 1018,
+      "dropped_zero_area": 0
+    },
+    {
+      "image": "images/val/0000280_02201_d_0000623.jpg",
+      "exact_canonical_numeric_parity": true,
+      "detections": 720,
+      "dropped_zero_area": 0
+    },
+    {
+      "image": "images/val/0000327_04201_d_0000732.jpg",
+      "exact_canonical_numeric_parity": true,
+      "detections": 772,
+      "dropped_zero_area": 0
+    },
+    {
+      "image": "images/val/0000364_01765_d_0000782.jpg",
+      "exact_canonical_numeric_parity": true,
+      "detections": 446,
+      "dropped_zero_area": 0
+    }
+  ],
+  "metric_computed": false,
+  "gt_read": false,
+  "canonical_order": "same original P2 sorting; exact values, no tolerance"
+}

@@ -1,0 +1,29 @@
+{
+  "version": "22_v2",
+  "kind": "validator_bugfix",
+  "cause": "YOLO cap1000 incorrectly applied to merged SAHI archive",
+  "scientific_protocol_sha256": "c8dfb425b59b940183a4c5da946184b2f61c2b536b8887811b4638ed01f62dce",
+  "metric_core_sha256": "c75e2123577287034fb506b7df0864540e3475d03ddf7732c8b714d9ebfa8737",
+  "new_result_directory": "experiments/supplementary_coco_v2_seed42",
+  "old_sources_readonly": true,
+  "training": false,
+  "gpu": false,
+  "truncate_predictions": false,
+  "sahi640_index_records_over_1000": [
+    {
+      "source_image": "images/val/0000001_04527_d_0000008.jpg",
+      "path": "official_val_predictions/sahi640/0000001_04527_d_0000008.json",
+      "sha256": "1222a2bb132d0dfef7ccffc9275a1f1eab95d28b7d69c725b2fb194578451696",
+      "detections": 1018
+    },
+    {
+      "source_image": "images/val/0000001_08414_d_0000013.jpg",
+      "path": "official_val_predictions/sahi640/0000001_08414_d_0000013.json",
+      "sha256": "cb39b03f596a6e970937f3ce18a0aeb40d4d89b8d656d6f25f7820beec553da8",
+      "detections": 1006
+    }
+  ],
+  "source_policy_evidence": "Published P2 p2_development.checked and save_prediction restrict len above 1000 only for YOLO methods.",
+  "tests_passed": 13,
+  "target_windows_repair_confirmation_pending": true
+}

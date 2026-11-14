@@ -1,0 +1,17 @@
+{
+  "25_NITEL_GORSELLERI_HAZIRLA.cmd": "8e2eb2cd1039c1ae5ed2662aa5b14820840c7dfaa2ffe5c9ed7fe66addb00e4c",
+  "CAPTION_EN.md": "698a40858eeaa605bba438643f5313d263fcabd9a8c3c5c03e442ba63fd0559c",
+  "DUZELTME_1_TR.md": "a3583d3e855a3564a1855254f8248f294a93614b7debcde14bd159adfaf0d43d",
+  "ONCE_OKUYUN_TR.md": "867903fb249ad666dc9302d20b75d2b82ab8266089288eb9d9c46beb14bc9c9d",
+  "protocol.json": "078e563580a430b28ac4df814e8ad90d8c71bcc53c14d025ae1be3e39f162d8f",
+  "qualitative25.py": "2332a7c18a2c56a66505e350d3a92566bc295dc04009f7d0f4b7da3a76377019",
+  "references/20_prediction_index.json": "8ef66a74a857911d9b37f802580ba24c9af9fbae754ee03a69f34340ebf2681a",
+  "references/24_prediction_index.json": "75aca54988a626b82adb2f4b154602de9b290a072ffeee83328fe7193773d83c",
+  "references/24_result.json": "7d14e77adaffe04a0c1aeb7448b0fb40646bc2856df1f8180ba4aab4c44c05bd",
+  "references/annotation_index.json": "f753572e9b3c0758345d34eec990e01427c976b6ad88e738fd1fc801ef45c57b",
+  "references/bootstrap_groups.json": "7964fd044b66aaab8a6ac25444f9af40861881decd2d560eb2841409f446cf80",
+  "references/dataset_manifest.json": "d2f8311c49ccd45fa304fb6598993c8597f01039137b6e1a20ecb97ccefb647b",
+  "selection.json": "f486ec417986610e681444613c69e99df89bbbcb732a1133a2766ce753599830",
+  "test_qualitative25.py": "cd24049b831a00135bc8e290aad17540e14a8ffafe7ed701789176a6736eb36c",
+  "visdrone_metrics.py": "d87a27c597393e80704bc544312ede5a571a55f387ea3728e4f16a807dbf6a9b"
+}

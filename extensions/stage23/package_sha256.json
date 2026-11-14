@@ -1,0 +1,23 @@
+{
+  "23_COCO_GUVEN_VE_RECALL.cmd": "e56c0b06fa493f6cc3235ee0518ed642b8d0c1fd9ecc718f8726b07f9867ce60",
+  "COCO_LICENSE.txt": "bd8ef15597b3b292f3bb0feed9701c1ace5bcebe07f28fb5047ec8d3d89471b1",
+  "ONCE_OKUYUN.md": "e6fd0551676ede46465eb8d948eac5aa7c99bc7e7999e90fadcb3c9feeed8e08",
+  "THIRD_PARTY_NOTICES.md": "403a47ca6cc49fc4c7a1901129d60c2ff8b960646e91085bef4979992cb0e570",
+  "VALIDATION.md": "719af7652a53fbefb4b557ff4ad198948ae378ecfae3c88e75225a9d8a3f6b94",
+  "bootstrap_vendor.py": "9ae05f3caeaf3800efd02c15a744fd47e0367dd9a3c206dbce0d6e12ea0e309d",
+  "coco_core.py": "c75e2123577287034fb506b7df0864540e3475d03ddf7732c8b714d9ebfa8737",
+  "preparation_validation.json": "face08150c1b464f84369c43ea362c1726d862f676baafcc4b03519228b82fff",
+  "protocol.json": "f92386e29b942893fafb9af53b8eb67269c6f215e8b8994b4c4e163a439085e8",
+  "recall_core.py": "105d2b820e88933c247da50cc699b8a5e7bd040c58497cd6ac1539222bb734ab",
+  "references/22_point_results.json": "b97f04fbe8e4068484c58d9237ab81f5eacc5e0e98b0880adc66caa470749d7f",
+  "references/22_protocol.json": "c8dfb425b59b940183a4c5da946184b2f61c2b536b8887811b4638ed01f62dce",
+  "references/annotation_index.json": "f753572e9b3c0758345d34eec990e01427c976b6ad88e738fd1fc801ef45c57b",
+  "references/bootstrap_groups.json": "7964fd044b66aaab8a6ac25444f9af40861881decd2d560eb2841409f446cf80",
+  "references/dataset_manifest.json": "d2f8311c49ccd45fa304fb6598993c8597f01039137b6e1a20ecb97ccefb647b",
+  "references/stage20_metrics.json": "db5ad7c0b3177bf499dc2687a9437c3a579ea47ecf099e4eba7b39c0ba4268fb",
+  "resampling.py": "07edf848bced24b58a634323ffda8c1193fed11df1e4c6d03f0906656a9e5a87",
+  "run_analysis.py": "2caac68055934d098712bc64a8d2def953e80ee031bcf23e9577c50f4d139292",
+  "test_analysis.py": "a922a03ed98eaeeb0b99be268608e5b80c9964918647a7f6ba6677cb5b81970e",
+  "uncertainty_core.py": "374510290ec7ef937262c15bd08dfb710db26cd4eb5985e27ff3dcddd8f7d186",
+  "wheels/pycocotools-2.0.11-cp311-cp311-win_amd64.whl": "8e159232adae3aef6b4e2d37b008bff107b26e9ed3b48e70ea6482302834bd34"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "hycado_qualitative1280_v1",
+  "date": "2026-11-14",
+  "qualitative": {
+    "seed": 20261112,
+    "candidate_pool": 12,
+    "main_random_examples": 3,
+    "separate_posthoc_failures_max": 2,
+    "selection": "sha256 of seed and group/image identity; distinct proxy groups",
+    "display_score_threshold": 0.05,
+    "window": {
+      "size": [
+        640,
+        420
+      ],
+      "rule": "max normal-GT center count among <=100 annotation-order evenly spaced candidate centers; ties smaller x then y; image-clipped; GT-based selection disclosed"
+    }
+  },
+  "parent_protocol_file_sha256": "f43e0cb8c7d912b7c26490105639a1997a1057c674d4be86c42386a94816321d",
+  "methods": [
+    "yolo1280",
+    "hybrid1280",
+    "sahi640"
+  ],
+  "source20_directory": "experiments/testdev1280_extension_v1_seed42",
+  "source24_directory": "experiments/sahi640_testdev_v1_seed42",
+  "output_directory": "experiments/qualitative1280_v1_seed42",
+  "training": false,
+  "gpu_inference": false,
+  "new_metric_computation": false,
+  "posthoc_failures_added": 0,
+  "selection_implementation": "sha256(UTF8(str(seed)+\"|\"+group_label+\"|\"+image)); ascending digest, image path tie; first occurrence of each group; first12; first3 main",
+  "window_implementation": "GT after pinned ignore preprocessing; floor(i*(N-1)/(n-1)) for n=min(100,N); floor(center-window_size/2); clip origin; max centers in half-open native-coordinate window; tie x,y",
+  "display": "pinned ignore filter; archived score>=0.05; no prediction cap; no score recalibration; class colors, no TP/FP assignment",
+  "preview": "Pillow RGB PNG, native-size crops, class colors; original JPEG and raw prediction JSON included byte-exact",
+  "scope": "illustrative fixed hash sample; previously examined test-dev; window uses GT; group sampling not equal probability; no independence/equivalence/superiority inference"
+}

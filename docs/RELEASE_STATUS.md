@@ -1,22 +1,18 @@
 # Release status
 
-The public source repository now contains the recorded-result materials for manuscript v12. Cite an immutable commit URL for the exact revision used.
+The current recorded-result extension is v14. See V14_UPDATE.md and the main README for the distinct historical toolkit and supplementary COCO metric definitions.
 
 | Component | Status |
 |---|---|
-| Historical code, fixed recipes and provenance | Included; original bytes retained |
-| Exact original source roles | Included: 5824 training / 647 internal development / 548 VAL |
-| Test-dev membership and recorded JPEG identities | Included: 1610 images |
-| Current v12 tables and CPU regeneration | Included: 11 byte-checked LaTeX files |
-| Higher-resolution and SAHI VAL results | Included with paired intervals and retained official-VAL implementation |
-| VAL false-positive/size/count results and table checks | Included with source-bound reports |
-| Original stage16/stage17 diagnostic source ZIPs | Retained externally; hashes recorded |
-| Completed stage 18–20 reports and implementations | Included; no new GPU execution during this update |
-| Historical stage-26 CPU fusion source and tests | Included |
-| Official images and annotations | Obtain from dataset maintainers |
-| Trained checkpoint downloads | Recorded hashes included; public hosting pending |
-| Full frozen prediction downloads | Recorded hashes included; public hosting pending |
-| Fresh-clone end-to-end training replication | Not validated |
-| Project-wide license | No new license grant assigned by this update |
+| Historical implementation and source roles | Retained |
+| Completed stage18–20 reports and historical v12 tables | Retained |
+| Completed stage22–25 implementations and references | Included |
+| COCO point metrics, paired draws and SAHI test-dev results | Included |
+| Ten-class main-manuscript table and other result tables | Included under paper_assets/v14/tables |
+| Record-level table/interval verification | Included; does not rerun detection |
+| Dataset images and original annotations | Obtain from maintainers |
+| Trained checkpoints and complete prediction databases | Public downloads pending |
+| Qualitative atlas and manuscript PDFs | Supplied in manuscript bundle, not newly distributed here |
+| Fresh-clone training replication | Not validated |
 
-The initial preparation_validation.json retains the state on its original preparation date. The v12 validation record separately describes this update. Source publication does not by itself complete the external-artifact release.
+Publication of source and hashes does not complete the release of external experiment inputs. Historical preparation-state records retain their original dates and scope.

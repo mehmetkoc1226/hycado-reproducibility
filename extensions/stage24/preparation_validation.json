@@ -1,0 +1,17 @@
+{
+  "status": "REFERENCE_TESTS_PASSED_TARGET_VAL_REPLAY_PENDING",
+  "tests_passed": 13,
+  "tested_platform": "Linux / Python3.12 / NumPy2.3.5 / pycocotools2.0.11",
+  "actual_CUDA_inference_run_here": false,
+  "real_SAHI_testdev_metrics_computed_here": false,
+  "source_function_body_equality_verified": true,
+  "target_VAL_replay_images": [
+    "images/val/0000001_02999_d_0000005.jpg",
+    "images/val/0000001_04527_d_0000008.jpg",
+    "images/val/0000280_02201_d_0000623.jpg",
+    "images/val/0000327_04201_d_0000732.jpg",
+    "images/val/0000364_01765_d_0000782.jpg"
+  ],
+  "new_training": false,
+  "original_artifacts_modified": false
+}

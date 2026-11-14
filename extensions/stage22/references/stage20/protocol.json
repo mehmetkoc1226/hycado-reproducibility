@@ -1,0 +1,190 @@
+{
+  "id": "testdev1280_extension_v1_seed42",
+  "source_bindings": {
+    "stage18": {
+      "protocol.json": "c3ff97e57f707b4bac5f79e14a6f748674b3ade7f6567bc79bcfcb86d2d7041a",
+      "dataset_manifest.json": "d2f8311c49ccd45fa304fb6598993c8597f01039137b6e1a20ecb97ccefb647b",
+      "prediction_index.json": "742b75e0da3c58ec8dfc63c88a00566a1397dbc7515cc37f9821ee6a905d055a",
+      "annotation_index.json": "f753572e9b3c0758345d34eec990e01427c976b6ad88e738fd1fc801ef45c57b",
+      "metrics.json": "a94d0542078def8b5d5720fd9b79eb86785928d628ea150342a01704baa3c296",
+      "result.json": "15458180d0057b24a94ee8812f7514a93edff510b7311da518286079ed8e822b",
+      "database_sha256": "47c13d27e4effe7bd014d7d7cbaed65b342c8c14c4c0c8d1c520e9cb9a8f70e6"
+    },
+    "stage19": {
+      "protocol.json": "91528cff57b2e072261a9fb54c1b20cc3ea98c49237bf62958691ccda656fb6e",
+      "prediction_index.json": "55cb6c81d6381de852ea3121e80a524f7656ff403046af641f9622793e9ca69f",
+      "metrics.json": "e1c0a21840437d706a03a18deb1f603f566897f1f4e044c71b637c85b49aad04",
+      "result.json": "fb6a3c7f2bd8fe3d3f6b1de58c6dea32d793b74992c6805efc8b3a1b37064531",
+      "database_sha256": "63bc0681b64b682340679cb1e482735c3d9a1389484bd5d8c49ef8550ce4f6d1"
+    }
+  },
+  "source18_protocol_sha256": "c8d5894838491c6bcc80f4b378caf3f37e7af1b1434e3dfc93f5f723901b3af2",
+  "source19_protocol_sha256": "c17ee0d8f1eb08bc2ebb882ebb8c0b6cf91f6800b9ca36a08e69afc37cb07331",
+  "runner_sha256": "2571aa94de8e30f40bf3a8444c439bc5ce0c557a7d97bc888dde82a36e79c01b",
+  "support_sha256": "72c261ed8841b6622f0b1afffada901c85f7e840c1570cfe7d9c9ad203ea621d",
+  "parity_records_sha256": "81dfd9f026ed19b2a06d640e4cdf58ecd4a8022c636211693d40836267ee1cb2",
+  "frozen_evidence_sha256": "c48281dab2897a489d5556514d40b61b845b9aae50afe1a923e39ffd62d4bec3",
+  "records_sha256": "8e441ef9865a13db01657a337c612089e7f43b0173a09e1d70b2905bb54fc678",
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "vram_bytes": 8589410304,
+    "cuda": "12.4",
+    "driver_inventory": "NVIDIA GeForce RTX 3060 Ti, 610.60",
+    "python": [
+      3,
+      11,
+      5
+    ]
+  },
+  "methods": [
+    "yolo1280",
+    "hybrid1280",
+    "yolo1280_rois800",
+    "hybrid800_reference"
+  ],
+  "images": 1610,
+  "alpha": 0.25,
+  "crop_policy": {
+    "decision_id": "hycado_crop_policy_v1",
+    "created_utc": "2026-10-23T10:44:58.680849+00:00",
+    "decision_date_europe_istanbul": "2026-10-23",
+    "status": "selected_development_reference_for_next_crop_data_preparation",
+    "selected_configuration_id": "c3_near_z3_b10",
+    "selection_basis": "Observed development crop count, IoA90 spatial coverage, and 960-square projected visible size; no RT-DETR AP or latency optimization claim",
+    "source07_protocol_sha256": "ebd673597595dd2f00668b6a0eee146eb0bb2cfc08dffb64f357c98c8d217226",
+    "source07_report_sha256": "5cdcbb133ef82892ff3875dc1d431fb269103739a8a79a98abc3bfdddcd22046",
+    "source06_protocol_sha256": "f4e33b895d33e9314607ae68cf051d94990b7f181fd0c9e13d76cd0ce3d3c354",
+    "source_prediction_index_sha256": "957042087b71af0b35ec6bdafd49ccb58a54db5348be69e04d5624235e1d7d60",
+    "dataset_manifest_sha256": "a047bf572d7a45235863fc7e8f626d7c96dee5698f16840cef90c49117ae3219",
+    "stage1_reference": {
+      "checkpoint": {
+        "epoch": 80,
+        "path": "weights/epoch_0080.pt",
+        "sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149"
+      },
+      "weights_used": "ema"
+    },
+    "proposal_generation": {
+      "cache_type": "06 post classwise NMS; preserve all cached Stage-1 outputs independently of crop Top-K",
+      "threshold": 0.05,
+      "top_k": 60,
+      "context_scale": 3.0,
+      "context_definition": "multiply anchor width and height; symmetric; floor/ceil; clip to original image; exact crop dedup"
+    },
+    "merge": {
+      "implementation_protocol_id": "hycado_crop_merge_development_v1",
+      "algorithm": "deterministic greedy heap; rank worst original-member axis growth, pair hull waste, gap, stable ids",
+      "source_code_hashes": {
+        "crop_merge.py": "3df67a7c697bcb851d44ae52c2fe8f0bdc992a13babffa7ef570487240c5dac4",
+        "merge_geometry.py": "39938c224256538f639182350711784770b6760044986370f4be0b946f619a81"
+      },
+      "policy": {
+        "name": "near_z3",
+        "max_gap_ratio": 0.5,
+        "max_axis_growth": 3.0,
+        "max_pair_hull_ratio": 2.0
+      },
+      "requested_crop_count": 10,
+      "requested_crop_count_is_hard_cap": false,
+      "inherited_crop_count_hard_upper_bound": 60,
+      "budget_failure_policy": "Retain every remaining crop; never discard a region to force requested count"
+    },
+    "evaluation_proxy": {
+      "resolution": 960,
+      "input_geometry": "square scale-fill; visible short side conditional on IoA90",
+      "coverage": "At least 90 percent GT area within one crop; class-agnostic geometry",
+      "small_definition": "Original GT area <1024 square pixels",
+      "pixel_size_thresholds_are_recognition_guarantees": false
+    },
+    "observed_development": {
+      "images": 647,
+      "targets": 33401,
+      "small_targets": 19796,
+      "mean_crops": 16.510046367851622,
+      "p95_crops": 25,
+      "crop_call_reduction_vs_base": 0.6511772197367991,
+      "budget_met_rate": 0.1839258114374034,
+      "budget_unmet_images": 528,
+      "coverage_ioa90": 0.8428789557198886,
+      "small_coverage_ioa90": 0.7653061224489796,
+      "small_coverage90_min8px": 0.7652556071933724,
+      "small_coverage90_min16px": 0.7630329359466559,
+      "small_paired_view_ratio_p10": 0.40191114420451723,
+      "small_paired_view_ratio_median": 0.5681818181818182,
+      "small_lost_min8px": 0,
+      "small_gained_min8px": 667
+    },
+    "paired_reference": {
+      "unmerged_control": {
+        "id": "c3_base",
+        "mean_crops": 47.33075734157651,
+        "coverage_ioa90": 0.818538367114757,
+        "small_coverage_ioa90": 0.7316124469589816
+      },
+      "moderate_merge_ablation_to_retain": {
+        "id": "c3_near_z2_b10",
+        "mean_crops": 24.168469860896444,
+        "coverage_ioa90": 0.8274003772342146,
+        "small_coverage_ioa90": 0.7435845625378864
+      }
+    },
+    "data_roles": {
+      "training_images": 5824,
+      "development_images": 647,
+      "both_from_official_train": true,
+      "official_val_images": 548,
+      "official_val_used_for_this_decision": false,
+      "train_proposals_are_in_sample_stage1_predictions": true,
+      "GT_used_to_place_or_merge_crops": false
+    },
+    "not_yet_frozen": {
+      "crop_partial_GT_and_ignore_policy": "Requires explicit implementation and verification before crop training",
+      "crop_training_sampling_and_step_budget": "Set from actual training crop counts and measured local training cost; do not automatically repeat 80 epochs over every crop",
+      "RTDETR_accuracy_and_runtime": "Not measured by study 07",
+      "official_VisDrone_evaluator": "Reference compatibility verification still required"
+    },
+    "old_experiment_artifacts_used": false,
+    "notes_tr": [
+      "Bu seçim ilk crop veri hazırlığının geliştirme referansıdır; nihai doğruluk optimumu değildir.",
+      "b10 hedefi yumuşaktır: yalnız 119/647 görüntü 10 crop veya altına inmiştir; P95=25 kesin maksimum değildir.",
+      "Birleşim sonrası başlangıçta kapsanan küçük nesnelerin en iyi görünür kısa kenar oranı medyanı 0.56818; gerçek model başarısı ayrıca ölçülecek.",
+      "Geometri çalışmaları tamamlandıktan sonra bu politikayla gerçek crop sayısı, etiket denetimi ve eğitim maliyeti ölçümüne geçilecek."
+    ]
+  },
+  "crop_inference": {
+    "imgsz": 960,
+    "batch": 1,
+    "weights": "round80 EMA",
+    "precision": "float32 weights/input with CUDA float16 autocast",
+    "fuse": false,
+    "preprocess": "Pillow RGB, OpenCV INTER_LINEAR square scale-fill, float32 /255",
+    "output": "normalized cxcywh + sigmoid class scores; best class per query",
+    "confidence_strictly_greater_than": 0.001,
+    "per_crop_nms": false,
+    "augment": false
+  },
+  "fusion": {
+    "nms_iou": 0.7,
+    "max_det": 1000,
+    "raw_conf_strictly_greater": 0.001,
+    "second_confidence_cutoff_after_scaling": false,
+    "baseline_scores_unchanged": true
+  },
+  "primary": "hybrid1280 minus yolo1280 toolkit AP",
+  "secondary": [
+    "yolo1280_rois800 minus yolo1280",
+    "hybrid1280 minus yolo1280_rois800"
+  ],
+  "scope": "exploratory extension; test-dev results of original HyCADO800 already examined",
+  "training": false,
+  "parameter_search": false,
+  "new_global_inference": "3 development images in preflight only",
+  "new_crop_inference": "union of ordered 800/1280 rectangles per image; identical rectangles reuse the exact same batch-one query",
+  "bootstrap": {
+    "draws": 1000,
+    "mode": "paired filename/hash proxy clusters",
+    "seed": 20261102
+  },
+  "timing": "progress/estimate only; not a controlled latency benchmark",
+  "annotation_policy": "new output sets frozen before new metric matching; existing test labels/metrics were used in stage18"
+}

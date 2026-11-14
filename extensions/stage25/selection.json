@@ -1,0 +1,194 @@
+[
+  {
+    "rank": 1,
+    "hash": "0004b2ababf73f2211cf8209c47e53eee17d504ec34db06cbaba8c652307cf45",
+    "group": "9999952",
+    "role": "main",
+    "record": {
+      "image": "images/test-dev/9999952_00000_d_0000137.jpg",
+      "stem": "9999952_00000_d_0000137",
+      "width": 1400,
+      "height": 788,
+      "image_sha256": "52dce283c01e5762bf0685ccd78aa87453f28d6e6114ec88077b431753162a81",
+      "annotation": "9999952_00000_d_0000137.txt",
+      "annotation_size": 498,
+      "annotation_mtime_ns": 1794395407063135200
+    }
+  },
+  {
+    "rank": 2,
+    "hash": "002d74854c5459a690508e0c9e0bd2b2e6574bec2d827f5364ce6b629f51bcea",
+    "group": "9999979",
+    "role": "main",
+    "record": {
+      "image": "images/test-dev/9999979_00000_d_0000035.jpg",
+      "stem": "9999979_00000_d_0000035",
+      "width": 1400,
+      "height": 1050,
+      "image_sha256": "524f3d377386a92502d1fe4fd090160e9bdefda6097b5475cf8e4cd987c8dbbf",
+      "annotation": "9999979_00000_d_0000035.txt",
+      "annotation_size": 1212,
+      "annotation_mtime_ns": 1794395407226742000
+    }
+  },
+  {
+    "rank": 3,
+    "hash": "009ccc715375bfa94800cab35d2200e1e0619a2b4bd54742fd1476f40aff3205",
+    "group": "9999938",
+    "role": "main",
+    "record": {
+      "image": "images/test-dev/9999938_00000_d_0000054.jpg",
+      "stem": "9999938_00000_d_0000054",
+      "width": 1400,
+      "height": 788,
+      "image_sha256": "5ac327009f15af12cafed2a8df9d9c59393b3f069ff4e9660cd7d31eaf371211",
+      "annotation": "9999938_00000_d_0000054.txt",
+      "annotation_size": 447,
+      "annotation_mtime_ns": 1794395406851015800
+    }
+  },
+  {
+    "rank": 4,
+    "hash": "00a462787029e8137cd89cce63ac45b0a7cd9bd844473e16529a353134f7a7da",
+    "group": "9999996",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999996_00000_d_0000018.jpg",
+      "stem": "9999996_00000_d_0000018",
+      "width": 1400,
+      "height": 1050,
+      "image_sha256": "57541827a1cf2588d350bd791aa53b3c267f665e1429fb5d6921aab58196e831",
+      "annotation": "9999996_00000_d_0000018.txt",
+      "annotation_size": 650,
+      "annotation_mtime_ns": 1794395407265553300
+    }
+  },
+  {
+    "rank": 5,
+    "hash": "00f857d969d621f7306b6d358d9b35b813bf4739b3a29f6a28822f66759bb979",
+    "group": "9999944",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999944_00000_d_0000003.jpg",
+      "stem": "9999944_00000_d_0000003",
+      "width": 1400,
+      "height": 788,
+      "image_sha256": "0ebd9674b797cbc7fdc8cdb0f1a051172e919fe1d67bad33d48df2972e3528c8",
+      "annotation": "9999944_00000_d_0000003.txt",
+      "annotation_size": 685,
+      "annotation_mtime_ns": 1794395407015476900
+    }
+  },
+  {
+    "rank": 6,
+    "hash": "017b9ae6d42c3078ad81ad6655298620d4b6f29a8a7e7c94c41bb172f8c1b690",
+    "group": "9999976",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999976_00000_d_0000016.jpg",
+      "stem": "9999976_00000_d_0000016",
+      "width": 1400,
+      "height": 788,
+      "image_sha256": "fdd9d177752795be1f6541064447f66160ff3fd8112afd32c1ddc9ce18445666",
+      "annotation": "9999976_00000_d_0000016.txt",
+      "annotation_size": 1306,
+      "annotation_mtime_ns": 1794395407202674700
+    }
+  },
+  {
+    "rank": 7,
+    "hash": "029b34e39e8124137ec1d9e0f4799c4e6f44f9eae0867fb27a6a1c5becf69ef4",
+    "group": "9999986",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999986_00000_d_0000030.jpg",
+      "stem": "9999986_00000_d_0000030",
+      "width": 1400,
+      "height": 1050,
+      "image_sha256": "32907ce0f38333326935e822daecb3a2d1da5b8c2c47c697302966d9c0ffbdd6",
+      "annotation": "9999986_00000_d_0000030.txt",
+      "annotation_size": 626,
+      "annotation_mtime_ns": 1794395407242817000
+    }
+  },
+  {
+    "rank": 8,
+    "hash": "02a62c0a3eb243ce0674959d27de8c92a1115f3fb179bf582364c3fa15f6eae6",
+    "group": "0000078",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/0000078_05467_d_0000015.jpg",
+      "stem": "0000078_05467_d_0000015",
+      "width": 1360,
+      "height": 765,
+      "image_sha256": "6b2ad493474dc76ce2e8f3ae9f48bfd525e00826753a2459dbb9eb7938378b2c",
+      "annotation": "0000078_05467_d_0000015.txt",
+      "annotation_size": 74,
+      "annotation_mtime_ns": 1794395406785309000
+    }
+  },
+  {
+    "rank": 9,
+    "hash": "031b9ef1d0bb9b14afd942d548f19124c0e31bd5df6da19833f886443a97f67c",
+    "group": "0000265",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/0000265_05000_d_0000011.jpg",
+      "stem": "0000265_05000_d_0000011",
+      "width": 1360,
+      "height": 765,
+      "image_sha256": "60c96066b8a11cfab5c6a9fb6d28af4c32f3d3a1d5cfd82e5afbceb66b515df3",
+      "annotation": "0000265_05000_d_0000011.txt",
+      "annotation_size": 2525,
+      "annotation_mtime_ns": 1794395406809729400
+    }
+  },
+  {
+    "rank": 10,
+    "hash": "03c456385c641429fbdf0cef3db76ee336e8944fa281d493c321433c223521b2",
+    "group": "0000074",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/0000074_13875_d_0000027.jpg",
+      "stem": "0000074_13875_d_0000027",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "1e857407eb50174f17a23411e05c1e6c1160d6b240abdcc394ac16a191145029",
+      "annotation": "0000074_13875_d_0000027.txt",
+      "annotation_size": 2782,
+      "annotation_mtime_ns": 1794395406777331600
+    }
+  },
+  {
+    "rank": 11,
+    "hash": "0403cb42e2c9850e18b6a8c99433e8b099c4f9e04b056a0ae27df501f2f7f80b",
+    "group": "9999973",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999973_00000_d_0000089.jpg",
+      "stem": "9999973_00000_d_0000089",
+      "width": 1916,
+      "height": 1078,
+      "image_sha256": "75e6003b54aca970a2173e4c698964c04315590e2d82190a3b77490a606e2b28",
+      "annotation": "9999973_00000_d_0000089.txt",
+      "annotation_size": 421,
+      "annotation_mtime_ns": 1794395407177495600
+    }
+  },
+  {
+    "rank": 12,
+    "hash": "041006751606e7dc7ce9f086b292226b1a68587a2d4aad57c4abb3f026ae3a6f",
+    "group": "9999963",
+    "role": "supplementary",
+    "record": {
+      "image": "images/test-dev/9999963_00000_d_0000050.jpg",
+      "stem": "9999963_00000_d_0000050",
+      "width": 1400,
+      "height": 1050,
+      "image_sha256": "fdb904302b9b42d135de82068c9d339588432fea88f47f8d30692cfcd40fb06e",
+      "annotation": "9999963_00000_d_0000050.txt",
+      "annotation_size": 700,
+      "annotation_mtime_ns": 1794395407146918300
+    }
+  }
+]
