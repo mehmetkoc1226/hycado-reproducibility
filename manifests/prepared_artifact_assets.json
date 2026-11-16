@@ -1,0 +1,50 @@
+{
+  "status": "PREPARED_NOT_UPLOADED",
+  "report_source": "27_yayin_paketleme_rapor.zip",
+  "code_commit": "311bfe15c1a9df09326ec1d210b60c847905baed",
+  "packaging_source_commit": "21b07128402c621a37d9b5921143f21d105ed43e",
+  "plan_sha256": "3acaff8e743f837d3a679ea9765db7dfbc14881025e1ab718c9439d09f1c8491",
+  "total_asset_bytes": 2876308641,
+  "assets": [
+    {
+      "asset": "checkpoint_yolo.zip",
+      "bytes": 410440435,
+      "sha256": "2d6679ebfec8481f6e1224eb3e02e51d4f05947669707abdcc3621afb3b21d0f"
+    },
+    {
+      "asset": "checkpoint_crop.zip",
+      "bytes": 526970188,
+      "sha256": "dd9c3b0af26b80999178f4768ba1db1ad54f3edfb667fc282be2b048b00bec66"
+    },
+    {
+      "asset": "checkpoint_full.zip",
+      "bytes": 526962508,
+      "sha256": "d35951040413c12c987caa4c69d879672ac295a54541f863a82fe05c1778f3b8"
+    },
+    {
+      "asset": "predictions_stage18.zip",
+      "bytes": 318739034,
+      "sha256": "6223c8eec84b6c9959636555559a634005f158dccc1a572ad08b8f66b9e15f80"
+    },
+    {
+      "asset": "predictions_stage19.zip",
+      "bytes": 43315801,
+      "sha256": "810635b69d89521a64f463cf581e98b87670c282a875de989bdeb85c1178c3ab"
+    },
+    {
+      "asset": "predictions_stage20.zip",
+      "bytes": 807481946,
+      "sha256": "e6153b854f0c124e17c2b8ba7f35fe681e71740cf05cdf2b4ee829d010c466e8"
+    },
+    {
+      "asset": "predictions_stage24.zip",
+      "bytes": 97534553,
+      "sha256": "c7f6a6cc60b636b5f4d53845e1a354e1fe30f6d2557f89629d2dc7e3db0a8d88"
+    },
+    {
+      "asset": "legacy_replay_inputs.zip",
+      "bytes": 144864176,
+      "sha256": "3baa84ed3fc07fa0f84cc3a10af9394535703dd189d13760588488138218d9a4"
+    }
+  ]
+}
