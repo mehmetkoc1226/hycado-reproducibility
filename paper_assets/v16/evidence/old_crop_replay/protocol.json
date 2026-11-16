@@ -1,0 +1,32 @@
+{
+  "id": "p4_yolo1280_old_roi_cpu_replay_v1",
+  "images": 647,
+  "crop_weight": 0.25,
+  "scope": "TRAIN-internal development, exploratory; original YOLO-800 ROIs",
+  "script_sha256": "2e248d43539d5ec0312deb18e136b37e81451cd5d17fb40592c23c5e7cda9097",
+  "refs": {
+    "code": {
+      "score_ablation.py": "c83892eb69d09b4cba1ff287192e07684d55ea8eebaf2206064661d453fcaf5d",
+      "dev_evaluation.py": "3e7a2c7e79d75c6841bd57824723f84da269abf8a8cbf5d2e3415803697ddf11",
+      "dev_metrics.py": "d87a27c597393e80704bc544312ede5a571a55f387ea3728e4f16a807dbf6a9b",
+      "proposal_geometry.py": "3a7015d30f4178a48abd3dd08031fead4a10b2338cfb23c0d28a12d276b4b182"
+    },
+    "manifest": "a047bf572d7a45235863fc7e8f626d7c96dee5698f16840cef90c49117ae3219",
+    "checkpoint": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+    "p2_metrics": "a532c30548c688951ed4a0039402d50ca2f5649c92d43b20cb621fdd106c2da9",
+    "pilot_a_metrics": "9ec3ff86a010d8bc07465714de5ac1cffa48bdfcefff4304acd131dedae13927",
+    "p2_script": "53ec58a853e3c93ca4363df9ec25df3fa08d808f5c5da31d1579a8cc979619b1"
+  },
+  "p2_index_sha256": "8c72b5c99566539869acac45b213bbf18fd35a50fc9a5c31a98a870f0b2c32c0",
+  "p2_protocol_sha256": "df5bc6a3a40057d70af477b8916b8505f30d68c4f2ef48e1fd0dc71a8b8b7105",
+  "capture_index_sha256": "9a706540bead203e07dd9e1283739f27b903d01a4e0657fe6d440d1b1187a49b",
+  "variants": [
+    "yolo1280",
+    "yolo1280_nms_only",
+    "hycado800_a025",
+    "yolo1280_old_rois_a025"
+  ],
+  "training": false,
+  "inference": false,
+  "latency_measured": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Bounded text and notation corrections",
+  "main_pages": 14,
+  "supplement_pages": 20,
+  "citations": 40,
+  "main_figures": 4,
+  "main_tables": 6,
+  "source_commit_retained": "21b07128402c621a37d9b5921143f21d105ed43e",
+  "new_training": false,
+  "new_inference": false,
+  "new_detection_metric_computation": false,
+  "github_modified": false,
+  "table_bibliography_figure_bytes_unchanged": true,
+  "checks": [
+    "check_extensions.py PASS",
+    "check_val_diagnostics.py PASS",
+    "build_current_results.py PASS",
+    "cross-references PASS",
+    "PDF compilation and visual layout PASS"
+  ],
+  "sha256": {
+    "main.tex": "82f87eb29b354c121b93d2c94d3ecabe8ad37ddc7ec4a72d254905bf15394228",
+    "supplement.tex": "69cdf2c7db745cdbe63c178182227dfb17464ad5f2a9d1f91505f4406bf28696",
+    "main.pdf": "94947e9d9ca396c4d98dd2dd5eba94f21a804bb7a88e37e7e224ab01303f0b1a",
+    "supplement.pdf": "4007ed372e75f161129be50c9884acb1376ce187d1554679b63133d4c7051529"
+  }
+}

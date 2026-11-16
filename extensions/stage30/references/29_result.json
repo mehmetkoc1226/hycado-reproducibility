@@ -1,0 +1,23 @@
+{
+  "status": "RAW29_AUDIT_COMPLETE",
+  "signature": "5ed19dfbc3b3521b283a53edc454a7dffd5248853217c325c50f36eb885659d1",
+  "images": 1610,
+  "raw_archives_sha256_verified": 1610,
+  "tests_passed": 11,
+  "exact_replays": {
+    "hybrid800": 1610,
+    "hybrid1280": 1610,
+    "global1280_regions800": 1610
+  },
+  "alpha_sensitivity_possible_without_inference": true,
+  "reason": "All300 raw queries per crop, exact ordered geometry, fixed baselines and alpha=.25 replay verified",
+  "alpha_sweep_or_AP_computed_in_this_audit": false,
+  "training": false,
+  "gpu_inference": false,
+  "GT_read": false,
+  "original_databases_unchanged": true,
+  "verified_raw_index_sha256": "220b122e969b85c02b0c58771e81f5bf4816b9016251149173790d387cbdd769",
+  "crop_filling_boxes_are_not_automatically_false_positives": true,
+  "retained_crop_boxes": 1312333,
+  "retained_display_crop_boxes_ratio_ge_0_95": 4676
+}

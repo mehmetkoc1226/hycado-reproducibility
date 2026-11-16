@@ -1,0 +1,50 @@
+{
+  "id": "hycado_sahi640_testdev_v1",
+  "created_local": "2026-11-13",
+  "images": 1610,
+  "training": false,
+  "parameter_search": false,
+  "source_P2_protocol_file_sha256": "3149009864dffa172a5db5bbca1bb3fae7aabe8a4a3373a2a42a2ce2525ff217",
+  "checkpoint_sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+  "model_input_size": 800,
+  "slice_height": 640,
+  "slice_width": 640,
+  "sahi_frozen_settings": {
+    "package_version": "0.11.35",
+    "model_type": "ultralytics",
+    "model_input_size": 800,
+    "confidence_threshold": 0.001,
+    "overlap_height_ratio": 0.2,
+    "overlap_width_ratio": 0.2,
+    "perform_standard_pred": true,
+    "postprocess_type": "NMS",
+    "postprocess_match_metric": "IOU",
+    "postprocess_match_threshold": 0.5,
+    "postprocess_class_agnostic": false,
+    "max_output_for_evaluation": 500,
+    "note": "actual SAHI Ultralytics adapter; verify checkpoint loading and class indices before full run"
+  },
+  "effective_factory": "original P2 AutoDetectionModel defaults; no new half/TensorRT/backend flags",
+  "SAHI_input_candidate_limit": null,
+  "inference": "new SAHI640 only; every image committed before annotation-row access; no baseline reinference",
+  "VAL_replay": "5 fixed images, first/middle/last plus prior tie-order diagnostic and 1018-row dense image; exact numeric canonical equality",
+  "metric": {
+    "toolkit": "same retained toolkit-aligned AP, global max500; point estimates",
+    "COCO": "same stated ignore-region preprocessing, native boxes, cap100 primary and cap500 sensitivity; area AP and per-class AP"
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "groups": 61,
+    "seed": 20261102,
+    "primary_contrast": "hybrid1280_minus_sahi640 / COCO AP cap100 area all",
+    "secondary_contrast": "sahi640_minus_yolo1280",
+    "comparator_reuse": "same draw ids from completed23; no new baseline samples",
+    "toolkit_CI": false,
+    "cap500_and_area_CI": false,
+    "scope": "fixed weights; unverified filename/hash proxy clusters; exploratory previously examined test-dev",
+    "multiple_comparison_correction": false
+  },
+  "runtime": "progress only; no FPS or controlled latency benchmark",
+  "old_sources_readonly": true,
+  "new_output": "experiments/sahi640_testdev_v1_seed42"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "zip_sha256": "4f211056558dfe44fcad96a6f3ca29a89edafa544b99d7d5b02bc45a1d68fe11",
+  "zip_members": 94,
+  "all_member_hashes_verified": true,
+  "images_verified": 12,
+  "source_prediction_payloads_verified": 36,
+  "selection_reproduced": true,
+  "native_image_dimensions_verified": true,
+  "all_illustration_rows_and_windows_recomputed_exactly": true,
+  "issued_package_binding_verified": true,
+  "tests_passed_on_user_Windows": 13,
+  "new_training": false,
+  "new_inference": false,
+  "new_matching_or_metrics": false,
+  "main_PDF_pages": 1,
+  "supplementary_PDF_pages": 12,
+  "embedded_fonts_verified": true,
+  "all_PDF_pages_rendered_and_visually_reviewed": true,
+  "standalone_rebuild_page_drawing_streams_identical": true,
+  "main_rows_unchanged": [
+    1,
+    2,
+    3
+  ],
+  "posthoc_examples_added": 0
+}

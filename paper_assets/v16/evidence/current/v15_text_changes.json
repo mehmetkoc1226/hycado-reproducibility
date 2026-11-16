@@ -1,0 +1,22 @@
+{
+  "scope": "Text and notation only; no new experiments, metrics, figures or GitHub changes",
+  "changes": [
+    "Abstract: relocation explicitly limited to HyCADO-800",
+    "Placement seeds distinguished from training seeds",
+    "Consistent placement-seed terminology",
+    "COCO subsection heading clarified",
+    "Current reporting metric distinguished from historical endpoint",
+    "Preserve protocol chronology and exploratory status",
+    "Results metric wording aligned",
+    "Large-object comparison explicitly scoped; 800 references acknowledged",
+    "Proposal/global notation defined for all retained variants",
+    "Trigger-list notation aligned",
+    "Trigger equation uses proposal output",
+    "Global-list role explicit",
+    "Fusion equation uses global rather than proposal output",
+    "Fusion-score explanation aligned",
+    "Supplement: numerical stages22--24 separated from qualitative stage25"
+  ],
+  "all_table_files_and_bibliography_unchanged": true,
+  "name": "HyCADO retained as method name; no unverified acronym expansion introduced"
+}

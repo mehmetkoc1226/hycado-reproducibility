@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "synthetic_tests_passed": 15,
+  "integration": "4-image synthetic end-to-end freeze/matching/1000 paired draws and reopen/resume; byte-identical draw export after resume",
+  "upstream_COCO_parity": "maxDets100 and500; explicit equal-score bootstrap replication",
+  "nms": "40 randomized comparisons against independent literal greedy NMS; exact IoU0.7 boundary and class isolation",
+  "runtime_preparation": "Linux CPython3.12 using matching pycocotools2.0.11 Linux wheel; target bundle contains pinned Windows CPython3.11 wheel",
+  "native_Windows_execution_tested_here": false,
+  "actual_user_1610_image_experiment_executed_here": false,
+  "model_or_GPU_imports": false,
+  "package_does_not_require_network_or_pip": true
+}

@@ -1,0 +1,97 @@
+{
+  "id": "hycado_yolo800_1280_late_fusion_v1",
+  "specified_date": "2026-11-16",
+  "source": "Retained final detections from stage18; stage20 YOLO-1280 replay verified exactly",
+  "images": 1610,
+  "split": "VisDrone DET test-dev",
+  "frozen_outputs_not_raw_network_logits": true,
+  "fusion": {
+    "input_coordinates": "native-image xyxy; no 1280/800 coordinate scaling",
+    "input_order": [
+      "yolo800",
+      "yolo1280"
+    ],
+    "score_multipliers": [
+      1.0,
+      1.0
+    ],
+    "new_score_threshold": null,
+    "canonical_sort": [
+      "descending score",
+      "class",
+      "x1",
+      "y1",
+      "x2",
+      "y2"
+    ],
+    "stable_exact_ties": true,
+    "nms": "greedy class-wise, suppress IoU strictly >0.7 against retained candidates",
+    "iou_threshold": 0.7,
+    "output_global_cap": 1000,
+    "prefusion_additional_cap": null,
+    "raw_zero_area": "clipped zero-area candidates dropped",
+    "training_or_inference": false
+  },
+  "comparison": {
+    "primary": "hybrid1280_minus_yolo800_1280_fusion / COCO AP maxDets100",
+    "secondary": [
+      "yolo800_1280_fusion_minus_yolo1280",
+      "yolo800_1280_fusion_minus_sahi640"
+    ],
+    "all_results_reported_regardless_of_direction": true,
+    "baseline_points": "Recompute YOLO-1280 and HyCADO-1280 from frozen source20 and require agreement with completed22 within 1e-8 pp",
+    "SAHI": "Reuse completed24 fixed point values and paired draws; no SAHI rerun"
+  },
+  "evaluation": {
+    "pycocotools": "2.0.11",
+    "metric": "COCO-style bbox with exactly retained VisDrone category-zero ignore preprocessing",
+    "primary_maxDets_per_image_per_class": 100,
+    "sensitivity_maxDets_per_image_per_class": 500,
+    "primary_area": "all",
+    "point_outputs": [
+      "AP",
+      "AP50",
+      "AP75",
+      "AP_small",
+      "AP_medium",
+      "AP_large",
+      "AR",
+      "per-class AP/AP50/AP75"
+    ],
+    "ground_truth_count_after_ignore": 74707,
+    "image_order": "lexicographic original image path, IDs1..1610",
+    "GT_and_detection_ignore_filter": "same pinned visdrone_preprocess.py as completed22",
+    "no_new_metric_tuning": true
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "proxy_clusters": 61,
+    "seed": 20261102,
+    "draw_rule": "PCG64(SeedSequence([20261102,0,draw_index])); same filename/hash proxy clusters as completed23/24",
+    "canonical_replication": "sorted original image order; stable equal-score image-block replication",
+    "keys": [
+      "AP",
+      "AP50",
+      "AP75",
+      "AR100"
+    ],
+    "area": "all",
+    "maxDets": 100,
+    "interval": "paired percentile, 2.5/97.5 quantiles, method=linear",
+    "training_seed_uncertainty": false,
+    "independence_of_proxy_clusters_verified": false,
+    "secondary_multiplicity_corrected": false
+  },
+  "interpretation": "Exploratory fixed control on already examined test-dev; not an untouched confirmatory evaluation; not an equal-compute or latency comparison",
+  "safety": {
+    "original_databases": "read-only SQLite connections; full SHA256 before and after",
+    "annotations": "read only, all hashes checked",
+    "resume": "atomic SQLite per-image predictions/matches and per-draw values; signature-bound outputs; OS lock released after restart",
+    "new_output": "experiments/yolo800_1280_fusion_v1_seed42",
+    "report": "28_cift_cozunurluk_fuzyon_rapor.zip beside CMD",
+    "no_training": true,
+    "no_gpu": true,
+    "no_pip_install": true,
+    "main_venv_unchanged": true
+  }
+}

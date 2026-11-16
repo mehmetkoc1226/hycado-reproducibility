@@ -1,0 +1,64 @@
+{
+  "id": "hycado_coco_uncertainty_recall_v1",
+  "implementation_date": "2026-11-13",
+  "parent_scientific_protocol_sha256": "c8dfb425b59b940183a4c5da946184b2f61c2b536b8887811b4638ed01f62dce",
+  "completed22_signature": "95f5e294e492eed9feb6917cce025508b3353ff633b711f87369a431b3269161",
+  "images": 1610,
+  "methods": [
+    "yolo1280",
+    "hybrid1280",
+    "yolo1280_rois800"
+  ],
+  "primary_contrast": "hybrid1280_minus_yolo1280 / COCO AP maxDets100 area all",
+  "secondary_contrasts": [
+    "yolo1280_rois800_minus_yolo1280",
+    "hybrid1280_minus_yolo1280_rois800"
+  ],
+  "bootstrap": {
+    "replicates": 1000,
+    "proxy_clusters": 61,
+    "seed": 20261102,
+    "resampling": "paired filename/hash proxy-cluster frequencies; PCG64 SeedSequence([seed,0,draw_index])",
+    "canonical_replicate_order": "original sorted image order, repeated copies; stable score/image tie blocks",
+    "interval": "percentile 2.5/97.5, numpy method=linear",
+    "scope": "fixed weights, sample composition uncertainty; unverified cluster independence; exploratory previously examined test-dev",
+    "multiplicity": "marginal intervals; secondary and recall intervals descriptive"
+  },
+  "coco": {
+    "primary_maxDets": 100,
+    "area": "all",
+    "keys": [
+      "AP",
+      "AP50",
+      "AP75",
+      "AR100"
+    ],
+    "cached_matching": "completed22 unchanged COCO per-image matches",
+    "accumulation": "101 recall points; direct upstream equivalence tested",
+    "cap500_and_size_AP": "stage22 point estimates retained; no additional bootstrap for these endpoints"
+  },
+  "recall_fp": {
+    "source": "frozen source20 toolkit-aligned global-max500 matches",
+    "IoU": [
+      0.5,
+      0.75
+    ],
+    "FP_per_image_budgets": [
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "primary_descriptive_budget": 2,
+    "whole_score_ties": true,
+    "bootstrap_image_denominator": "resampled number of images, not fixed1610",
+    "deployment_threshold_selected": false,
+    "not_COCO_AR": true
+  },
+  "training": false,
+  "gpu_inference": false,
+  "parameter_search": false,
+  "old_sources_readonly": true,
+  "new_output_directory": "experiments/coco_uncertainty_recall_v1_seed42"
+}

@@ -1,0 +1,22 @@
+{
+  "unmodified_stage22_modules": [
+    "coco_core.py",
+    "bootstrap_vendor.py",
+    "visdrone_preprocess.py"
+  ],
+  "unmodified_stage24_modules": [
+    "resampling.py",
+    "uncertainty_core.py"
+  ],
+  "new_modules": [
+    "fusion28.py",
+    "run_fusion28.py",
+    "test_fusion28.py"
+  ],
+  "frozen_reference_archives": {
+    "22B_coco_nokta_sonuclar_rapor(1).zip": "ede8a13b40577e5844bfc597b57e13ddc43c36878cb897bbe525a2f8fcbffe64",
+    "23_coco_guven_recall_rapor.zip": "53e50ceb65eb5486403e782e52f918e736951d4fdfe5bc243c5d7d27def5956f",
+    "24_sahi640_testdev_rapor.zip": "e87bfabb0e030ee59607ed46737be7877af99a64df3760d4c64c71d7fd833858"
+  },
+  "NMS": "NumPy implementation retains canonical sort/strict IoU/global-cap behavior of previous dev_evaluation.classwise_nms; independent literal parity tested"
+}

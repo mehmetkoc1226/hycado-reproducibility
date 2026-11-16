@@ -1,0 +1,38 @@
+{
+  "status": "QUALITATIVE_EXPORT_COMPLETE",
+  "images": 12,
+  "main_images": 3,
+  "methods": [
+    "yolo1280",
+    "hybrid1280",
+    "sahi640"
+  ],
+  "tests_passed": 13,
+  "signature": "bd7658a69c4ded4c719167f4e476760841df8bdad268a703d216cfe8f4d41771",
+  "package_manifest_sha256": "cbf777f3921b6f74fa1fb1ed4df697ad39b23ad8c893a48039e2dc7ad871665f",
+  "training": false,
+  "gpu_inference": false,
+  "new_metric_computation": false,
+  "source_files_opened_readonly": true,
+  "source_database_stat_unchanged": true,
+  "full_database_rehash": false,
+  "selected_prediction_payload_hashes_verified": true,
+  "original_image_and_annotation_hashes_verified": true,
+  "image_selection_uses_predictions": false,
+  "window_selection_uses_GT": true,
+  "class_colors_are_not_TP_FP_labels": true,
+  "versions": {
+    "Pillow": "11.3.0",
+    "numpy": "1.26.4"
+  },
+  "source_database_stats": {
+    "source20": [
+      807481344,
+      1794469884370992500
+    ],
+    "source24": [
+      97533952,
+      1794604838963421800
+    ]
+  }
+}

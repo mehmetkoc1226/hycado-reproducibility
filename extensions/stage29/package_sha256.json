@@ -1,0 +1,16 @@
+{
+  "29_HAM_CROP_DENETIMI.cmd": "1ac7c927db0d6e16a3a91a9b61893f6f0944eaade318113fbc1b75975802442d",
+  "ONCE_OKUYUN_TR.md": "2c4bce0974ed83d2e2f786260d57f357490656d757e097407e4c574b1eed3fb5",
+  "audit29.py": "db6683e85c96cd088a5cbe74e05c919bef9dbaa058364a035cdeeef54442ce01",
+  "frozen_cpu.py": "951e0a0cb82e90fdd799d49a46fc69f4e501cc6158729e906acd935a372412d3",
+  "preparation_validation.json": "6bf7db50a50fa342400b9669d04a6fad898b24e25de981eaef13a9a8a045e8ec",
+  "protocol.json": "bfc5e1064f5d3cb045a1af52982e11e1dcdee82d8daddb26096e58bb969abffd",
+  "references/22_point_results.json": "b97f04fbe8e4068484c58d9237ab81f5eacc5e0e98b0880adc66caa470749d7f",
+  "references/stage18/dataset_manifest.json": "d2f8311c49ccd45fa304fb6598993c8597f01039137b6e1a20ecb97ccefb647b",
+  "references/stage18/prediction_index.json": "742b75e0da3c58ec8dfc63c88a00566a1397dbc7515cc37f9821ee6a905d055a",
+  "references/stage20/prediction_index.json": "8ef66a74a857911d9b37f802580ba24c9af9fbae754ee03a69f34340ebf2681a",
+  "source_provenance.json": "594a4fb134d1410219f6feffff0dea4482f19a41ba71d25f12a2a24b3ff53be9",
+  "test_audit29.py": "9e83182696194ad02125044bc59c3fe1db45277b5d4bb20d41866ac5c504a0b2",
+  "trace29.py": "92756ffa3870a36b98cacda65b571f15115692eee5add6818a34e4108e99f0c0",
+  "validation_tests.txt": "62c279aa2866c9e41fa7bcafe0e4368f172c2558ac5bdf52fc13d54696e26dae"
+}

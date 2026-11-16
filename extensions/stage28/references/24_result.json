@@ -1,0 +1,59 @@
+{
+  "status": "SAHI640_TESTDEV_COMPLETE",
+  "images": 1610,
+  "tests_passed": 13,
+  "signature": "3edfde9c7f044cde76287bc388a1523f97ea61c32d4c931baeb70b81be7eb3f8",
+  "training": false,
+  "parameter_search": false,
+  "new_inference": "SAHI640 only, frozen P2 settings",
+  "original_sources_unchanged": true,
+  "prediction_freeze_sha256": "4c373ce69d7a231f01c785c823d2836c7589fb2b7e0fe719fbe5a12e6cc473d6",
+  "runtime_bindings": {
+    "scientific_protocol_sha256": "a847a090e1356fed8b667aa14ce5324c68064f1f6f139c911263ea78cae783b6",
+    "package_sha256": "9d9352d4c4009bb0f23c4bdc5d1176fda7122588b5eb48f0603db88525c58674",
+    "checkpoint_sha256": "3b61a12a89a448b849bc965e44f00afa92042a5fc0928b4c4f801e0182f84149",
+    "environment": {
+      "versions": {
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "ultralytics": "8.3.203",
+        "sahi": "0.11.35",
+        "numpy": "1.26.4",
+        "shapely": "2.0.7",
+        "tqdm": "4.67.1"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti",
+      "cuda": "12.4",
+      "driver_inventory": "610.60",
+      "sahi_source_sha256": {
+        "adapter": "0b1bab67ccd135569b3b367eb4634c019a2f21e4930ae83f007866d3c3fa6c88",
+        "predict": "aed0b86ee0bcf513c2f847461733740e016db067b891293f4eb97264f98785c4",
+        "combine": "9b821a2263373b8c4052d91009711408dea3a4423f6594539355a0b3eb7b7201"
+      },
+      "backend_defaults": {
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": false,
+        "matmul_tf32": false,
+        "cudnn_tf32": true
+      }
+    },
+    "coco_environment": {
+      "pycocotools": "2.0.11",
+      "wheel_sha256": "8e159232adae3aef6b4e2d37b008bff107b26e9ed3b48e70ea6482302834bd34",
+      "numpy": "1.26.4",
+      "cocoeval_sha256": "84b0e75c6e972ca8b6fa3219fb03c1993dc9a3509df28447ca112c3f91828d61"
+    },
+    "dataset_path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev_frozen_v1_seed42\\dataset_78b0c5078a14ee43",
+    "reference22_fingerprint": "80eca9a67c3716e08c38704242a5b69dcddcac954b688912a400a20a35c1872d",
+    "reference23_signature": "9dd5a70cee5f253fec0f8563213764decb30b4613f0356cb4326b7bca4f383a3"
+  },
+  "sahi640_COCO_AP100": 24.529205986833734,
+  "sahi640_toolkit_AP": 29.478814887253574,
+  "primary_COCO_difference": {
+    "point": -0.09451799258820515,
+    "lower95": -0.776478844834471,
+    "upper95": 0.7432034668355987,
+    "bootstrap_SE": 0.3995524659468503
+  },
+  "runtime_note": "progress estimates only; no FPS or latency benchmark"
+}

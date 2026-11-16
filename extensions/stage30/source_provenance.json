@@ -1,0 +1,20 @@
+{
+  "unmodified_modules_from29": [
+    "trace29.py",
+    "frozen_cpu.py"
+  ],
+  "unmodified_modules_from28": [
+    "coco_core.py",
+    "bootstrap_vendor.py",
+    "visdrone_preprocess.py"
+  ],
+  "new_modules": [
+    "alpha30_core.py",
+    "run_alpha30.py",
+    "test_alpha30.py"
+  ],
+  "source_reports": {
+    "28_cift_cozunurluk_fuzyon_rapor.zip": "39802ab39f00f492c25eacde00582f240bf9bf9165a22e9467279dded46ef253",
+    "29_ham_crop_denetim_rapor.zip": "ed930ad8eb079b71afd0355b005c28da723349a93b6666692950546994024ae1"
+  }
+}

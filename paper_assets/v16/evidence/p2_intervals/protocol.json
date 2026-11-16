@@ -1,0 +1,40 @@
+{
+  "id": "hycado_p2_paired_ci_v1",
+  "official_val_images": 548,
+  "methods": [
+    "hybrid_a025",
+    "yolo800_repeat",
+    "yolo1280",
+    "yolo1536",
+    "sahi640",
+    "sahi800"
+  ],
+  "p2_source_files": {
+    "official_val_protocol.json": "3149009864dffa172a5db5bbca1bb3fae7aabe8a4a3373a2a42a2ce2525ff217",
+    "official_val_prediction_index.json": "bf041e21109092a7c4a31b1e1504e00e904ced34119bb2f2ce731fcb7c43052a",
+    "official_val_metrics.json": "3ceac720677498235408b3000e207d5a8d6bbd7814a1000f844ad01522031137"
+  },
+  "hycado_source_files": {
+    "protocol.json": "bf406f50d8441fc66346be30615ebdb94b009625e5946e5fa59dd1e5427e686f",
+    "prediction_index.json": "7448cb758b2afbad87c3601221edd77a890be36e336460c66004b21c51abff17",
+    "metrics.json": "331ca863f925dcb3145b1c32ec0d27ed243f58dabdad2c194cfe0e6b94d3876a"
+  },
+  "official_manifest_sha256": "e2b610a276aea28c4d5d3ec47e45c381d4b4fc2b09f3ef20d57495a0677905fa",
+  "score_source_sha256": "c83892eb69d09b4cba1ff287192e07684d55ea8eebaf2206064661d453fcaf5d",
+  "metric_source_sha256": "d87a27c597393e80704bc544312ede5a571a55f387ea3728e4f16a807dbf6a9b",
+  "bootstrap_engine_sha256": "d563560d550cd48edfaca5e45ddff44aa2d695c2d15597a1cafa8a1547363cfc",
+  "runner_sha256": "a582efa8ad12faaeaa960199636cac7fe63d56c8e393500dbc0dcfac3eb32753",
+  "groups_sha256": "2705a9f38809cbc6dd2d6f0f0d0e30a74388ae56053b4e6ca32e94a473b784cd",
+  "draw_seed": 20261105,
+  "draws_per_mode": 1000,
+  "block_size": 25,
+  "modes": [
+    "cluster",
+    "image"
+  ],
+  "training": false,
+  "gpu_inference": false,
+  "post_hoc_exploratory": true,
+  "metric": "frozen toolkit-aligned Python; not COCO mAP",
+  "scope": "sample composition uncertainty conditional on one trained model pair; marginal intervals"
+}

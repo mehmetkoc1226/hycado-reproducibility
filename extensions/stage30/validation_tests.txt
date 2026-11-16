@@ -1,0 +1,13 @@
+test_COCO_dtIds_map_back_through_class_sorting (test_alpha30.AlphaTests.test_COCO_dtIds_map_back_through_class_sorting) ... ok
+test_alpha025_source_origins_and_area_ratios (test_alpha30.AlphaTests.test_alpha025_source_origins_and_area_ratios) ... ok
+test_cache_resume_tampering_and_atomic_coupled_diagnostic (test_alpha30.AlphaTests.test_cache_resume_tampering_and_atomic_coupled_diagnostic) ... ok
+test_end_to_end_freeze_metrics_geometry_and_reopen_resume (test_alpha30.AlphaTests.test_end_to_end_freeze_metrics_geometry_and_reopen_resume) ... ok
+test_fixed_grid_native_geometry_and_true_global_only_endpoint (test_alpha30.AlphaTests.test_fixed_grid_native_geometry_and_true_global_only_endpoint) ... ok
+test_ignore_filter_preserves_native_source_ID (test_alpha30.AlphaTests.test_ignore_filter_preserves_native_source_ID) ... ok
+test_per_class_top100_diagnostic_cap (test_alpha30.AlphaTests.test_per_class_top100_diagnostic_cap) ... ok
+test_retained29_gate_covers_exact_raw_index (test_alpha30.AlphaTests.test_retained29_gate_covers_exact_raw_index) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.152s
+
+OK

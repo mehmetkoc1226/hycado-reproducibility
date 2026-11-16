@@ -1,0 +1,77 @@
+{
+  "valid_replicates": 1000,
+  "replicates_requested": 1000,
+  "proxy_cluster_count": 61,
+  "differences_pp": {
+    "hybrid1280_minus_yolo1280": {
+      "AP": {
+        "point": 0.5052088738614202,
+        "lower95": 0.1294410082563929,
+        "upper95": 0.8848662103577757
+      },
+      "AP50": {
+        "point": 0.5659396972270301,
+        "lower95": -0.11160649968599472,
+        "upper95": 1.2824639944830198
+      },
+      "AP75": {
+        "point": 0.6256455333871784,
+        "lower95": 0.25356354859741737,
+        "upper95": 1.0021255940776543
+      },
+      "AR500": {
+        "point": 2.5092810424383387,
+        "lower95": 1.9190834407113981,
+        "upper95": 3.5713471519669313
+      }
+    },
+    "yolo1280_rois800_minus_yolo1280": {
+      "AP": {
+        "point": 0.5436589969479506,
+        "lower95": 0.1675439208316444,
+        "upper95": 0.9237076324870694
+      },
+      "AP50": {
+        "point": 0.6462479458507318,
+        "lower95": -0.017809361238872137,
+        "upper95": 1.334007630769015
+      },
+      "AP75": {
+        "point": 0.6671144731570706,
+        "lower95": 0.2864684047371191,
+        "upper95": 1.0452845082095423
+      },
+      "AR500": {
+        "point": 2.6100791962316308,
+        "lower95": 2.0085815788180237,
+        "upper95": 3.727465147303826
+      }
+    },
+    "hybrid1280_minus_yolo1280_rois800": {
+      "AP": {
+        "point": -0.0384501230865304,
+        "lower95": -0.06856202167895838,
+        "upper95": -0.003899906494180538
+      },
+      "AP50": {
+        "point": -0.08030824862370167,
+        "lower95": -0.1468629742862742,
+        "upper95": -0.0008788520156718656
+      },
+      "AP75": {
+        "point": -0.04146893976989219,
+        "lower95": -0.09010184343372218,
+        "upper95": -0.0016032949164228162
+      },
+      "AR500": {
+        "point": -0.10079815379329204,
+        "lower95": -0.22576992874643,
+        "upper95": 0.01637434517395859
+      }
+    }
+  },
+  "primary_contrast": "hybrid1280_minus_yolo1280",
+  "scope": "fixed models, exploratory previously examined test-dev; sample uncertainty only",
+  "multiplicity": "marginal 95% intervals, no multiple-comparison correction",
+  "interval": "paired proxy-cluster percentile; groups are not verified independent scenes"
+}

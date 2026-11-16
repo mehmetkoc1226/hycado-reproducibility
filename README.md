@@ -2,34 +2,72 @@
 
 Companion materials for **HyCADO for Detector-Guided Region Refinement in UAV Object Detection**, Gul Erten and Mehmet Koc.
 
-The current recorded-result extension is **v14**. It adds completed COCO-style evaluation, paired uncertainty and recall diagnostics, frozen SAHI-640 test-dev inference, and prediction-independent qualitative selection code (stages 22–25). This publication does not run training or inference. The ten-class AP table is now in the main manuscript.
+The current recorded-result revision is **v16**. It includes completed stages22–25 and28–30: COCO-style evaluation, paired uncertainty, SAHI-640 test-dev, frozen qualitative selection, two-resolution YOLO fusion, exact raw-crop replay, and descriptive score-multiplier/geometry diagnostics. This repository update runs no training or detector inference. Historical implementations and v12/v14 records remain intact.
 
 ## Current COCO results
 
-All values below use **COCO-style AP on VisDrone DET test-dev with the stated ignore-region preprocessing**, maxDets100 per image/category (1610 images). These are distinct from the historical toolkit scores below.
+VisDrone DET **test-dev,1610 images**, COCO-style bbox metrics with the recorded ignore-region preprocessing, **maxDets100 per image/category**. These scores are distinct from the historical toolkit scores further below.
 
-| Method | AP | AP_small | AR100 |
-|---|---:|---:|---:|
-| YOLO-1280 | 23.996 | 15.365 | 36.166 |
-| HyCADO-1280 | 24.435 | 15.906 | 39.128 |
-| SAHI-640 + same YOLO checkpoint | 24.529 | 15.692 | 39.817 |
+| Method | AP | AP_small | AP_medium | AP_large | AR100 |
+|---|---:|---:|---:|---:|---:|
+| YOLO-1280 | 23.996 | 15.365 | 33.295 | 35.016 | 36.166 |
+| HyCADO-1280, original alpha0.25 | 24.435 | 15.906 | 33.832 | 34.910 | 39.128 |
+| SAHI-640 + same YOLO checkpoint | 24.529 | 15.692 | 32.793 | 41.419 | 39.817 |
+| YOLO-800 + YOLO-1280 fusion | 25.311 | 15.661 | 35.160 | 43.238 | 39.520 |
 
-HyCADO minus YOLO: **+0.439 AP [0.161, 0.838]**. HyCADO minus SAHI: **−0.095 [−0.776, 0.743]**. The latter interval establishes neither superiority nor equivalence. Size/class differences have no separate intervals. Low-FP recall point estimates are unchanged for the 1280 refinement variants at the prespecified budgets. All comparisons are exploratory on a previously examined split, conditional on one seed-42 trained model set and unverified filename/hash proxy groups.
+HyCADO minus YOLO-1280: **+0.439 AP [0.161,0.838]**. HyCADO minus SAHI: **−0.095 [−0.776,0.743]**, which establishes neither superiority nor equivalence. HyCADO minus two-resolution fusion: **−0.876 [−1.506,−0.152]**. The latter control combines the same YOLO weights at targets800 and1280, leaves both score multipliers at1, and applies the cascade's final NMS/cap. No latency or equal-compute conclusion follows from these accuracy results.
 
-## Current result checks
+Intervals are paired percentile intervals from1000 draws over61 filename/hash proxy groups, conditional on one trained seed42 model set. The split had already been examined. Size/class differences have no separate intervals. Low-FP recall is unchanged for the two1280 refinement variants at the reported budgets; SAHI and two-resolution fusion were not evaluated in that particular recall diagnostic.
 
-Use an isolated environment for optional analysis dependencies:
+## Descriptive multiplier and crop diagnostics
+
+With weights, crop regions, decoder, score cutoff and NMS fixed:
+
+| Crop-score multiplier alpha | COCO AP100 |
+|---|---:|
+| 0 — crop branch disabled; YOLO-1280 | 23.996 |
+| 0.125 | 24.510 |
+| **0.25 — original HyCADO** | **24.435** |
+| 0.5 | 24.189 |
+| 1 | 22.256 |
+
+All five points are reported; **the original alpha0.25 is retained**. The0.075-point difference at0.125 has no newly computed CI and does not establish a newly validated optimal setting. This is descriptive post-hoc sensitivity, not an untouched confirmation set.
+
+Stage29 verifies all1610 raw-query archives and exactly replays three frozen configurations. At alpha0.25,4534 evaluated crop-source display boxes (score>=0.05) occupy at least95% of their originating crop area; all are COCO FPs at IoU0.5 and0.75 after ignore filtering and the per-class top100 cap. A COCO FP may be a duplicate or a class/localization error. These counts are not an AP decomposition or a tested benefit from deleting those boxes. Stage29's raw geometry totals use a different, uncapped/unfiltered population.
+
+## Reproduce recorded-result checks
+
+Use a separate environment, not an active experiment environment:
 
 ```bash
 python -m venv .venv-report
-# Activate that environment for your platform, then:
-python -m pip install -r requirements/report_v14.txt
-python paper_assets/v14/scripts/build_current_results.py
+# Activate it for your platform, then:
+python -m pip install -r requirements/report_v16.txt
+python tools/verify_v16.py
+python paper_assets/v16/scripts/check_extensions.py
+python paper_assets/v16/scripts/check_val_diagnostics.py
+python paper_assets/v16/scripts/build_current_results.py
+python paper_assets/v16/scripts/build_revision_controls.py
 ```
 
-The last command checks ten generated table/scalar files, source bindings and paired intervals against retained bootstrap draws. It is reporting verification, not AP recomputation. Optional `--write --figures` regenerates the same tables plus the AP/class and low-FP recall plots; add Matplotlib in the isolated environment first. Exact inference/evaluation packages are extracted under `extensions/stage22` through `stage25`; they require the original Windows project and externally supplied frozen inputs, not just a fresh clone.
+These commands verify retained results, source/code identities, table bytes, class means and paired intervals. The v16 verifier checks the two updated documentation files against their new hashes and all other historical files against the prior published Git blob identities. The original `verify_release.py` remains an archival verifier of the initial documentation snapshot; use `verify_v16.py` for this checkout. **They do not load models or recompute AP from predictions.** The last command additionally verifies completed28–30 reports, twelve paired metric intervals/standard errors, alpha CSV values and geometry partitions, and six new table files. For numeric figure regeneration:
 
-No dataset images, checkpoints, full prediction SQLite databases, manuscript PDFs or image atlas are added by this extension. Stage25 includes the fixed selection, hashes and export code; rendering needs the externally supplied images and frozen databases. Trained checkpoint and complete prediction download locations remain pending. See [v14 update](docs/V14_UPDATE.md).
+```bash
+python -m pip install -r requirements/figures_v16.txt
+python paper_assets/v16/scripts/build_revision_controls.py --write --figures
+```
+
+The included numeric figures show the multiplier grid and the retained full-range recall data on a common linear-near-zero/logarithmic-above0.5 axis. Dataset images, manuscript PDFs, the pipeline's image-containing artwork and the qualitative atlas remain outside this repository. The LaTeX files document the reporting source; they are not advertised as a self-contained image-complete Overleaf project.
+
+## Original Windows CPU controls
+
+Exact originally distributed packages, including references and package identities, are under:
+
+- `extensions/stage28`: fixed YOLO-800/1280 fusion and paired comparisons;
+- `extensions/stage29`: raw-query integrity, exact alpha0.25 replay and geometric provenance;
+- `extensions/stage30`: fixed alpha grid and COCO-matched crop geometry.
+
+They require the original frozen Windows Python3.11 project inputs. Their launchers use CPU only, do not install into the main environment, and resume signature-bound completed work. Inspect their `ONCE_OKUYUN_TR.md` and `protocol.json` first. **A fresh clone does not supply the external checkpoints, full prediction databases or original data.** Their download links remain pending. See [v16 update](docs/V16_UPDATE.md), [release status](docs/RELEASE_STATUS.md), and [external inputs](docs/ARTIFACTS.md).
 
 ## Historical v12 workflow
 
@@ -38,7 +76,7 @@ No dataset images, checkpoints, full prediction SQLite databases, manuscript PDF
 Python 3.11 or newer is sufficient for the following CPU-only checks; no additional packages or GPU are needed:
 
 ```bash
-python tools/verify_release.py
+python tools/verify_v16.py
 python tools/verify_v12.py
 python tools/reproduce_tables.py --output build/v12_tables
 python -m unittest discover -s tests -v
@@ -92,7 +130,7 @@ All conditions retain one seed-42 trained model set. Placement seeds are not tra
 
 ## Repository map
 
-- paper_assets/v12/: current table sources, completed reports and verification/generation scripts.
+- paper_assets/v12/: historical toolkit table sources, completed reports and verification/generation scripts.
 - extensions/stage18/: original test-dev evaluation and matched relocation.
 - extensions/stage19/: full 1280 cascade on 647 internal-development images.
 - extensions/stage20/: fixed test-dev comparison of the two 1280 variants.
@@ -103,7 +141,7 @@ All conditions retain one seed-42 trained model set. Placement seeds are not tra
 - splits/: exact role lists; test-dev JPEG identities are in the stage-18 dataset manifest.
 - manifests/: source, checkpoint, archive and table identities.
 
-The original files directly under paper_assets/ remain the historical snapshot. Use v12 for the historical table set and paper_assets/v14 for the supplementary COCO result extension. Detailed timing tables and plots are excluded from the v12 table workflow; historical records remain available separately. The manuscript retains a brief hardware-bound cost disclosure and crop-call counts.
+The original files directly under paper_assets/ remain the historical snapshot. Use v12 for the historical toolkit table set, paper_assets/v14 for its frozen COCO extension, and paper_assets/v16 for the current recorded-result revision. Detailed timing tables and plots are excluded from the v12 table workflow; historical records remain available separately. The manuscript retains a brief hardware-bound cost disclosure and crop-call counts.
 
 ## Historical table and prediction replay
 

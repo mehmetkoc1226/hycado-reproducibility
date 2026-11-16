@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "main_pages": 13,
+  "supplement_pages": 20,
+  "main_class_table": "IV",
+  "main_class_table_page": 9,
+  "repository": "mehmetkoc1226/hycado-reproducibility",
+  "source_commit": "21b07128402c621a37d9b5921143f21d105ed43e",
+  "public_extension_files_verified": 175,
+  "old_blobs_preserved_except_two_documentation_updates": true,
+  "other_repositories_modified": false,
+  "new_training": false,
+  "new_inference": false,
+  "final_sha256": {
+    "main.tex": "0520fad11825aebf184cdad70947708fe1763cb5229143bfe73fd4d1d13c37cf",
+    "supplement.tex": "e011583b9cb17671dd19d17f1e185bfaaafe7d19d94b3323f82fb9881dd99620",
+    "main.pdf": "655bf6ff10e28e3087c0d18aa7b541ec2f35f1ffa2a83fdc3c6eea051ab80c0e",
+    "supplement.pdf": "1e06a1eccad54ac3a01d2aa889e61974a29a361cb13789c1cc337f89a4a5a87d",
+    "tables/coco_class_testdev.tex": "f8bc7d59fa2c475fb87673bd9e8dad4d4b3bfc48acef93a40b4144074347564e"
+  }
+}

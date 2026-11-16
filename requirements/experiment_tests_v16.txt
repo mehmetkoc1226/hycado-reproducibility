@@ -1,0 +1,3 @@
+# Optional synthetic CPU tests for stages28/30; no model dependencies.
+-r report_v16.txt
+pycocotools==2.0.11

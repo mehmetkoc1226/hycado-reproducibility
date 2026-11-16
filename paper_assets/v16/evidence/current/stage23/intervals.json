@@ -1,0 +1,597 @@
+{
+  "replicates_requested": 1000,
+  "valid_replicates": 1000,
+  "proxy_cluster_count": 61,
+  "interval": "paired proxy-cluster percentile, numpy linear 2.5/97.5 quantiles",
+  "primary": "hybrid1280_minus_yolo1280 / COCO AP maxDets100 area all",
+  "scope": "fixed models; previously examined exploratory test-dev; filename/hash groups are not verified independent scenes; no training-seed uncertainty",
+  "multiplicity": "marginal intervals, no multiple-comparison correction; secondary/recall intervals descriptive",
+  "cap500": "point sensitivity already in stage22; no cap500 bootstrap in this bounded analysis",
+  "area_AP": "stage22 point metrics retained; no size-specific bootstrap here",
+  "methods": {
+    "yolo1280": {
+      "AP": {
+        "point": 23.99566649527929,
+        "lower95": 21.54346539784345,
+        "upper95": 28.353740752707317,
+        "bootstrap_SE": 1.839644988991886
+      },
+      "AP50": {
+        "point": 40.230216181611524,
+        "lower95": 36.50879228523627,
+        "upper95": 47.03556245612,
+        "bootstrap_SE": 2.757704419883775
+      },
+      "AP75": {
+        "point": 24.424732343671273,
+        "lower95": 21.66382606614279,
+        "upper95": 28.85246086060923,
+        "bootstrap_SE": 1.981566936675991
+      },
+      "AR100": {
+        "point": 36.166450276268854,
+        "lower95": 33.50005991815854,
+        "upper95": 41.19389704183154,
+        "bootstrap_SE": 2.0441206307529347
+      }
+    },
+    "hybrid1280": {
+      "AP": {
+        "point": 24.43468799424553,
+        "lower95": 21.849133085506953,
+        "upper95": 29.065551855289257,
+        "bootstrap_SE": 1.9713027893068402
+      },
+      "AP50": {
+        "point": 40.804493170987314,
+        "lower95": 36.913487235426615,
+        "upper95": 48.065509097741575,
+        "bootstrap_SE": 2.9214312631610815
+      },
+      "AP75": {
+        "point": 24.939782612586576,
+        "lower95": 22.008325385346883,
+        "upper95": 29.712381754801243,
+        "bootstrap_SE": 2.138424675253182
+      },
+      "AR100": {
+        "point": 39.12769515508821,
+        "lower95": 36.31096000113028,
+        "upper95": 44.94582843597848,
+        "bootstrap_SE": 2.3302109695398636
+      }
+    },
+    "yolo1280_rois800": {
+      "AP": {
+        "point": 24.468893992871035,
+        "lower95": 21.889228803249065,
+        "upper95": 29.075747729767375,
+        "bootstrap_SE": 1.9699276094140952
+      },
+      "AP50": {
+        "point": 40.88029177500005,
+        "lower95": 36.986936356104685,
+        "upper95": 48.15063920526541,
+        "bootstrap_SE": 2.925405936154307
+      },
+      "AP75": {
+        "point": 24.974239977795957,
+        "lower95": 22.033696912351733,
+        "upper95": 29.736969883538396,
+        "bootstrap_SE": 2.1437852811014255
+      },
+      "AR100": {
+        "point": 39.23696724147369,
+        "lower95": 36.38873634987759,
+        "upper95": 45.10126099060413,
+        "bootstrap_SE": 2.33424477547952
+      }
+    }
+  },
+  "differences_pp": {
+    "hybrid1280_minus_yolo1280": {
+      "AP": {
+        "point": 0.43902149896623754,
+        "lower95": 0.16128724430974808,
+        "upper95": 0.8375766091324609,
+        "bootstrap_SE": 0.19053745218367346
+      },
+      "AP50": {
+        "point": 0.5742769893757895,
+        "lower95": 0.04095964411676719,
+        "upper95": 1.2288507134215516,
+        "bootstrap_SE": 0.3226452743949707
+      },
+      "AP75": {
+        "point": 0.5150502689153029,
+        "lower95": 0.23967669772103797,
+        "upper95": 0.9688233924972549,
+        "bootstrap_SE": 0.20315107896932372
+      },
+      "AR100": {
+        "point": 2.9612448788193575,
+        "lower95": 2.352298084049524,
+        "upper95": 4.130047749084825,
+        "bootstrap_SE": 0.452173346611376
+      }
+    },
+    "yolo1280_rois800_minus_yolo1280": {
+      "AP": {
+        "point": 0.47322749759174343,
+        "lower95": 0.19914116016802924,
+        "upper95": 0.8571432713351809,
+        "bootstrap_SE": 0.18722244190444753
+      },
+      "AP50": {
+        "point": 0.6500755933885287,
+        "lower95": 0.14188860948596674,
+        "upper95": 1.2910934822629263,
+        "bootstrap_SE": 0.3176137110651176
+      },
+      "AP75": {
+        "point": 0.5495076341246836,
+        "lower95": 0.27825911363979505,
+        "upper95": 0.9835074239350489,
+        "bootstrap_SE": 0.20501444435141514
+      },
+      "AR100": {
+        "point": 3.0705169652048383,
+        "lower95": 2.4698101369987575,
+        "upper95": 4.223020731218068,
+        "bootstrap_SE": 0.44568474199940666
+      }
+    },
+    "hybrid1280_minus_yolo1280_rois800": {
+      "AP": {
+        "point": -0.034205998625505885,
+        "lower95": -0.0746329278940844,
+        "upper95": 0.01735333893221592,
+        "bootstrap_SE": 0.022681217487618185
+      },
+      "AP50": {
+        "point": -0.07579860401273919,
+        "lower95": -0.17192265661817138,
+        "upper95": -0.00350795036276709,
+        "bootstrap_SE": 0.04152855434026937
+      },
+      "AP75": {
+        "point": -0.0344573652093807,
+        "lower95": -0.09610818642231714,
+        "upper95": 0.020896300027216503,
+        "bootstrap_SE": 0.028601182852135358
+      },
+      "AR100": {
+        "point": -0.1092720863854808,
+        "lower95": -0.25679195937445237,
+        "upper95": 0.045934486885967525,
+        "bootstrap_SE": 0.07766323972868948
+      }
+    }
+  },
+  "recall_at_FP": {
+    "0.5": {
+      "0.5": {
+        "methods": {
+          "yolo1280": {
+            "point": 13.167440802066741,
+            "lower95": 10.680087750122238,
+            "upper95": 18.441928269601508,
+            "bootstrap_SE": 2.026151342352793
+          },
+          "hybrid1280": {
+            "point": 13.167440802066741,
+            "lower95": 10.680087750122238,
+            "upper95": 18.441928269601508,
+            "bootstrap_SE": 2.026151342352793
+          },
+          "yolo1280_rois800": {
+            "point": 13.167440802066741,
+            "lower95": 10.680087750122238,
+            "upper95": 18.441928269601508,
+            "bootstrap_SE": 2.026151342352793
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "1.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 22.050142556922378,
+            "lower95": 18.634953278486588,
+            "upper95": 29.072196631452734,
+            "bootstrap_SE": 2.6618970348878825
+          },
+          "hybrid1280": {
+            "point": 22.050142556922378,
+            "lower95": 18.634953278486588,
+            "upper95": 29.072196631452734,
+            "bootstrap_SE": 2.6618970348878825
+          },
+          "yolo1280_rois800": {
+            "point": 22.050142556922378,
+            "lower95": 18.634953278486588,
+            "upper95": 29.072196631452734,
+            "bootstrap_SE": 2.6618970348878825
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "2.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 32.69037707309891,
+            "lower95": 29.252274192914683,
+            "upper95": 39.99588106585142,
+            "bootstrap_SE": 2.754511315538005
+          },
+          "hybrid1280": {
+            "point": 32.69037707309891,
+            "lower95": 29.252274192914683,
+            "upper95": 39.99588106585142,
+            "bootstrap_SE": 2.754511315538005
+          },
+          "yolo1280_rois800": {
+            "point": 32.69037707309891,
+            "lower95": 29.252274192914683,
+            "upper95": 39.99588106585142,
+            "bootstrap_SE": 2.754511315538005
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "5.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 47.79337946912605,
+            "lower95": 44.15781928321406,
+            "upper95": 54.08170739511924,
+            "bootstrap_SE": 2.5428737782131225
+          },
+          "hybrid1280": {
+            "point": 47.79337946912605,
+            "lower95": 44.15781928321406,
+            "upper95": 54.08170739511924,
+            "bootstrap_SE": 2.5428737782131225
+          },
+          "yolo1280_rois800": {
+            "point": 47.79337946912605,
+            "lower95": 44.15781928321406,
+            "upper95": 54.08170739511924,
+            "bootstrap_SE": 2.5428737782131225
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "10.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 56.12191628629178,
+            "lower95": 52.68890029061583,
+            "upper95": 62.214722970599595,
+            "bootstrap_SE": 2.5145474530283445
+          },
+          "hybrid1280": {
+            "point": 56.12191628629178,
+            "lower95": 52.68890029061583,
+            "upper95": 62.214722970599595,
+            "bootstrap_SE": 2.514122251498321
+          },
+          "yolo1280_rois800": {
+            "point": 56.12191628629178,
+            "lower95": 52.68890029061583,
+            "upper95": 62.214722970599595,
+            "bootstrap_SE": 2.5141166565983357
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.004045422292524082
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.004075566017137438
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 9.536134797402935e-05
+          }
+        }
+      }
+    },
+    "0.75": {
+      "0.5": {
+        "methods": {
+          "yolo1280": {
+            "point": 10.75802802950192,
+            "lower95": 8.66914442133047,
+            "upper95": 14.180926705363655,
+            "bootstrap_SE": 1.3880544639995167
+          },
+          "hybrid1280": {
+            "point": 10.75802802950192,
+            "lower95": 8.66914442133047,
+            "upper95": 14.180926705363655,
+            "bootstrap_SE": 1.3880544639995167
+          },
+          "yolo1280_rois800": {
+            "point": 10.75802802950192,
+            "lower95": 8.66914442133047,
+            "upper95": 14.180926705363655,
+            "bootstrap_SE": 1.3880544639995167
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "1.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 15.7187412156826,
+            "lower95": 13.191149772452258,
+            "upper95": 20.404385251301388,
+            "bootstrap_SE": 1.8357001574143952
+          },
+          "hybrid1280": {
+            "point": 15.7187412156826,
+            "lower95": 13.191149772452258,
+            "upper95": 20.404385251301388,
+            "bootstrap_SE": 1.8357001574143952
+          },
+          "yolo1280_rois800": {
+            "point": 15.7187412156826,
+            "lower95": 13.191149772452258,
+            "upper95": 20.404385251301388,
+            "bootstrap_SE": 1.8357001574143952
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "2.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 22.402184534247127,
+            "lower95": 19.288690360699785,
+            "upper95": 27.44933772363933,
+            "bootstrap_SE": 2.0580602985322805
+          },
+          "hybrid1280": {
+            "point": 22.402184534247127,
+            "lower95": 19.288690360699785,
+            "upper95": 27.44933772363933,
+            "bootstrap_SE": 2.0580602985322805
+          },
+          "yolo1280_rois800": {
+            "point": 22.402184534247127,
+            "lower95": 19.288690360699785,
+            "upper95": 27.44933772363933,
+            "bootstrap_SE": 2.0580602985322805
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "5.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 30.865916179206767,
+            "lower95": 27.606581310112052,
+            "upper95": 35.90960230984134,
+            "bootstrap_SE": 2.0920068290192595
+          },
+          "hybrid1280": {
+            "point": 30.865916179206767,
+            "lower95": 27.606581310112052,
+            "upper95": 35.90960230984134,
+            "bootstrap_SE": 2.0920068290192595
+          },
+          "yolo1280_rois800": {
+            "point": 30.865916179206767,
+            "lower95": 27.606581310112052,
+            "upper95": 35.90960230984134,
+            "bootstrap_SE": 2.0920068290192595
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      },
+      "10.0": {
+        "methods": {
+          "yolo1280": {
+            "point": 36.46244662481428,
+            "lower95": 33.523205663964575,
+            "upper95": 41.57779672929829,
+            "bootstrap_SE": 2.034138029791216
+          },
+          "hybrid1280": {
+            "point": 36.46244662481428,
+            "lower95": 33.523205663964575,
+            "upper95": 41.57779672929829,
+            "bootstrap_SE": 2.034138029791216
+          },
+          "yolo1280_rois800": {
+            "point": 36.46244662481428,
+            "lower95": 33.523205663964575,
+            "upper95": 41.57779672929829,
+            "bootstrap_SE": 2.034138029791216
+          }
+        },
+        "differences_pp": {
+          "hybrid1280_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "yolo1280_rois800_minus_yolo1280": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          },
+          "hybrid1280_minus_yolo1280_rois800": {
+            "point": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "bootstrap_SE": 0.0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "FUSION28_COMPLETE",
+  "signature": "4964c468b429477589126baa485a90b8a41b01e44c1f306d23949ac247087d98",
+  "images": 1610,
+  "normal_GT": 74707,
+  "tests_passed": 15,
+  "prediction_freeze_sha256": "4e3b1559017f752624fa70de9ce3fac86ef473ecea496cdc46b71ebbf2ac8794",
+  "training": false,
+  "gpu_inference": false,
+  "source_databases_unchanged": true,
+  "hyperparameter_search": false,
+  "fusion_COCO_AP100": 25.31116614857123,
+  "primary_COCO_difference": {
+    "point": -0.8764781543256959,
+    "lower95": -1.5057565464383627,
+    "upper95": -0.1522420057580255,
+    "bootstrap_SE": 0.33294241854401363
+  },
+  "interpretation": "Fixed multiresolution late-fusion control; exploratory test-dev, not an untouched confirmation set",
+  "timing_scope": "CPU analysis only; no inference latency or equal-compute claim"
+}

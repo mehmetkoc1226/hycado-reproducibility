@@ -1,0 +1,9 @@
+{
+  "draws_completed": 1000,
+  "draws_total": 1000,
+  "new": 1000,
+  "reused": 0,
+  "rough_remaining_seconds": 0.0,
+  "training": false,
+  "gpu": false
+}

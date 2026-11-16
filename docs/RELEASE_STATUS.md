@@ -1,18 +1,19 @@
 # Release status
 
-The current recorded-result extension is v14. See V14_UPDATE.md and the main README for the distinct historical toolkit and supplementary COCO metric definitions.
+The current recorded-result revision is **v16**. Earlier v12/v14 sources remain available. Metric definitions, exploratory scope and pending external inputs are explicit in README and V16_UPDATE.md.
 
 | Component | Status |
 |---|---|
-| Historical implementation and source roles | Retained |
-| Completed stage18–20 reports and historical v12 tables | Retained |
-| Completed stage22–25 implementations and references | Included |
-| COCO point metrics, paired draws and SAHI test-dev results | Included |
-| Ten-class main-manuscript table and other result tables | Included under paper_assets/v14/tables |
-| Record-level table/interval verification | Included; does not rerun detection |
-| Dataset images and original annotations | Obtain from maintainers |
-| Trained checkpoints and complete prediction databases | Public downloads pending |
-| Qualitative atlas and manuscript PDFs | Supplied in manuscript bundle, not newly distributed here |
-| Fresh-clone training replication | Not validated |
+| Historical implementation and source roles | Retained unchanged |
+| Completed stage18–25 reports/implementations | Retained |
+| Completed stage28 fusion implementation and paired results | Included |
+| Completed stage29 raw-query audit implementation and results | Included |
+| Completed stage30 alpha/GT diagnostic implementation and results | Included |
+| Current accuracy/class tables and numerical figures | Included under paper_assets/v16 |
+| Recorded-result verification and table regeneration | Included; no model inference or new AP matching |
+| Original dataset images/annotations | Obtain from maintainers |
+| Trained checkpoints and full prediction SQLite databases | **Public downloads pending** |
+| Pipeline image artwork, qualitative atlas and manuscript PDFs | Distributed separately with manuscript |
+| Full fresh-clone training replication | Not validated |
 
-Publication of source and hashes does not complete the release of external experiment inputs. Historical preparation-state records retain their original dates and scope.
+Source publication and hashes do not make external experiment inputs downloadable. The report verifiers can run from this source tree; original inference/evaluation launchers still require the frozen external project. No optimal alpha or independent new test is claimed.

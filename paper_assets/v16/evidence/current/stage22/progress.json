@@ -1,0 +1,8 @@
+{
+  "mode": "full",
+  "split": "testdev",
+  "images_done": 1610,
+  "images_total": 1610,
+  "training": false,
+  "gpu": false
+}

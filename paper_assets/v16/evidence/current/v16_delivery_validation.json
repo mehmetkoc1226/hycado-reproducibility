@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "main_pages": 15,
+  "supplement_pages": 22,
+  "main_figures": 5,
+  "main_tables": 6,
+  "supplement_tables": 17,
+  "cited_references": 40,
+  "new_training": false,
+  "new_inference": false,
+  "new_AP_or_matching_computation_in_revision": false,
+  "original_alpha025_retained": true,
+  "github_modified": false,
+  "earlier_public_source_commit_retained": "21b07128402c621a37d9b5921143f21d105ed43e",
+  "checks": [
+    "original22/23/24 and qualitative25 checks PASS",
+    "old18/19/20 and VAL checks PASS",
+    "completed28/29/30 signatures PASS",
+    "12 paired metric intervals/SE and point differences PASS",
+    "alpha CSV, class means and geometry partitions PASS",
+    "PDF compilation, reference checks and visual layout PASS"
+  ],
+  "sha256": {
+    "main.tex": "465dcef01c1f7629f6505c1bc53eac88ed529892c620631df715160d6ddf8e9e",
+    "supplement.tex": "cc58a826b15e5fa9c9b42e91a76845f5d4d592b79963db789189fd1b509a5fbe",
+    "main.pdf": "86e24ccfc90e3c9ef9740404ac953b09a5efda30a163fcf033383d68d1c217b5",
+    "supplement.pdf": "f1beb0e700d118175f89da12a9f9a5a986a950b497f48191e4d632348c751d4e",
+    "tables/coco_testdev_main_v16.tex": "32596cfddbaf83a940897561bd230b29f74f2829664e7bbf1eacc232897f7da2",
+    "tables/coco_class_v16.tex": "cf777eed7adfbefe47c18df84a3e1d9c09492633a8bcebd4e3fdd8c04ebaeef8",
+    "tables/alpha_points.tex": "2e65426e7962c43593c23150651e1d2d252b2ad0fa64e00618caa4385aff9fa2"
+  }
+}

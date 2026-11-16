@@ -1,0 +1,7 @@
+{
+  "raw_capture_source": "Retained stage20 test1280.py get_raw/save_raw/fuse/crop_phase/freeze functions",
+  "decoder_source": "Retained dev_evaluation.map_queries, same float64 arithmetic and strict0.001 cutoff",
+  "trace_source": "Retained crop_capture.trace_nms algorithm; independent literal tests and exact frozen-row replay required",
+  "frozen_cpu_helpers": "Function bodies retained from stage28 fusion28.py; unrelated evaluator/cache functions omitted",
+  "original_stage20_script_sha256": "2571aa94de8e30f40bf3a8444c439bc5ce0c557a7d97bc888dde82a36e79c01b"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETED",
+  "protocol_sha256": "c17ee0d8f1eb08bc2ebb882ebb8c0b6cf91f6800b9ca36a08e69afc37cb07331",
+  "images": 647,
+  "crops": 11552,
+  "AP_gain_vs_yolo1280_pp": 0.758418662355151,
+  "AP_gain_vs_nms_only_pp": 0.7583079591015647,
+  "primary_AP_interval": {
+    "point": 0.7584186623551439,
+    "lower95": 0.47182402281219904,
+    "upper95": 1.217133087916779
+  },
+  "training": false,
+  "official_val_images_used": false,
+  "testdev_used": false,
+  "independent_test": false,
+  "latency_measured": false,
+  "completed_utc": "2026-11-11T21:42:47.324797+00:00",
+  "prediction_database_sha256": "63bc0681b64b682340679cb1e482735c3d9a1389484bd5d8c49ef8550ce4f6d1"
+}

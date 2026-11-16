@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETED",
+  "images": 548,
+  "proxy_clusters": 75,
+  "replicates_per_mode": 2000,
+  "new_training": false,
+  "new_inference": false,
+  "new_timing": false,
+  "input_files_unchanged": true,
+  "all_4000_original_HyCADO_replicates_reproduced": true,
+  "max_old_HyCADO_replicate_abs_diff": 0.0,
+  "protocol_sha256": "7ccacad0ce7fefdc93df6a058bbda496233442aab681cf48a43615f95b5978e1",
+  "bootstrap_seconds": 307.1758013440003
+}

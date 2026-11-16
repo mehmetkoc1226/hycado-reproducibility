@@ -1,0 +1,94 @@
+{
+  "id": "hycado_alpha_sensitivity_v1",
+  "specified_date": "2026-11-16",
+  "scope": "Descriptive post-hoc alpha sensitivity using verified frozen test-dev raw crop queries; no new model inference or training",
+  "gate": "Completed29 exact3-method raw replay and identical source20 database SHA256; local29 result must match retained report",
+  "alpha_grid": [
+    0,
+    0.125,
+    0.25,
+    0.5,
+    1
+  ],
+  "alpha0": "crop branch disabled; exact frozen YOLO-1280 predictions and completed22 point values, not score-zero crop injection",
+  "fixed_elements": {
+    "detectors": "same final EMA weights, no loading",
+    "proposal_target": 1280,
+    "global_target": 1280,
+    "regions": "exact frozen HyCADO-1280 ordered crop plan",
+    "crop_input": 960,
+    "queries": "all300 retained float32 query rows per crop",
+    "best_class": "first argmax of10 class scores",
+    "raw_score_filter": "strict >0.001 before scaling",
+    "box_mapping": "same float64 clipped native crop xyxy",
+    "global_score_multiplier": 1,
+    "post_scaling_score_cutoff": null,
+    "NMS": "same canonical descending score/class/xyxy order, stable exact ties; class-wise greedy IoU >0.7; final global cap1000",
+    "new_box_geometry_filter": null
+  },
+  "evaluation": {
+    "images": 1610,
+    "normal_GT_after_ignore": 74707,
+    "pycocotools": "2.0.11",
+    "preprocessing": "unchanged pinned VisDrone ignore-region filtering of GT and detections",
+    "primary_display_endpoint": "COCO AP maxDets100 area all",
+    "point_metrics": [
+      "AP",
+      "AP50",
+      "AP75",
+      "AP_small",
+      "AP_medium",
+      "AP_large",
+      "AR",
+      "per-class AP/AP50/AP75"
+    ],
+    "maxDets_sensitivity": 500,
+    "alpha025_requirements": "exact frozen detection replay before GT; reproduce completed22 COCO point values within1e-8 pp",
+    "new_bootstrap": false,
+    "inference_latency_or_equal_compute_claim": false
+  },
+  "crop_geometry_diagnostic": {
+    "alpha": 0.25,
+    "definition": "box area / originating crop area, originating query retained through exact NMS",
+    "crop_filling_threshold": 0.95,
+    "score_subgroups": [
+      "all evaluated retained crop rows",
+      "scaled score >=0.05 display subgroup"
+    ],
+    "evaluation_population": "after pinned ignore-region filtering, top100 detections per image per class, area all",
+    "IoU": [
+      0.5,
+      0.75
+    ],
+    "assignment": "direct upstream COCOeval dtIds/dtMatches/dtIgnore mapped to original final-row and crop/query IDs",
+    "outputs": [
+      "TP",
+      "FP",
+      "ignored",
+      "TP/(TP+FP) within each diagnostic subset"
+    ],
+    "comparison": "crop-filling vs remaining crop boxes; all points descriptive without CIs",
+    "interpretation": "GT-match association, not an AP decomposition, causal artefact effect, or evidence all crop-filling boxes are wrong",
+    "example_rule": "per image top8 crop-filling display examples per IoU0.5 TP/FP/ignored status by ratio then score; combine top30/status"
+  },
+  "interpretation": {
+    "testdev_previously_examined": true,
+    "independent_confirmatory_set": false,
+    "parameter_selection_from_curve": false,
+    "original_alpha025_result_retained": true,
+    "all_grid_points_reported_regardless_of_direction": true,
+    "final_paper_configuration_automatically_changed": false,
+    "training_seed_uncertainty_estimated": false
+  },
+  "operation": {
+    "CPU_only": true,
+    "new_training": false,
+    "new_GPU_inference": false,
+    "pip_or_network": false,
+    "main_venv_modified": false,
+    "old_data_readonly": true,
+    "new_output": "experiments/alpha_sensitivity_v1_seed42",
+    "resume": "per-image signature-bound transactional predictions, COCO entries and coupled geometry diagnostics",
+    "report": "30_alpha_duyarlilik_rapor.zip beside CMD"
+  }
+}

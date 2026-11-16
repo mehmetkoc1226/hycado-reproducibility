@@ -1,0 +1,167 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times,microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=.8in]{geometry}
+\usepackage{booktabs,amsmath,amssymb,graphicx,array,pdfpages}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\APlit}{\mathrm{AP}_{\mathrm{toolkit}}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\title{Supplementary Results for HyCADO}
+\author{Gul Erten and Mehmet Koc}
+\date{}
+\begin{document}
+\maketitle
+These materials accompany \emph{HyCADO for Detector-Guided Region Refinement in UAV Object Detection}. They retain the completed COCO-style evaluation, paired uncertainty, operating-point diagnostics, and fixed-sample qualitative atlas, together with the historical toolkit and VAL diagnostic results. Numerical tables are regenerated from completed stages 22--24 and 28--30; the fixed-sample qualitative atlas and its selection records come from stage 25. No training, new inference, or parameter selection was performed when preparing this revision.
+
+\section{Metric definitions and scope}
+COCO-style bbox AP uses \texttt{pycocotools} 2.0.11 with native coordinates, ten IoU thresholds from 0.50 to 0.95, 101 recall thresholds, and equal-class averaging. The pinned VisDrone category-zero ignore-map preprocessing applies to GT and detections before evaluation. The retained input contains 38599 normal targets on VAL and 74707 on test-dev. No class-specific score-zero target remains in these evaluated inputs. Frozen final scores and candidates are reused without a new display threshold or NMS.
+
+The primary COCO limit is maxDets100 per image and category. The maxDets500 sensitivity uses the same inputs. No historical global max500 truncation is applied before these evaluations, and SAHI candidate lists are not capped at 1000 on ingestion. Area ranges use the upstream boundaries at $32^2$ and $96^2$ native pixels$^2$, including its boundary conventions. AR uses the displayed cap. Area-specific and cap500 results are point estimates without confidence intervals.
+
+Historical toolkit AP, its equal-class macro diagnostic, and COCO-style AP are distinct quantities. Recall--FP curves use toolkit-aligned matching with a global max500 cap and are not COCO AR. All AP/recall values use a 0--100 scale and differences are points. Test-dev intervals use 1000 paired draws over 61 filename/hash proxy groups, conditional on one trained model set. These groups are not verified independent scenes. Secondary intervals are marginal and unadjusted. The resolution, COCO, SAHI, two-resolution fusion, and multiplier/geometry extensions followed earlier test-dev analysis and provide no new untouched confirmation set.
+
+\section{COCO-style point results}
+No HyCADO-1280 VAL COCO result is available in this bounded extension; its full evaluation is on test-dev. The three test-dev relocation conditions retain the original HyCADO-800 geometry and crop network. They are separate placement scores, not an ensemble. In every table, a SAHI suffix specifies native slice side length; the detector target remains 800 with the same YOLO checkpoint.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{VAL COCO-style point metrics, maxDets100.}
+\input{tables/coco_val_100}
+\end{table}
+\clearpage
+\begin{table}[t]
+\centering\footnotesize\setlength{\tabcolsep}{3.6pt}
+\caption{Test-dev COCO-style point metrics, maxDets100. Regions 800 / global 1280 is the mixed-resolution refinement variant.}
+\input{tables/coco_testdev_100}
+\end{table}
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{VAL COCO-style sensitivity, maxDets500.}
+\input{tables/coco_val_500}
+\end{table}
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{3.6pt}
+\caption{Test-dev COCO-style sensitivity, maxDets500.}
+\input{tables/coco_testdev_500}
+\end{table}
+\clearpage
+\section{Paired test-dev COCO contrasts}
+The resolution analysis prespecified HyCADO-1280 minus YOLO-1280 as its primary COCO contrast. The later SAHI extension prespecified HyCADO-1280 minus SAHI-640 and reused identical comparator draws. The table retains all five contrasts and four evaluated metrics. Bounds are the linear 2.5th and 97.5th percentiles of paired differences. The check script recomputes bounds and bootstrap standard errors from retained draws. An interval crossing zero establishes neither equivalence nor superiority.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{Paired test-dev COCO differences at maxDets100. The two primary roles refer to the separately recorded resolution and SAHI protocols. All intervals are marginal 95\% intervals.}
+\input{tables/coco_all_intervals}
+\end{table}
+\clearpage
+\section{Test-dev recall at common false-positive budgets}
+YOLO-1280 and both refinement variants have identical recall point estimates at every listed budget. Method-specific recall intervals are also the same to displayed precision. The table gives their common point and interval, plus HyCADO-1280 minus YOLO-1280. At the primary two-FP budget, all paired differences equal zero in all 1000 draws. At IoU 0.50 and ten FP/image, two draws have small negative refinement differences even though the displayed percentile interval is [0,0]. This describes the retained sample and score prefixes, not universal equality.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4.5pt}
+\caption{Pooled recall (\%) at a maximum average number of false positives per image, preserving whole score ties. The paired difference is H--Y. SAHI was not evaluated in this diagnostic.}
+\input{tables/testdev_recall_budgets}
+\end{table}
+\clearpage
+\begin{figure}[t]
+\centering\includegraphics[width=\textwidth]{figures/recall_testdev_full.pdf}
+\caption{Full recorded test-dev recall--FP range under toolkit-aligned max500 matching. Curves end at actual archived-score coverage, without extrapolation. The main article uses the same retained curve data on a common linear-near-zero/logarithmic-above-0.5 horizontal axis; the table resolves the prespecified low-FP budgets.}
+\end{figure}
+The largest whole pooled score prefix within each budget is selected separately per method and recomputed in each resample. FP counts can fall below a budget when the next tied group would exceed it. These are empirical operating points, not deployment thresholds. Crop scores cannot exceed 0.25 after scaling, while the measured low-FP cutoffs remain higher.
+
+\section{Historical toolkit resolution results}
+The following tables preserve the pre-COCO endpoint and must not be substituted for the COCO numbers. The 800-region variant uses original YOLO-800 crop selection and YOLO-1280 global predictions, with the same crop model and multiplier. Its separate proposal pass remains part of the complete configuration.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Toolkit test-dev resolution extension. Macro AP is the equal-class toolkit diagnostic.}
+\input{tables/testdev1280}
+\end{table}
+\begin{table}[h!]
+\centering\small
+\caption{Toolkit AP contrasts for the resolution extension, with 1000 paired proxy-cluster draws.}
+\input{tables/testdevci}
+\end{table}
+\clearpage
+\begin{table}[h!]
+\centering\small
+\caption{Toolkit test-dev comparison including frozen SAHI-640. SAHI contrasts were bootstrapped only under the COCO definition.}
+\input{tables/sahi_toolkit_testdev}
+\end{table}
+\begin{table}[h!]
+\centering\small\setlength{\tabcolsep}{5pt}
+\caption{Class-wise toolkit AP for the resolution extension. Differences are relative to YOLO-1280.}
+\input{tables/testdev_per_class}
+\end{table}
+\section{Historical VAL operating-point diagnostics}
+These tables compare HyCADO-800 (original v1) and YOLO-1280 on frozen predictions for 548 VAL images. They use class-aware full-image matching at each IoU, retaining at most 500 detections after ignore handling. Differences are HyCADO-800 minus YOLO-1280. Marginal 95\% percentile intervals use 2000 paired draws over 75 filename/hash proxy groups, without multiple-comparison correction.
+
+The primary point is IoU 0.50 and at most two false positives per image on average, over all images and separately over the 99 images with 1--30 normal objects. The largest whole score prefix within the cap is selected independently per method and group, and recomputed in each draw. Equal scores remain tied.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4.5pt}
+\caption{Historical VAL matched-budget recall. YOLO denotes YOLO-1280; HyCADO denotes HyCADO-800. FP/I is realized false positives per image and R is recall (\%).}
+\input{tables/matched_fp_full}
+\end{table}
+\clearpage
+\section{Historical VAL size and object-count diagnostics}
+These tables use the original outputs up to global500, without matching false-positive rates. Normal targets are assigned to native-area bins after full-image matching. False positives have no GT area and are not assigned to these bins. These are stratified recall values, not area-specific AP. Object-count groups use the number of normal targets per image, not spatial density. Pooled precision is $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$, excluding ignored detections. No evaluated image has zero normal targets and no retained normal target has nonpositive area.
+\begin{table}[h!]
+\centering\small\setlength{\tabcolsep}{6pt}
+\caption{Historical VAL recall (R, \%) by native annotation area in pixels squared; GT is normal-target count. HyCADO is the 800 configuration.}
+\input{tables/val_size_recall}
+\end{table}
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Historical VAL recall difference, pooled precision, and FP counts by object count. Differences are HyCADO-800 minus YOLO-1280.}
+\input{tables/val_density_recall}
+\end{table}
+\clearpage
+\section{Two-resolution fusion and multiplier sensitivity}
+The completed two-resolution control uses the frozen YOLO-800 and YOLO-1280 final outputs in native coordinates, unchanged scores, class-wise NMS at IoU 0.7, and a global cap of 1000. The primary recorded contrast is HyCADO-1280 minus fusion. Its paired draws reuse the exact 61 proxy groups, draw identities, and comparator values from the earlier analyses. The secondary contrasts are marginal and unadjusted. This control followed earlier test-dev results and does not establish an equal-compute ordering.
+\begin{table}[h!]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Two-resolution YOLO fusion on all 1610 test-dev images, COCO-style point metrics.}
+\input{tables/fusion_points}
+\end{table}
+\begin{table}[h!]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Paired differences for the completed fusion control, maxDets100. Intervals are 95\% percentile intervals conditional on the retained trained models.}
+\input{tables/fusion_intervals}
+\end{table}
+\clearpage
+The raw-query audit verifies all 1610 archive hashes and exactly reconstructs the original HyCADO-800, HyCADO-1280, and 800-region/1280-global outputs. The subsequent multiplier grid keeps the raw-score cutoff, coordinates, crop plans, global scores, sorting, NMS, and output cap fixed. Positive values rerank and fuse the full candidate lists; zero disables the crop branch and reuses the original global endpoint. No new confidence intervals are computed for this descriptive grid, and the original multiplier is retained.
+\begin{table}[h!]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Complete multiplier sensitivity on test-dev. The original $\alpha=0.25$ reproduces the prior COCO result exactly. No optimal multiplier is selected from this previously examined split.}
+\input{tables/alpha_points}
+\end{table}
+
+\section{Matched crop-geometry diagnostics}
+These counts describe the original HyCADO-1280 at $\alpha=0.25$. Source crop/query IDs are retained through exact NMS, ignore filtering, and COCO's own detection-ID matching. The population is the per-image, per-class top100 after the pinned ignore filter, with area set to all. The display subgroup additionally requires scaled score at least 0.05. Area ratio is decoded box area divided by originating crop area. The raw audit had no ignore filtering or COCO cap, so its 4676 crop-filling display boxes and the evaluated subset of 4534 have different populations. A COCO FP can be a duplicate or a class/localization error; these counts do not identify an AP contribution or a causal artefact effect.
+\begin{table}[h!]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Crop-source detections by box/crop area ratio, class-aware COCO matches. Precision is $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ within each diagnostic subset; it is not AP. No box-removal counterfactual or uncertainty interval was computed.}
+\input{tables/crop_geometry_matches}
+\end{table}
+\clearpage
+\section{Geometric properties of the fixed merge}
+Let $\mathcal R_0=(r_i^{(0)})_{i=0}^{n-1}$ be the initial distinct expanded rectangles. Each active cluster stores member indices and its hull. Singleton initialization partitions the indices. Replacing two clusters by their hull, and coalescing identical hulls, preserves that partition and contains every initial member. Each operation reduces active count, so at most $\max(n-1,0)$ merges occur. For final crops $r_1,\ldots,r_{m(I)}$,
+\[
+0\leq m(I)\leq n\leq60,\qquad
+\bigcup_{i=0}^{n-1}r_i^{(0)}\subseteq\bigcup_{j=1}^{m(I)}r_j.
+\]
+Hulls may add background; the soft target of ten does not force merging after all eligible pairs are exhausted. The growth test compares hull dimensions with minimum width and height of \emph{initial} members. If initial rectangle $i$, with dimensions $w_i,h_i$, belongs to final crop $j$, with dimensions $w_j,h_j$, crop side $L=960$ and tolerance $\varepsilon=10^{-12}$ give
+\[
+\frac{L/w_j}{L/w_i}=\frac{w_i}{w_j}\geq\frac1{3+\varepsilon},\qquad
+\frac{L/h_j}{L/h_i}=\frac{h_i}{h_j}\geq\frac1{3+\varepsilon}.
+\]
+Carrying initial-member minima forward controls enlargement accumulated across merges. The bound concerns geometric resize scale, not recognition accuracy. Each crop adds at most 300 candidates, giving at most $1000+300m(I)\leq19000$ before fusion. Final NMS and truncation can remove candidates, so containment does not guarantee preservation of YOLO recall.
+
+\section{Qualitative sampling and display protocol}
+The twelve-image test-dev sample uses seed 20261112. For each image the SHA256 digest is calculated from the UTF-8 string
+\begin{center}\texttt{20261112|group\_label|image\_path}\end{center} Images are ranked by increasing digest, retaining the first occurrence of each distinct filename proxy group until twelve groups are represented. The first three form the main figure. This rule does not yield equal group-selection probabilities or verified independent scenes. Image selection was fixed before these qualitative outputs were viewed; the underlying split had been examined numerically.
+
+After the pinned ignore filter, candidate centers use up to 100 evenly spaced annotation-order indices of normal GT. Each $640\times420$ window is translated to fit the image. The window with the most normal-GT centers is retained, with ties favoring smaller $x$, then smaller $y$. GT affects only the display window. Archived scores and coordinates are preserved, with display score $\geq0.05$, no added NMS, and no candidate cap. Colors identify classes, not matching status. Crossing boxes are clipped only for rendering. The common threshold does not calibrate scores or equalize FP rates.
+
+The following twelve-page atlas retains all selected examples, including the three main rows. Original image context, window, and detector outputs appear together. Image, annotation, and selected prediction-payload hashes were verified against retained sources. No source databases were changed.
+\clearpage
+\includepdf[pages=-,pagecommand={\thispagestyle{empty}},fitpaper=false]{qualitative1280_supplementary.pdf}
+\end{document}

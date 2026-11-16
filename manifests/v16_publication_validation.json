@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "base_commit": "21b07128402c621a37d9b5921143f21d105ed43e",
+  "historical_blobs_preserved": 581,
+  "historical_paths_replaced": [
+    "README.md",
+    "docs/RELEASE_STATUS.md"
+  ],
+  "root_unit_tests": 7,
+  "stage28_synthetic_tests": 15,
+  "stage29_synthetic_tests": 11,
+  "stage30_synthetic_tests": 8,
+  "historical_v12_checks": "PASS;11 LaTeX tables,147 extension sources,1610 test-dev memberships",
+  "current_record_checks": "22\u201325 signatures and50 paired metric/recall checks PASS;28\u201330 signatures and12 paired metric interval/SE checks PASS",
+  "roles": {
+    "training": 5824,
+    "development": 647,
+    "official_val": 548
+  },
+  "environment": "Linux CPU; Python3.12; NumPy2.3.5; pycocotools2.0.11 for optional synthetic tests",
+  "new_training": false,
+  "new_detector_inference": false,
+  "original_datasets_or_weights_replayed": false,
+  "native_Windows_execution_this_publication": false,
+  "full_training_fresh_clone_validated": false,
+  "data_images_checkpoints_and_full_prediction_databases_added": false,
+  "other_repositories_modified": false
+}

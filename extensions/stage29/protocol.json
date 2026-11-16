@@ -1,0 +1,90 @@
+{
+  "id": "hycado_raw_crop_audit_v1",
+  "specified_date": "2026-11-16",
+  "scope": "CPU-only read-only audit of retained stage20 raw crops; no annotations, AP evaluation or alpha search",
+  "sources": {
+    "stage18": "experiments/testdev_frozen_v1_seed42/predictions.sqlite3",
+    "stage20": "experiments/testdev1280_extension_v1_seed42/predictions.sqlite3",
+    "binding": "full database hashes match completed22, per-prediction hashes match18/20 frozen indices, raw NPZ digest matches20 raw_sha256"
+  },
+  "raw": {
+    "table": "crop_raw",
+    "records": 1610,
+    "rectangles": "exact insertion-order union of800 and1280 crop plans",
+    "query_shape": "number of union rectangles x300x14",
+    "query_dtype": "float32",
+    "rects_dtype": "int32",
+    "probability_range": [
+      0,
+      1
+    ],
+    "width_height_nonnegative": true,
+    "allow_pickle": false
+  },
+  "replay": {
+    "methods": [
+      "HyCADO-800",
+      "HyCADO-1280",
+      "global1280_regions800"
+    ],
+    "score_filter_before_mapping": "strict raw best-class score >0.001",
+    "class_tie": "first argmax",
+    "mapping": "float64 decoded clipped normalized cxcywh to exact native crop xyxy",
+    "alpha": 0.25,
+    "canonical_sort": [
+      "descending score",
+      "class",
+      "x1",
+      "y1",
+      "x2",
+      "y2"
+    ],
+    "exact_ties": "stable original candidate order; global rows first, then ordered crops and query order",
+    "NMS": "class-wise greedy, suppress IoU strictly >0.7, final global cap1000",
+    "success": "all1610 images in each of3 methods exactly reproduce frozen detection lists"
+  },
+  "geometry": {
+    "method": "HyCADO-1280",
+    "subsets": [
+      "all accepted pre-NMS crop candidates",
+      "retained crop candidates",
+      "retained crop candidates with scaled score >=0.05"
+    ],
+    "display_threshold_changes_detection_archive": false,
+    "ratio": "decoded box area / originating crop area",
+    "ratio_histogram_edges": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      1.0000000001
+    ],
+    "reported_ratio_cutoffs": [
+      0.5,
+      0.8,
+      0.95
+    ],
+    "edge_contact_tolerance_native_pixels": 1e-06,
+    "class_counts": 10,
+    "examples": "per-image top12 by area ratio then score, independently for all-retained and display-filtered; combine to global top40 each",
+    "GT_or_false_positive_classification": false,
+    "claim": "crop-filling boxes are descriptive geometry, not automatic false positives or proof of artefacts",
+    "ignore_regions_filtered_in_this_audit": false
+  },
+  "alpha_readiness": "true only after complete raw hash/shape/geometry audit and exact alpha=.25 replay of3 frozen methods; no AP-alpha curve computed by this tool",
+  "operation": {
+    "training": false,
+    "gpu_inference": false,
+    "package_installation": false,
+    "GT_read": false,
+    "source_mutation": false,
+    "resume": "signature-bound per-image transactional SQLite cache; completed images reused after source identity checks",
+    "new_output": "experiments/raw_crop_audit_v1_seed42",
+    "report": "29_ham_crop_denetim_rapor.zip beside CMD"
+  }
+}

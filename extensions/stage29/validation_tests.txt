@@ -1,0 +1,16 @@
+test_decode_matches_independent_retained_math (test_audit29.AuditTests.test_decode_matches_independent_retained_math) ... ok
+test_full_audit_summary_resume_and_source_binding (test_audit29.AuditTests.test_full_audit_summary_resume_and_source_binding) ... ok
+test_global_cap_and_cross_source_suppression (test_audit29.AuditTests.test_global_cap_and_cross_source_suppression) ... ok
+test_invalid_plans_rejected (test_audit29.AuditTests.test_invalid_plans_rejected) ... ok
+test_random_trace_parity (test_audit29.AuditTests.test_random_trace_parity) ... ok
+test_ratio_histogram_edges_empty_groups_and_display_filter (test_audit29.AuditTests.test_ratio_histogram_edges_empty_groups_and_display_filter) ... ok
+test_raw_replay_detects_changed_prediction (test_audit29.AuditTests.test_raw_replay_detects_changed_prediction) ... ok
+test_raw_shape_hash_union_and_probability_tampering (test_audit29.AuditTests.test_raw_shape_hash_union_and_probability_tampering) ... ok
+test_readonly_database_handle_released_on_windows (test_audit29.AuditTests.test_readonly_database_handle_released_on_windows) ... ok
+test_strict_raw_score_and_zero_area_filter (test_audit29.AuditTests.test_strict_raw_score_and_zero_area_filter) ... ok
+test_trace_matches_literal_nms_and_preserves_exact_tie_origin (test_audit29.AuditTests.test_trace_matches_literal_nms_and_preserves_exact_tie_origin) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.178s
+
+OK

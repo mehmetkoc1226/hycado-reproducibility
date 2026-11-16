@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "synthetic_tests_passed": 11,
+  "integration": "3-image mock frozen18/20 databases with raw NPZ queries; replay3 methods; geometric aggregation; reopen/resume; byte-identical geometry export; cache-tamper rejection; original database hashes unchanged",
+  "decoder": "independent literal float64 retained decoder comparison; strict raw score and clipped zero-area filtering",
+  "NMS": "20 randomized literal comparisons; source attribution under exact ties; cap1000",
+  "platform": "Preparation tests run under Linux with NumPy; explicit SQLite closing and file-unlink tests included for Windows handle behavior",
+  "native_Windows_tested_here": false,
+  "actual_1610_image_audit_executed_here": false,
+  "no_model_or_GPU_imports": true
+}

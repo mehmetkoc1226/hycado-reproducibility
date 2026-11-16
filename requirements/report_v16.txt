@@ -1,0 +1,2 @@
+# Isolated recorded-result verification; tested with Python3.12.
+numpy==2.3.5

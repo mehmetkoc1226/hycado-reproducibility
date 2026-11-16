@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "synthetic_tests_passed": 8,
+  "integration": "3-image frozen-query SQLite fixture;5 alpha output freeze;4 COCO matches; per-class/area points; exact alpha0.25 metric parity; geometry matching; reopen/resume yields byte-identical metrics CSV and equal diagnostic JSON",
+  "provenance_tests": "COCO dtIds mapped through class sorting and ignore filtering; cap100 checked with106 detections; alpha0 disables crop injection; all positive alphas rerun NMS",
+  "cache_tests": "signature/tampering rejection; coupled alpha025 metrics+diagnostic rolled back atomically if incomplete; all SQLite connections closed",
+  "native_Windows_executed_here": false,
+  "actual_1610_image_analysis_executed_here": false,
+  "preparation_environment": "Linux with pinned pycocotools2.0.11 and NumPy; shipped target wheel is Windows CPython3.11"
+}

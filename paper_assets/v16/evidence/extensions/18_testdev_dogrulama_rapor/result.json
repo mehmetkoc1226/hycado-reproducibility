@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETED",
+  "protocol_sha256": "c8d5894838491c6bcc80f4b378caf3f37e7af1b1434e3dfc93f5f723901b3af2",
+  "images": 1610,
+  "methods": [
+    "yolo800",
+    "yolo1280",
+    "hybrid_a025",
+    "relocated_s0_a025",
+    "relocated_s1_a025",
+    "relocated_s2_a025"
+  ],
+  "heldout_user_confirmed": true,
+  "primary_AP_difference_pp": {
+    "point": 1.1420042709832678,
+    "lower95": 0.7918972821072436,
+    "upper95": 1.452392045545104,
+    "bootstrap_SE": 0.18508339318679187
+  },
+  "crop_calls_each_crop_method": 25863,
+  "test_dev_ground_truth_read_after_prediction_freeze": true,
+  "training": false,
+  "multiple_training_seeds": false,
+  "latency_benchmark": false,
+  "prediction_database_sha256": "47c13d27e4effe7bd014d7d7cbaed65b342c8c14c4c0c8d1c520e9cb9a8f70e6",
+  "heldout_attestation_sha256": "645497e9ba1ca16db2a89ce3c7f2fc5d158a0d5f0f3f5071701a646a374d5c07",
+  "completed_utc": "2026-11-11T15:04:00.657377+00:00"
+}

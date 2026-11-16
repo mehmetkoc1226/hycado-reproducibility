@@ -1,0 +1,35 @@
+{
+  "signature": "5ed19dfbc3b3521b283a53edc454a7dffd5248853217c325c50f36eb885659d1",
+  "config": {
+    "protocol_sha256": "bfc5e1064f5d3cb045a1af52982e11e1dcdee82d8daddb26096e58bb969abffd",
+    "package_manifest_sha256": "62e64be879e5c44e305f74718ea278afe20c830db67bc3fb7621f0235bb96226",
+    "source_database_sha256": {
+      "18": "47c13d27e4effe7bd014d7d7cbaed65b342c8c14c4c0c8d1c520e9cb9a8f70e6",
+      "20": "3d3c68aac45e4931b7dfd4bbc5243d114552d19d51eec32e378c1898e27cf7b3"
+    },
+    "numpy": "1.26.4",
+    "python": [
+      3,
+      11,
+      5
+    ]
+  },
+  "sources": {
+    "18": {
+      "path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev_frozen_v1_seed42\\predictions.sqlite3",
+      "sha256": "47c13d27e4effe7bd014d7d7cbaed65b342c8c14c4c0c8d1c520e9cb9a8f70e6",
+      "stat": [
+        318738432,
+        1794409440278974100
+      ]
+    },
+    "20": {
+      "path": "D:\\HyCADO_Temiz_Baslangic\\experiments\\testdev1280_extension_v1_seed42\\predictions.sqlite3",
+      "sha256": "3d3c68aac45e4931b7dfd4bbc5243d114552d19d51eec32e378c1898e27cf7b3",
+      "stat": [
+        807481344,
+        1794469884370992500
+      ]
+    }
+  }
+}

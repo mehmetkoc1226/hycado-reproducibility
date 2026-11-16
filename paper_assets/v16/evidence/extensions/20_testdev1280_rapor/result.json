@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETED",
+  "protocol_sha256": "61c062fb5af135098b39c4c423f9bfff4f44ae2ce7794572a3bac832163dbe3c",
+  "images": 1610,
+  "primary_AP_difference_pp": {
+    "point": 0.5052088738614202,
+    "lower95": 0.1294410082563929,
+    "upper95": 0.8848662103577757
+  },
+  "secondary_oldroi_AP_difference_pp": {
+    "point": 0.5436589969479506,
+    "lower95": 0.1675439208316444,
+    "upper95": 0.9237076324870694
+  },
+  "crop_calls800": 25863,
+  "crop_calls1280": 27682,
+  "source18_original_outputs_and_metrics_reproduced": true,
+  "training": false,
+  "parameter_search": false,
+  "independent_untouched_test": false,
+  "latency_benchmark": false,
+  "completed_utc": "2026-11-12T07:51:24.447002+00:00",
+  "prediction_database_sha256": "3d3c68aac45e4931b7dfd4bbc5243d114552d19d51eec32e378c1898e27cf7b3"
+}

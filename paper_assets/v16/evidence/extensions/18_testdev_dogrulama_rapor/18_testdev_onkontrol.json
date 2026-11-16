@@ -1,0 +1,29 @@
+{
+  "status": "PREFLIGHT_OK",
+  "protocol_sha256": "c8d5894838491c6bcc80f4b378caf3f37e7af1b1434e3dfc93f5f723901b3af2",
+  "val_exact_images": 3,
+  "pilot_images": [
+    "images/test-dev/9999941_00000_d_0000013.jpg",
+    "images/test-dev/9999973_00000_d_0000069.jpg",
+    "images/test-dev/9999941_00000_d_0000008.jpg",
+    "images/test-dev/9999952_00000_d_0000218.jpg",
+    "images/test-dev/9999973_00000_d_0000109.jpg",
+    "images/test-dev/9999938_00000_d_0000033.jpg",
+    "images/test-dev/9999938_00000_d_0000367.jpg",
+    "images/test-dev/9999963_00000_d_0000020.jpg",
+    "images/test-dev/9999938_00000_d_0000212.jpg",
+    "images/test-dev/9999952_00000_d_0000312.jpg",
+    "images/test-dev/9999973_00000_d_0000027.jpg",
+    "images/test-dev/9999938_00000_d_0000133.jpg"
+  ],
+  "testdev_gt_parsed": false,
+  "estimated_inference_hours": 2.50884648631246,
+  "pilot_inference_seconds": 67.3181168998126,
+  "pilot_crop_forwards_all_four_methods": 780,
+  "pilot_seconds_by_phase": {
+    "yolo800": 2.2636047998676077,
+    "yolo1280": 2.0441478999564424,
+    "crop_variants": 63.010364199988544
+  },
+  "estimate_scope": "approximate only, excludes CPU metric/bootstrap and setup; not a benchmark"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "new_training": false,
+  "new_inference": false,
+  "source_checks": [
+    "check_extensions.py",
+    "check_val_diagnostics.py"
+  ],
+  "pdf_pages": {
+    "main.pdf": 13,
+    "supplement.pdf": 3
+  },
+  "timing_archive_sha256": "6000d91f93414d0906c23785879aae0b182c56e1396a1e72e1b06906482c3aa2",
+  "scope": "Completed reports; fixed trained models; VisDrone; exploratory 1280 extension."
+}

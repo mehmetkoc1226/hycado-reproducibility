@@ -1,0 +1,63 @@
+{
+  "replicates": 1000,
+  "proxy_clusters": 61,
+  "primary_contrast": "hybrid1280_minus_sahi640 / COCO AP cap100 area all",
+  "differences_pp": {
+    "hybrid1280_minus_sahi640": {
+      "AP": {
+        "point": -0.09451799258820515,
+        "lower95": -0.776478844834471,
+        "upper95": 0.7432034668355987,
+        "bootstrap_SE": 0.3995524659468503
+      },
+      "AP50": {
+        "point": -0.8188468669636819,
+        "lower95": -1.8582126513814743,
+        "upper95": 0.552756910583524,
+        "bootstrap_SE": 0.6230934490903707
+      },
+      "AP75": {
+        "point": 0.018281345609381106,
+        "lower95": -0.7752268502149011,
+        "upper95": 0.9497302707999816,
+        "bootstrap_SE": 0.42987621480565213
+      },
+      "AR100": {
+        "point": -0.6893158497261496,
+        "lower95": -1.712730426443111,
+        "upper95": 0.7692057378669886,
+        "bootstrap_SE": 0.6370486845749939
+      }
+    },
+    "sahi640_minus_yolo1280": {
+      "AP": {
+        "point": 0.5335394915544427,
+        "lower95": -0.07789828872491895,
+        "upper95": 1.153974421523968,
+        "bootstrap_SE": 0.31675732271944834
+      },
+      "AP50": {
+        "point": 1.3931238563394714,
+        "lower95": 0.3177235969600462,
+        "upper95": 2.3854325470602484,
+        "bootstrap_SE": 0.5480976967812524
+      },
+      "AP75": {
+        "point": 0.4967689233059218,
+        "lower95": -0.13893182260495668,
+        "upper95": 1.2697445608012827,
+        "bootstrap_SE": 0.35192399546973246
+      },
+      "AR100": {
+        "point": 3.650560728545507,
+        "lower95": 2.9111603750311605,
+        "upper95": 4.561475959918767,
+        "bootstrap_SE": 0.4308317956057492
+      }
+    }
+  },
+  "interval": "paired percentile using retained seed/groups; 22B/23 fixed comparator outputs reused",
+  "scope": "exploratory previously examined test-dev; fixed trained weights; no training-seed uncertainty; unverified proxy-group independence",
+  "secondary_multiplicity_corrected": false,
+  "toolkit_confidence_intervals_computed": false
+}

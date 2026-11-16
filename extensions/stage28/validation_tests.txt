@@ -1,0 +1,20 @@
+test_atomic_write_and_lock_reusable_after_exit (test_fusion28.FusionTests.test_atomic_write_and_lock_reusable_after_exit) ... ok
+test_bootstrap_equal_score_image_blocks_match_explicit_replication (test_fusion28.FusionTests.test_bootstrap_equal_score_image_blocks_match_explicit_replication) ... ok
+test_coco_caps_and_empty_images_match_upstream (test_fusion28.FusionTests.test_coco_caps_and_empty_images_match_upstream) ... ok
+test_end_to_end_freeze_matching_bootstrap_and_resume (test_fusion28.FusionTests.test_end_to_end_freeze_matching_bootstrap_and_resume) ... ok
+test_fusion_native_coordinates_and_scores_unchanged (test_fusion28.FusionTests.test_fusion_native_coordinates_and_scores_unchanged) ... ok
+test_ignore_preprocessing_is_same_for_gt_and_detections (test_fusion28.FusionTests.test_ignore_preprocessing_is_same_for_gt_and_detections) ... ok
+test_nms_strict_boundary_and_class_isolation (test_fusion28.FusionTests.test_nms_strict_boundary_and_class_isolation) ... ok
+test_packed_prediction_and_coco_payload_tamper (test_fusion28.FusionTests.test_packed_prediction_and_coco_payload_tamper) ... ok
+test_randomized_nms_matches_independent_literal (test_fusion28.FusionTests.test_randomized_nms_matches_independent_literal) ... ok
+test_readonly_missing_and_connection_released (test_fusion28.FusionTests.test_readonly_missing_and_connection_released) ... ok
+test_retained_draws_groups_and_annotation_names (test_fusion28.FusionTests.test_retained_draws_groups_and_annotation_names) ... ok
+test_source_payload_digest_and_image_binding (test_fusion28.FusionTests.test_source_payload_digest_and_image_binding) ... ok
+test_stable_ties_clipping_and_global_cap (test_fusion28.FusionTests.test_stable_ties_clipping_and_global_cap) ... ok
+test_state_resume_signature_and_marker_tampering (test_fusion28.FusionTests.test_state_resume_signature_and_marker_tampering) ... ok
+test_validation_rejects_nonfinite_class_geometry_and_cap (test_fusion28.FusionTests.test_validation_rejects_nonfinite_class_geometry_and_cap) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 5.741s
+
+OK
